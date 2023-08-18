@@ -1,44 +1,47 @@
-<nz-layout>
-    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-      <div class="logo"></div>
-      <ul nz-menu nzTheme="dark" nzMode="inline">
-        <li nz-submenu nzTitle="User" nzIcon="user">
-          <ul>
-            <li nz-menu-item>Tom</li>
-            <li nz-menu-item>Bill</li>
-            <li nz-menu-item>Alex</li>
-          </ul>
-        </li>
-        <li nz-submenu nzTitle="Team" nzIcon="team">
-          <ul>
-            <li nz-menu-item>Team 1</li>
-            <li nz-menu-item>Team 2</li>
-          </ul>
-        </li>
-        <li nz-menu-item>
-          <span nz-icon nzType="file"></span>
-          <span>File</span>
-        </li>
-      </ul>
+<nz-layout class="layout">
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" 
+        [ngClass]="isCollapsed ? 'collapsed' : 'expanded'">
+        <div class="logo"></div>
+        <ul nz-menu nzTheme="light" nzMode="inline">
+            <li nz-menu-item [nzMatchRouter]="true" [routerLink]="['/admin/dashboard']">
+                <span nz-icon nzType="dashboard"></span>
+                <span>Dashboard</span>
+            </li>
+            <li nz-menu-item>
+                <span nz-icon nzType="user"></span>
+                <span>Users</span>
+            </li>
+        </ul>
     </nz-sider>
-    <nz-layout>
-      <nz-header>
-        <span
-          class="trigger"
-          nz-icon
-          [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-          (click)="isCollapsed = !isCollapsed"
-        ></span>
-      </nz-header>
-      <nz-content>
-        <nz-breadcrumb>
-          <nz-breadcrumb-item>User</nz-breadcrumb-item>
-          <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
-        </nz-breadcrumb>
-        <!-- <div class="inner-content">Bill is a cat.</div> -->
-        <router-outlet></router-outlet>
-
-      </nz-content>
-      <!-- <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer> -->
+    <nz-layout class="right-layout" [ngStyle]="{'margin-left': isCollapsed ? '0' : '290px' }">
+        <nz-header class="px-4" [ngStyle]="{'margin-left': isCollapsed ? '80px' : '0px' }">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="left">
+                    <span class="trigger hover-primary p-3" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+                        (click)="isCollapsed = !isCollapsed"></span>
+                </div>
+                <div class="right">
+                    <nz-avatar [nzSize]="35" nzIcon="user" nz-dropdown nzTrigger="click"[nzDropdownMenu]="menu"></nz-avatar>
+                    <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <ul nz-menu>
+                            <li class="p-h-20 pt-3"><div class="d-flex m-r-50"><nz-avatar [nzSize]="35" nzIcon="user"></nz-avatar><div class="ms-3"><p class="mb-0 text-dark font-weight-semibold">Marshall Nichols</p><p class="m-b-0 opacity-07">UI/UX Desinger</p></div></div></li>
+                            <li nz-menu-divider></li>
+                            <li nz-menu-item><span nz-icon nzType="user" nzTheme="outline" class="me-2 py-2"></span>Edit Profile</li>
+                            <li nz-menu-item><span nz-icon nzType="lock" nzTheme="outline" class="me-2 py-2"></span>Account Setting</li>
+                            <li nz-menu-item><span nz-icon nzType="logout" nzTheme="outline" class="me-2 py-2"></span>Logout</li>
+                           
+                        </ul>
+                    </nz-dropdown-menu>
+                </div>
+            </div>
+        </nz-header>
+        <nz-content [ngStyle]="{'margin-left': isCollapsed ? '80px' : '0px' }">
+            <div class="inner-content bg-light">
+                <div class="p-3 bg-white">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </nz-content>
+        <!-- <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer> -->
     </nz-layout>
-  </nz-layout>
+</nz-layout>
