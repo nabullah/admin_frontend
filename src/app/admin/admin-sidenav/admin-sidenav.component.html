@@ -7,9 +7,9 @@
                 <span nz-icon nzType="dashboard"></span>
                 <span>Dashboard</span>
             </li>
-            <li nz-menu-item>
+            <li nz-menu-item [nzMatchRouter]="true" [routerLink]="['/admin/crm']">
                 <span nz-icon nzType="user"></span>
-                <span>Users</span>
+                <span>CRM</span>
             </li>
         </ul>
     </nz-sider>

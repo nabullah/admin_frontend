@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
+import { CrmDashboardComponent } from './components/crm-dashboard/crm-dashboard.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
         pathMatch: 'full' as Route['pathMatch'],
       },
       { path: 'dashboard', component: DashboardComponent },
+      { path: 'crm', component: CrmDashboardComponent },
       { path: '**', redirectTo: 'dashboard' },
     ],
   },
