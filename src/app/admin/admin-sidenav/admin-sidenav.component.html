@@ -1,8 +1,14 @@
 <nz-layout class="layout">
-    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" 
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" class="border-end"
         [ngClass]="isCollapsed ? 'collapsed' : 'expanded'">
-        <div class="logo"></div>
-        <ul nz-menu nzTheme="light" nzMode="inline">
+        <div *ngIf="!isCollapsed" class="logo padding-4 d-flex align-items-center justify-content-start gap-3">
+            <img src="../../../assets/logo.jpg" class="img-fluid" width="40px">
+            <span class="fs-3">Admin</span>
+        </div>
+        <div *ngIf="isCollapsed" class="logo m-3 d-flex align-items-center justify-content-center">
+            <img src="../../../assets/logo.jpg" class="img-fluid" width="40px">
+        </div>
+        <ul nz-menu nzTheme="light" nzMode="inline" class="border-top">
             <li nz-menu-item [nzMatchRouter]="true" [routerLink]="['/admin/dashboard']">
                 <span nz-icon nzType="dashboard"></span>
                 <span>Dashboard</span>
@@ -11,25 +17,49 @@
                 <span nz-icon nzType="user"></span>
                 <span>CRM</span>
             </li>
+            <li nz-submenu nzTitle="E-Commerce" nzIcon="appstore">
+                <ul>
+                  <li nz-menu-item [nzMatchRouter]="true" [routerLink]="['/admin/products']">
+                    <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                    <span>Products</span>
+                  </li>
+                  <li nz-menu-item [nzMatchRouter]="true" [routerLink]="['/admin/order-list']">
+                    <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                    <span>Order list</span>
+                  </li>
+                  <li nz-menu-item [nzMatchRouter]="true" [routerLink]="['/admin/products-list']">
+                    <span nz-icon nzType="unordered-list" nzTheme="outline"></span>
+                    <span>Product list</span>
+                  </li>
+                </ul>
+              </li>
         </ul>
     </nz-sider>
     <nz-layout class="right-layout" [ngStyle]="{'margin-left': isCollapsed ? '0' : '290px' }">
-        <nz-header class="px-4" [ngStyle]="{'margin-left': isCollapsed ? '80px' : '0px' }">
+        <nz-header class="px-4 border-bottom" [ngStyle]="{'margin-left': isCollapsed ? '80px' : '0px' }">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="left">
                     <span class="trigger hover-primary p-3" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
                         (click)="isCollapsed = !isCollapsed"></span>
                 </div>
                 <div class="right">
-                    <nz-avatar [nzSize]="35" nzIcon="user" nz-dropdown nzTrigger="click"[nzDropdownMenu]="menu"></nz-avatar>
+                    <nz-avatar [nzSize]="35" nzIcon="user" nz-dropdown nzTrigger="click"
+                        [nzDropdownMenu]="menu"></nz-avatar>
                     <nz-dropdown-menu #menu="nzDropdownMenu">
                         <ul nz-menu>
-                            <li class="p-h-20 pt-3"><div class="d-flex m-r-50"><nz-avatar [nzSize]="35" nzIcon="user"></nz-avatar><div class="ms-3"><p class="mb-0 text-dark font-weight-semibold">Marshall Nichols</p><p class="m-b-0 opacity-07">UI/UX Desinger</p></div></div></li>
+                            <li class="p-h-20 pt-3">
+                                <div class="d-flex m-r-50"><nz-avatar [nzSize]="35" nzIcon="user"></nz-avatar>
+                                    <div class="ms-3">
+                                        <p class="mb-0 text-dark font-weight-semibold">Marshall Nichols</p>
+                                        <p class="m-b-0 opacity-07">UI/UX Desinger</p>
+                                    </div>
+                                </div>
+                            </li>
                             <li nz-menu-divider></li>
                             <li nz-menu-item><span nz-icon nzType="user" nzTheme="outline" class="me-2 py-2"></span>Edit Profile</li>
                             <li nz-menu-item><span nz-icon nzType="lock" nzTheme="outline" class="me-2 py-2"></span>Account Setting</li>
-                            <li nz-menu-item><span nz-icon nzType="logout" nzTheme="outline" class="me-2 py-2"></span>Logout</li>
-                           
+                            <li nz-menu-item (click)="logOut()"><span nz-icon nzType="logout" nzTheme="outline" class="me-2 py-2"></span>Logout</li>
+
                         </ul>
                     </nz-dropdown-menu>
                 </div>
@@ -37,7 +67,7 @@
         </nz-header>
         <nz-content [ngStyle]="{'margin-left': isCollapsed ? '80px' : '0px' }">
             <div class="inner-content bg-light">
-                <div class="p-3 bg-white">
+                <div class="p-3 bg-white rounded">
                     <router-outlet></router-outlet>
                 </div>
             </div>

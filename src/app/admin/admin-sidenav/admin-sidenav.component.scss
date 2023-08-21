@@ -1,78 +1,73 @@
 .logo {
-  height: 32px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-
+	height: 32px;
+	background: rgba(255, 255, 255, 0.2);
+	img {
+		border-radius: 4px;
+	}
+}
+.padding-4 {
+	padding: 2rem;
 }
 
 .layout {
-  min-height: 100vh;
+	min-height: 100vh;
 }
-nz-sider {
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
+
 nz-sider.expanded {
-  overflow: auto;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  flex: 0 0 290px !important;
-  max-width: 290px !important;
-  min-width: 290px !important;
-  width: 290px !important;
+	overflow: auto;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	flex: 0 0 290px !important;
+	max-width: 290px !important;
+	min-width: 290px !important;
+	width: 290px !important;
 }
 nz-sider.collapsed {
-  flex: 0 0 80px !important;
-  max-width: 80px !important;
-  min-width: 80px !important;
-  width: 80px !important;
-  overflow: auto;
-  height: 100%;
-  position: fixed;
-  left: 0;
+	flex: 0 0 80px !important;
+	max-width: 80px !important;
+	min-width: 80px !important;
+	width: 80px !important;
+	overflow: auto;
+	height: 100%;
+	position: fixed;
+	left: 0;
 }
 
 nz-header {
-  background: #fff;
-  padding: 0;
-  position: sticky;
-  top: 0;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	background: #fff;
+	padding: 0;
+	position: sticky;
+	top: 0;
+  z-index: 1;
 }
 
 nz-content {
-  overflow: initial;
+	overflow: initial;
 }
 
 .inner-content {
-  padding: 24px;
-  background: #fff;
-  div:first-child {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  }
+	padding: 24px;
+	background: #fff;
 }
 
 nz-footer {
-  text-align: center;
+	text-align: center;
 }
 
 .trigger {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 
 .m-r-50 {
-  margin-right: 50px !important;
+	margin-right: 50px !important;
 }
 
 .p-h-20 {
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
 }
 
 .ant-layout-sider {
-  background-color: #fff;
+	background-color: #fff;
 }

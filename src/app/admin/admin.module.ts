@@ -6,9 +6,13 @@ import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NzZorroModule } from '../modules/nz-zorro/nz-zorro.module';
 import { CrmDashboardComponent } from './components/crm-dashboard/crm-dashboard.component';
+import { ProductOrderListComponent } from './components/product-order-list/product-order-list.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductsListComponent } from './components/products-list/products-list.component';
+import { PageNotFoundComponent } from '../shared/components/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AdminSidenavComponent, DashboardComponent, CrmDashboardComponent],
+  declarations: [AdminSidenavComponent, DashboardComponent, CrmDashboardComponent, ProductOrderListComponent, ProductsComponent, ProductsListComponent, PageNotFoundComponent],
   imports: [CommonModule, AdminRoutingModule, NzZorroModule],
 })
 export class AdminModule {}

@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Injectable({
-  providedIn: 'root',
+	providedIn: "root",
 })
 export class AuthService {
-  constructor(private router: Router) {}
+	constructor(private router: Router) {}
 
-  // routeToLogin() {
-  //   this.router.navigate(['/auth/login']);
-  // }
+	logout() {
+		this.router.navigate(["/auth/login"]);
+	}
 }

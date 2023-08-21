@@ -28,8 +28,22 @@ body {
 	}
 }
 
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+router-outlet + * {
+	display: block;
+	animation: fade 1s;
+}
+
 .ant-menu-inline > .ant-menu-item {
-	height: 55px !important;
+	height: 49px !important;
 }
 
 .ant-input {
