@@ -18,6 +18,11 @@ const MODULES: any = [
   NzMenuModule,
   NzBreadCrumbModule,
   NzIconModule,
+  NzFormModule,
+  NzAvatarModule,
+  NzDropDownModule,
+  NzNotificationModule,
+  NzSelectModule
 ];
 
 @NgModule({
