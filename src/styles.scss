@@ -2,32 +2,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
 }
 
 .hover-primary:hover {
-  cursor: pointer;
-  color: #3f87f5;
-  background-color: #3f87f51a;
-  transition: background-color 0.3s linear;
-  border-radius: 4px;
+	cursor: pointer;
+	color: #3f87f5;
+	background-color: #3f87f51a;
+	transition: background-color 0.3s linear;
+	border-radius: 4px;
 }
 
 body {
-  &::-webkit-scrollbar {
-    width: 4px;
-    border-radius: 10px;
-  }
-  &::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #675b71;
-    border-radius: 4px;
-  }
+	&::-webkit-scrollbar {
+		width: 4px;
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar-track {
+		background: #ffffff;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #675b71;
+		border-radius: 4px;
+	}
 }
 
 .ant-menu-inline > .ant-menu-item {
-  height: 55px !important;
+	height: 55px !important;
+}
+
+.ant-input {
+	padding: 0.55rem 1rem !important;
+	line-height: 1.5 !important;
+	color: #53535f !important;
+	height: auto !important;
+	border: 1px solid #edf2f9 !important;
+	border-radius: 0.25rem !important;
+}
+
+.ant-input-affix-wrapper {
+	border-radius: 0.25rem !important;
+}
+
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+	background: #fff !important;
+	border-color: #ff4d4f !important;
+}
+
+.ant-input-focused,
+.ant-input:focus {
+	border-color: #40a9ff !important;
+	box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+	border-right-width: 1px !important;
+	outline: 0 !important;
 }

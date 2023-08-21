@@ -1,7 +1,11 @@
-.login-image{
-  height:100vh;
-  background-image: url("../../../assets/images/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+.login-image {
+	height: 100vh;
+	background-image: url("../../../assets/images/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.ant-input {
+	border: none !important;
 }
 

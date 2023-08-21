@@ -38,7 +38,7 @@
               </ng-template>
             </nz-form-control>
           </nz-form-item>
-          <div class="d-flex justify-content-between">
+          <div class="mt-2">
             <nz-form-item nz-row class="register-area">
               <nz-form-control>
                 <label nz-checkbox nzSize="large" formControlName="agree">
@@ -47,11 +47,15 @@
                     <a routerLink="javascript(void)">agreement</a>
                   </span>
                 </label>
-              </nz-form-control>
-            </nz-form-item>
-            <nz-form-item nz-row class="register-area">
-              <nz-form-control>
-                <button nz-button nzType="primary" nzSize="large" class="rounded-1 fs-5 h-100">Sign Up</button>
+                <div class="d-flex justify-content-between mt-3">
+                  <p class="">Already have an account? <a class="login-form-forgot" routerLink="/auth/login">Login</a>
+                  </p>
+                  <nz-form-item nz-row class="register-area">
+                    <nz-form-control>
+                      <button nz-button nzType="primary" nzSize="default" class="rounded-1 h-100">Sign Up</button>
+                    </nz-form-control>
+                  </nz-form-item>
+                </div>
               </nz-form-control>
             </nz-form-item>
           </div>
