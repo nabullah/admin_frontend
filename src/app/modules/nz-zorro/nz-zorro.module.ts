@@ -7,20 +7,22 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
 const MODULES: any = [
   NzLayoutModule,
   NzMenuModule,
   NzBreadCrumbModule,
   NzIconModule,
-  NzAvatarModule,
-  NzDropDownModule,
-  NzNotificationModule
 ];
 
 @NgModule({
   declarations: [],
   imports: [CommonModule, MODULES],
-  exports: [MODULES],
+  exports: [MODULES]
 })
 export class NzZorroModule {}

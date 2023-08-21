@@ -1,0 +1,19 @@
+.left {
+  background-image: url("../../../assets/Images/josep-martins-nAsdr5DC2Ss-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+a:hover {
+  text-decoration: underline;
+}
+input {
+  padding: 0.55rem 1rem;
+}
+h2 + p {
+  color: #72849a;
+  line-height: 1.8;
+}
+h2 {
+  font-size: 24px;
+}
