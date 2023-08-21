@@ -10,9 +10,10 @@ import { ProductOrderListComponent } from './components/product-order-list/produ
 import { ProductsComponent } from './components/products/products.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { PageNotFoundComponent } from '../shared/components/page-not-found/page-not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AdminSidenavComponent, DashboardComponent, CrmDashboardComponent, ProductOrderListComponent, ProductsComponent, ProductsListComponent, PageNotFoundComponent],
-  imports: [CommonModule, AdminRoutingModule, NzZorroModule],
+  imports: [CommonModule, AdminRoutingModule, NzZorroModule, FormsModule],
 })
 export class AdminModule {}

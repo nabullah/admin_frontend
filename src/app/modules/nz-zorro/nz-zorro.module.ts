@@ -12,6 +12,8 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { NzRateModule } from 'ng-zorro-antd/rate';
 
 const MODULES: any = [
   NzLayoutModule,
@@ -25,7 +27,9 @@ const MODULES: any = [
   NzSelectModule,
   NzInputModule,
   NzButtonModule,
-  NzCheckboxModule
+  NzCheckboxModule,
+  NzTabsModule,
+  NzRateModule
 ];
 
 @NgModule({

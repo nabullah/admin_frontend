@@ -1,1 +1,57 @@
-<p>products works!</p>
+<div class="bg-white wrapper-top d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-4">
+        <nz-avatar nzshape="square" [nzSrc]="productImage" class="ant-avatar ant-avatar-square ant-avatar-image"
+            style="width: 70px; height: 70px; line-height: 70px;">
+            <!-- <img src="./assets/Images/product-1.jpg" class="ng-star-inserted"> -->
+        </nz-avatar>
+        <div class="">
+            <h4 class="mb-0">Skinny Men Blazer</h4>
+            <p class="text-muted mb-0">Code: #5325</p>
+        </div>
+    </div>
+    <div class="edit-btn">
+        <button nz-button="" nztype="primary" class="ant-btn ant-btn-primary d-flex align-items-center"><span nz-icon nzType="edit" nzTheme="outline"></span><span>Edit</span></button>
+    </div>
+</div>
+<div class="tabs">
+    <nz-tabset>
+        <nz-tab nzTitle="Overview">
+            <div class="bg-light d-flex align-items-center gap-3 py-3 px-4">
+                <div class="box flex-fill d-flex align-items-center gap-3 p-4 bg-white">
+                    <span class="left flex-shrink-0" nz-icon nzType="smile" nzTheme="outline" style="color: #00c9a7;"></span>
+                    <div class="right">
+                        <p class="text-muted mb-1">10 ratings</p>
+                        <p class="fs-4"><nz-rate [ngModel]="2.5" nzAllowHalf></nz-rate></p>
+                    </div>
+                </div>
+                <div class="box flex-fill d-flex align-items-center gap-3 p-4 bg-white">
+                    <span class="left flex-shrink-0" nz-icon nzType="shopping" nzTheme="outline" style="color: #3f87f5;"></span>
+                    <div class="right">
+                        <p class="text-muted mb-1">Sales</p>
+                        <p class="fs-4 fw-bold">1,521</p>
+                    </div>
+                </div>
+                <div class="box flex-fill d-flex align-items-center gap-3 p-4 bg-white">
+                   <span class="left flex-shrink-0" nz-icon nzType="message" nzTheme="outline" style="color: #3f87f5;"></span>
+                    <div class="right">
+                        <p class="text-muted mb-1">Reviews</p>
+                        <p class="fs-4 fw-bold">27</p>
+                    </div>
+                </div>
+                <div class="box flex-fill d-flex align-items-center gap-3 p-4 bg-white">
+                   <span class="left flex-shrink-0" >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#3f87f5" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32H544c17.7 0 32 14.3 32 32V288c0 17.7-14.3 32-32 32s-32-14.3-32-32V205.3L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160H384z"/></svg>
+                   </span>
+                    <div class="right">
+                        <p class="text-muted mb-1">Available Stock</p>
+                        <p class="fs-4 fw-bold">152</p>
+                    </div>
+                </div>
+            </div>
+            <div class="basic-info">
+                
+            </div>
+        </nz-tab>
+        <nz-tab nzTitle="Product Images">Content of Tab Pane 2</nz-tab>
+      </nz-tabset>
+</div>

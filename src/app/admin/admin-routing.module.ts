@@ -23,8 +23,6 @@ const routes: Routes = [
 			{ path: "order-list", component: ProductOrderListComponent },
 			{ path: "products", component: ProductsComponent },
 			{ path: "products-list", component: ProductsListComponent },
-			// { path: "not-found", component: PageNotFoundComponent },
-			// { path: "**", redirectTo: "not-found" },
 		],
 	},
 ];

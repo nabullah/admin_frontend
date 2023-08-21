@@ -1,0 +1,23 @@
+.wrapper-top {
+	// margin: -24px;
+	margin: -24px -24px 0px;
+	background-color: #fff;
+	border-bottom: 1px solid #edf2f9;
+	padding: 25px 30px;
+}
+.tabs {
+	@extend .wrapper-top;
+	padding: 25px 0 !important;
+}
+
+:host ::ng-deep.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap {
+	padding: 0 25px;
+}
+
+:host ::ng-deep .ant-tabs-top > .ant-tabs-nav {
+	margin-bottom: 0;
+}
+
+.box .left {
+	font-size: 3rem;
+}
