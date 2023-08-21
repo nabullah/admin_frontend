@@ -22,7 +22,10 @@ const MODULES: any = [
   NzAvatarModule,
   NzDropDownModule,
   NzNotificationModule,
-  NzSelectModule
+  NzSelectModule,
+  NzInputModule,
+  NzButtonModule,
+  NzCheckboxModule
 ];
 
 @NgModule({
