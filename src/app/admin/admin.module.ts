@@ -14,6 +14,11 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AdminSidenavComponent, DashboardComponent, CrmDashboardComponent, ProductOrderListComponent, ProductsComponent, ProductsListComponent, PageNotFoundComponent],
-  imports: [CommonModule, AdminRoutingModule, NzZorroModule, FormsModule],
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    NzZorroModule, FormsModule,
+    FormsModule
+  ],
 })
 export class AdminModule {}

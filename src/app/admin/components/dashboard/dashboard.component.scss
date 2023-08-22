@@ -1,0 +1,72 @@
+.dollar-avatar{
+  background-color:rgb(24, 144, 255);
+}
+.line-chart-avatar{
+  background-color:rgb(0, 201, 167);
+}
+.profile-avatar{
+  background-color:rgb(255, 193, 7);
+}
+.user-avatar{
+  background-color:rgb(136, 108, 255);
+}
+nz-avatar {
+  display:grid;
+  place-items: center;
+}
+.spaced-container{
+  display:grid;
+  row-gap: 1.5vw;
+}
+.analytics-container{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  column-gap: 1vw;
+}
+.product{
+  gap:10px;
+}
+nz-card{
+  min-height:500px;
+}
+.doughnut-chart-container{
+  height:275px;
+  width:100%;
+}
+.upload-list{
+  list-style: none;
+  display:grid;
+  row-gap:1vw;
+}
+.ppt-file{
+  color:rgb(255, 193, 7);
+}
+.xls-file{
+  color:rgb(5, 201, 167);
+}
+.doc-file{
+  color:rgb(63, 135, 245);
+}
+.txt-file{
+  color:rgb(136, 108, 255);
+}
+.pdf-file{
+  color:rgb(222, 68, 54);
+}
+li .file-icon span{
+  font-size: 2vw;
+}
+.timeline-dot{
+  width:30px;
+  display:grid;
+  place-items: center;
+}
+.timeline{
+  height:440px;
+  overflow-y: scroll;
+}
+.list{
+  display:grid;
+  row-gap:1.5vw;
+  grid-template-columns: 1fr;
+}

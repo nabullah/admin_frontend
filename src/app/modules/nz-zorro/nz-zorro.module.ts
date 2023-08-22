@@ -21,6 +21,8 @@ import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzTimelineModule } from 'ng-zorro-antd/timeline';
 
 const MODULES: any = [
   NzLayoutModule,
@@ -42,7 +44,14 @@ const MODULES: any = [
   NzDividerModule,
   NzSwitchModule,
   NzTagModule,
-
+  NzCardModule,
+  NzRadioModule,
+  NzTagModule,
+  NzTableModule,
+  NzProgressModule,
+  NzDividerModule,
+  NzBadgeModule,
+  NzTimelineModule,
   NzCardModule,
   NzRateModule,
   NzBadgeModule,
