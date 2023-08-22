@@ -38,6 +38,9 @@
 	.bg-white {
 		background: var(--primary-bg-dark-shade) !important;
 	}
+	nz-card, .analytics-container > div {
+		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	}
 }
 
 // Light Theme
@@ -45,6 +48,9 @@
 	.wrapper-top,
 	.tabs .ant-tabs-nav-wrap {
 		background: var(--primary-bg-light);
+	}
+	nz-card, .analytics-container > div {
+		box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 	}
 }
 
@@ -56,7 +62,8 @@
 	border-radius: 4px;
 }
 
-body, .timeline {
+body,
+.timeline {
 	&::-webkit-scrollbar {
 		width: 4px;
 		border-radius: 10px;

@@ -59,7 +59,7 @@
         </ng-template>
       </div>
       <div class="col-lg-4 chart-container">
-        <nz-card [nzBordered]="false" nzTitle="Customers">
+        <nz-card [nzBordered]="false" nzTitle="Customers" class="h-100">
           <div class="doughnut-chart-container d-flex justify-content-center">
             <canvas #customerChart></canvas>
           </div>
@@ -93,7 +93,7 @@
 
     <div class="row">
       <div class="col-lg-4 chart-container">
-        <nz-card [nzBordered]="false">
+        <nz-card [nzBordered]="false" class="h-100">
           <div class="d-flex justify-content-between mb-3">
             <div>
               <h5>$17,267</h5>
@@ -138,7 +138,7 @@
 
     <div class="row">
       <div class="uploads col-4">
-        <nz-card nzTitle="Latest Upload"  [nzExtra]="uploadsExtraTemplate">
+        <nz-card nzTitle="Latest Upload"  [nzExtra]="uploadsExtraTemplate" class="h-100">
           <ul class="upload-list">
             <li class="d-flex justify-content-between" *ngFor="let item of latestUpload">
               <div class="file d-flex">
@@ -208,7 +208,7 @@
         </ng-template>
       </div>
       <div class="task col-4">
-        <nz-card nzTitle="Task">
+        <nz-card nzTitle="Task" class="h-100">
           <nz-tabset [nzSize]="'large'" nzCentered [nzTabBarGutter]="50">
             <nz-tab nzTitle="Today">
               <div class="list pt-2">
