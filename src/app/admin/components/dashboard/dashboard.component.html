@@ -95,10 +95,11 @@
 
     <div class="row third-row">
       <div class="col-lg-4">
-        <nz-card [nzBordered]="false" class="h-100 d-flex flex-column justify-content-between"[nzTitle]="titleTem" [nzExtra]="profit">
+        <nz-card [nzBordered]="false" class="h-100 d-flex flex-column justify-content-between" [nzTitle]="titleTem" [nzExtra]="profit">
+          <!-- d-flex flex-column justify-content-between -->
 
           <div class="average-chart-container">
-            <canvas #averageProfitChart></canvas>
+            <canvas #averageProfitChart height="400"></canvas>
           </div>
         </nz-card>
         <ng-template #profit>
@@ -108,7 +109,7 @@
         </ng-template>
         <ng-template #titleTem>
               <h5>$17,267</h5>
-              <span>Avg.Profit</span>
+              <span class="text-muted">Avg.Profit</span>
             <!-- <span><nz-tag class="rounded-pill" nzColor="processing">+ 5.7%</nz-tag></span> -->
         </ng-template>
       </div>
@@ -146,7 +147,7 @@
 
     <div class="row">
       <div class="uploads col-4">
-        <nz-card nzTitle="Latest Upload" [nzExtra]="uploadsExtraTemplate">
+        <nz-card nzTitle="Latest Upload" [nzExtra]="uploadsExtraTemplate" class="h-100">
           <ul class="upload-list">
             <li class="d-flex justify-content-between" *ngFor="let item of latestUpload">
               <div class="file d-flex">
@@ -216,7 +217,7 @@
         </ng-template>
       </div>
       <div class="task col-4">
-        <nz-card nzTitle="Task">
+        <nz-card nzTitle="Task" class="h-100">
           <nz-tabset [nzSize]="'large'" nzCentered [nzTabBarGutter]="50">
             <nz-tab nzTitle="Today">
               <div class="list pt-2">

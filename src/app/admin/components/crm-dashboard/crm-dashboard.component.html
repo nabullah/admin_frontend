@@ -1,6 +1,6 @@
 <div class="container-fluid g-0 bg- transparent">
 	<div class="content">
-		<div class="d-flex gap-3 main bg- transparent">
+		<div class="d-flex gap-3 main analytics-container">
 			<div class="box col p-3 bg-white">
 				<div class="d-flex justify-content-between align-items-center flex-row">
 					<div>
@@ -9,7 +9,8 @@
 							<span>$14,966</span>
 						</h3>
 					</div>
-					<nz-avatar nzIcon="dollar" class="ant-avatar ant-avatar-blue ant-avatar-circle ant-avatar-icon"></nz-avatar>
+					<nz-avatar nzIcon="dollar"
+						class="ant-avatar ant-avatar-blue ant-avatar-circle ant-avatar-icon"></nz-avatar>
 				</div>
 			</div>
 			<div class="box col p-3 bg-white">
@@ -20,7 +21,8 @@
 							<span>26.80%</span>
 						</h3>
 					</div>
-					<nz-avatar nzIcon="bar-chart" class="ant-avatar ant-avatar-blue ant-avatar-circle ant-avatar-icon"></nz-avatar>
+					<nz-avatar nzIcon="bar-chart"
+						class="ant-avatar ant-avatar-blue ant-avatar-circle ant-avatar-icon"></nz-avatar>
 				</div>
 			</div>
 			<div class="box col p-3 bg-white">
@@ -31,7 +33,8 @@
 							<span>3087</span>
 						</h3>
 					</div>
-					<nz-avatar nzIcon="profile" class="ant-avatar ant-avatar-blue ant-avatar-circle ant-avatar-icon"></nz-avatar>
+					<nz-avatar nzIcon="profile"
+						class="ant-avatar ant-avatar-blue ant-avatar-circle ant-avatar-icon"></nz-avatar>
 				</div>
 			</div>
 			<div class="box col p-3 bg-white">
@@ -42,15 +45,17 @@
 							<span>$746.87</span>
 						</h3>
 					</div>
-					<nz-avatar nzIcon="bar-chart" class="ant-avatar ant-avatar-blue ant-avatar-circle ant-avatar-icon"></nz-avatar>
+					<nz-avatar nzIcon="bar-chart"
+						class="ant-avatar ant-avatar-blue ant-avatar-circle ant-avatar-icon"></nz-avatar>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="steps col-lg-3">
-				<nz-card [nzBordered]="false" >
-          <div class="parameter d-flex justify-content-between flex-row mb-3">
-						<h6>Overall Rating</h6></div>
+				<nz-card [nzBordered]="false">
+					<div class="parameter d-flex justify-content-between flex-row mb-3">
+						<h6>Overall Rating</h6>
+					</div>
 					<div class="rating d-flex align-items-center">
 						<h3 class="m-0 me-2 font-weight-normal">4.5</h3>
 						<div>
@@ -72,13 +77,17 @@
 						<h6>Total sales</h6>
 						<div class="d-flex justify-content-between gap-2">
 							<nz-badge nzStatus="processing"></nz-badge>
-							<span><p class="text-muted">Revenue</p></span>
+							<span>
+								<p class="text-muted">Revenue</p>
+							</span>
 							<nz-badge nzStatus="default"></nz-badge>
-							<span><p class="text-muted">Margin</p></span>
+							<span>
+								<p class="text-muted">Margin</p>
+							</span>
 						</div>
 					</div>
-					<div >
-						<canvas id="myChart2" #mychart2 ></canvas>
+					<div>
+						<canvas id="myChart2" #mychart2></canvas>
 					</div>
 				</nz-card>
 			</div>
@@ -89,10 +98,11 @@
 					</div>
 					<div class="d-flex justify-content-center align-items-center flex-column gap-5">
 						<div>
-							<nz-progress [nzPercent]="90" [nzFormat]="formatOne" [nzStrokeWidth]="5" nzType="circle"></nz-progress>
+							<nz-progress [nzPercent]="90" [nzFormat]="formatOne" [nzStrokeWidth]="5"
+								nzType="circle"></nz-progress>
 						</div>
 						<div class="d-flex justify-content-center">
-							<nz-badge nzStatus="processing" ></nz-badge>
+							<nz-badge nzStatus="processing"></nz-badge>
 							<span class="text-muted"> 70% of your Goal</span>
 						</div>
 					</div>
@@ -100,48 +110,49 @@
 			</div>
 		</div>
 		<div class="row">
-      <div class="col-lg-12">
-			<nz-card [nzBordered]="false">
-				<div class="parameter d-flex justify-content-between flex-row mb-4">
-					<h6>Latest Transactions</h6>
-					<button nz-button nzType="default">View All</button>
-				</div>
-				<nz-table #basicTable [nzData]="listOfData" nzShowPagination="false" class="data-table">
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Customer</th>
-							<th>Date</th>
-							<th>Amount</th>
-							<th>Status</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr *ngFor="let data of basicTable.data" >
-							<td>#{{ data.ID }}</td>
-							<td>
-								<div class="d-flex align-items-center gap-2">
-									<img src="../../../../assets/Images/{{ data.productimage }}.jpg" height="45" class="rounded-circle" />
+			<div class="col-lg-12">
+				<nz-card [nzBordered]="false">
+					<div class="parameter d-flex justify-content-between flex-row mb-4">
+						<h6>Latest Transactions</h6>
+						<button nz-button nzType="default">View All</button>
+					</div>
+					<nz-table #basicTable [nzData]="listOfData" nzShowPagination="false" class="data-table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Customer</th>
+								<th>Date</th>
+								<th>Amount</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let data of basicTable.data">
+								<td>#{{ data.ID }}</td>
+								<td>
+									<div class="d-flex align-items-center gap-2">
+										<img src="../../../../assets/Images/{{ data.productimage }}.jpg" height="45"
+											class="rounded-circle" />
 
-									<h6 class="m-l-10 m-b-0">{{ data.Customer }}</h6>
-								</div>
-							</td>
-							<td>{{ data.Date }}</td>
-							<td>${{ data.Amount }}</td>
-							<td>
-								<span *ngIf="data.Status === 'Approved'; else processingBadge">
-									<nz-badge nzStatus="success"></nz-badge>
-								</span>
-								<ng-template #processingBadge>
-									<nz-badge nzStatus="processing"></nz-badge>
-								</ng-template>
-								{{ data.Status }}
-							</td>
-						</tr>
-					</tbody>
-				</nz-table>
-			</nz-card>
+										<h6 class="m-l-10 m-b-0">{{ data.Customer }}</h6>
+									</div>
+								</td>
+								<td>{{ data.Date }}</td>
+								<td>${{ data.Amount }}</td>
+								<td>
+									<span *ngIf="data.Status === 'Approved'; else processingBadge">
+										<nz-badge nzStatus="success"></nz-badge>
+									</span>
+									<ng-template #processingBadge>
+										<nz-badge nzStatus="processing"></nz-badge>
+									</ng-template>
+									{{ data.Status }}
+								</td>
+							</tr>
+						</tbody>
+					</nz-table>
+				</nz-card>
+			</div>
 		</div>
 	</div>
-</div>
 </div>

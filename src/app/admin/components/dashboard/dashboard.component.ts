@@ -30,12 +30,12 @@ export interface task {
 export class DashboardComponent implements OnInit {
 	chartType: any;
 	localData = dashboard;
-	listOfData:product[] = [];
-  latestUpload:any;
-  activity:activity[] = [];
-  today:task[] = [];
-  week:task[] = [];
-  month:task[] = [];
+	listOfData: product[] = [];
+	latestUpload: any;
+	activity: activity[] = [];
+	today: task[] = [];
+	week: task[] = [];
+	month: task[] = [];
 	@ViewChild("revenueChart", { static: true }) revenueChart!: ElementRef;
 	@ViewChild("customerChart", { static: true }) customerChart!: ElementRef;
 	@ViewChild("averageProfitChart", { static: true }) averageProfitChart!: ElementRef;
@@ -46,9 +46,9 @@ export class DashboardComponent implements OnInit {
 		this.listOfData = this.localData.topProducts;
 		this.latestUpload = this.localData.latestUpload;
 		this.activity = this.localData.activity;
-    this.today = this.localData.task.today;
-    this.week = this.localData.task.week;
-    this.month = this.localData.task.month;
+		this.today = this.localData.task.today;
+		this.week = this.localData.task.week;
+		this.month = this.localData.task.month;
 		this.chartInitiation();
 		this.getData();
 	}
@@ -66,10 +66,10 @@ export class DashboardComponent implements OnInit {
 						beginAtZero: false,
 					},
 				},
-        responsive:true,
-        // aspectRatio:2|1
-        maintainAspectRatio : false
-			}
+				responsive: true,
+				// aspectRatio:2|1
+				maintainAspectRatio: false,
+			},
 		});
 
 		this.chartType = new Chart(this.customerChart.nativeElement, {
@@ -79,14 +79,14 @@ export class DashboardComponent implements OnInit {
 				labels: this.localData.customers.labels,
 			},
 			options: {
-        responsive:true,
-        cutout:"90%",
-        aspectRatio: 1,
-        plugins:{
-          legend:{
-            display:false
-          }
-        }
+				responsive: true,
+				cutout: "75%",
+				aspectRatio: 1,
+				plugins: {
+					legend: {
+						display: false,
+					},
+				},
 			},
 		});
 
@@ -105,11 +105,10 @@ export class DashboardComponent implements OnInit {
 						stacked: true,
 					},
 				},
-        responsive:true,
-        // aspectRatio:2,
-        maintainAspectRatio : false
-
-			}
+				responsive: true,
+				// aspectRatio:2,
+				// maintainAspectRatio: false,
+			},
 		});
 	}
 
