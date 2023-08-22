@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { APP_INITIALIZER, NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -9,6 +9,16 @@ import { ErrorInterceptor } from "./interceptor/error.interceptor";
 import { SharedModule } from "./shared/shared.module";
 import { LoadingInterceptor } from "./interceptor/loading.interceptor";
 import { AuthorizationInterceptor } from "./interceptor/authorization.interceptor";
+import { ThemeService } from "./services/theme.service";
+
+export const AppInitializerProvider = {
+	provide: APP_INITIALIZER,
+	useFactory: (themeService: ThemeService) => () => {
+		return themeService.loadTheme();
+	},
+	deps: [ThemeService],
+	multi: true,
+};
 
 @NgModule({
 	declarations: [AppComponent],
@@ -30,6 +40,7 @@ import { AuthorizationInterceptor } from "./interceptor/authorization.intercepto
 			useClass: AuthorizationInterceptor,
 			multi: true,
 		},
+		AppInitializerProvider,
 	],
 	bootstrap: [AppComponent],
 })

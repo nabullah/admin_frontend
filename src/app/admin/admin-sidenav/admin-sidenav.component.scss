@@ -1,6 +1,5 @@
 .logo {
 	height: 32px;
-	background: rgba(255, 255, 255, 0.2);
 	img {
 		border-radius: 4px;
 	}
@@ -9,7 +8,7 @@
 	padding: 1.97rem;
 }
 
-.layout {
+.app-layout {
 	min-height: 100vh;
 }
 
@@ -35,11 +34,10 @@ nz-sider.collapsed {
 }
 
 nz-header {
-	background: #fff;
 	padding: 0;
 	position: sticky;
 	top: 0;
-  z-index: 1;
+	z-index: 1;
 }
 
 nz-content {
@@ -71,3 +69,4 @@ nz-footer {
 .ant-layout-sider {
 	background-color: #fff;
 }
+

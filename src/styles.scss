@@ -1,9 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+// @import url("./styles/themes/mixin.less");
+
 * {
 	font-family: "Roboto", sans-serif;
 	font-style: normal;
+}
+
+:root {
+	--primary-bg-light: #fff;
+
+	--primary-bg-dark: #001529;
+	--primary-bg-dark-shade: #3f87f508;
+	--border-color: #303030;
+}
+
+// Dark theme
+.dark {
+	.menu-sidebar {
+		background: var(--primary-bg-dark) !important;
+		border-right: 1px solid var(--primary-bg-dark) !important;
+	}
+	.inner-content,
+	.theme-bg {
+		background: var(--primary-bg-dark) !important;
+	}
+
+	.border,
+	.border-end,
+	.border-start,
+	.border-bottom,
+	.border-top {
+		border: 1px solid var(--border-color) !important;
+	}
+
+	.bg-white {
+		background: var(--primary-bg-dark-shade) !important;
+	}
+}
+
+// Light Theme
+.default {
+	.wrapper-top,
+	.tabs .ant-tabs-nav-wrap {
+		background: var(--primary-bg-light);
+	}
 }
 
 .hover-primary:hover {
@@ -75,4 +117,8 @@ router-outlet + * {
 
 .text-muted {
 	color: #72849ab3 !important;
+}
+
+.text-color-shade-1 {
+	color: #53535f;
 }

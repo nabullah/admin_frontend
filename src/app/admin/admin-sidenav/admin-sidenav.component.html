@@ -1,5 +1,5 @@
-<nz-layout class="layout">
-    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" class="border-end"
+<nz-layout class="app-layout">
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" class="border-end menu-sidebar" nzBreakpoint="md"
         [ngClass]="isCollapsed ? 'collapsed' : 'expanded'">
         <div *ngIf="!isCollapsed" class="logo padding-4 d-flex align-items-center justify-content-start gap-3">
             <img src="../../../assets/logo.jpg" class="img-fluid" width="40px">
@@ -8,6 +8,12 @@
         <div *ngIf="isCollapsed" class="logo m-3 d-flex align-items-center justify-content-center">
             <img src="../../../assets/logo.jpg" class="img-fluid" width="40px">
         </div>
+        <!-- <div class="sidebar-logo">
+            <a href="https://ng.ant.design/" target="_blank">
+              <img src="../../../assets/logo.jpg" alt="logo" width="40px">
+              <h1>Admin</h1>
+            </a>
+          </div> -->
         <ul nz-menu nzTheme="light" nzMode="inline" class="border-top">
             <li nz-menu-item [nzMatchRouter]="true" [routerLink]="['/admin/dashboard']">
                 <span nz-icon nzType="dashboard"></span>
@@ -41,8 +47,10 @@
                 <div class="left">
                     <span class="trigger hover-primary p-3" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
                         (click)="isCollapsed = !isCollapsed"></span>
+                   
                 </div>
                 <div class="right">
+                    
                     <nz-avatar [nzSize]="35" nzIcon="user" nz-dropdown nzTrigger="click"
                         [nzDropdownMenu]="menu"></nz-avatar>
                     <nz-dropdown-menu #menu="nzDropdownMenu">
@@ -58,6 +66,9 @@
                             <li nz-menu-divider></li>
                             <li nz-menu-item><span nz-icon nzType="user" nzTheme="outline" class="me-2 py-2"></span>Edit Profile</li>
                             <li nz-menu-item><span nz-icon nzType="lock" nzTheme="outline" class="me-2 py-2"></span>Account Setting</li>
+                            <li nz-menu-item><span nz-icon nzType="bg-colors" nzTheme="outline" class="me-2 py-2"></span>Dark Theme :<span class="header-trigger ms-2" (click)="toggleTheme()">
+                                <nz-switch [(ngModel)]="switchValue"></nz-switch> 
+                            </span></li>
                             <li nz-menu-item (click)="logOut()"><span nz-icon nzType="logout" nzTheme="outline" class="me-2 py-2"></span>Logout</li>
 
                         </ul>

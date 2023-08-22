@@ -1,4 +1,4 @@
-<div class="bg-white wrapper-top d-flex align-items-center justify-content-between">
+<div class="wrapper-top d-flex align-items-center justify-content-between">
     <div class="d-flex align-items-center gap-4">
         <nz-avatar nzshape="square" [nzSrc]="productImage" class="ant-avatar ant-avatar-square ant-avatar-image"
             style="width: 70px; height: 70px; line-height: 70px;">
@@ -10,48 +10,72 @@
         </div>
     </div>
     <div class="edit-btn">
-        <button nz-button="" nztype="primary" class="ant-btn ant-btn-primary d-flex align-items-center"><span nz-icon nzType="edit" nzTheme="outline"></span><span>Edit</span></button>
+        <button nz-button="" nztype="primary" class="ant-btn ant-btn-primary d-flex align-items-center"><span nz-icon
+                nzType="edit" nzTheme="outline"></span><span>Edit</span></button>
     </div>
 </div>
-<div class="tabs">
+<div class="tabs theme-bg">
     <nz-tabset>
         <nz-tab nzTitle="Overview">
-            <div class="bg-light d-flex align-items-center gap-3 py-3 px-4">
-                <div class="box flex-fill d-flex align-items-center gap-3 p-4 bg-white">
-                    <span class="left flex-shrink-0" nz-icon nzType="smile" nzTheme="outline" style="color: #00c9a7;"></span>
+            <div class="bg-light d-flex align-items-center gap-3 py-3 px-4 theme-bg">
+                <div class="box flex-fill border d-flex align-items-center gap-3 p-4 bg-white rounded">
+                    <span class="left flex-shrink-0" nz-icon nzType="smile" nzTheme="outline"
+                        style="color: #00c9a7;"></span>
                     <div class="right">
                         <p class="text-muted mb-1">10 ratings</p>
-                        <p class="fs-4"><nz-rate [ngModel]="2.5" nzAllowHalf></nz-rate></p>
+                        <p class="fs-4 mb-0"><nz-rate [ngModel]="2.5" nzAllowHalf></nz-rate></p>
                     </div>
                 </div>
-                <div class="box flex-fill d-flex align-items-center gap-3 p-4 bg-white">
-                    <span class="left flex-shrink-0" nz-icon nzType="shopping" nzTheme="outline" style="color: #3f87f5;"></span>
+                <div class="box flex-fill border d-flex align-items-center gap-3 p-4 bg-white rounded">
+                    <span class="left flex-shrink-0" nz-icon nzType="shopping" nzTheme="outline"
+                        style="color: #3f87f5;"></span>
                     <div class="right">
                         <p class="text-muted mb-1">Sales</p>
-                        <p class="fs-4 fw-bold">1,521</p>
+                        <p class="fs-4 fw-bold mb-0">1,521</p>
                     </div>
                 </div>
-                <div class="box flex-fill d-flex align-items-center gap-3 p-4 bg-white">
-                   <span class="left flex-shrink-0" nz-icon nzType="message" nzTheme="outline" style="color: #3f87f5;"></span>
+                <div class="box flex-fill border d-flex align-items-center gap-3 p-4 bg-white rounded">
+                    <span class="left flex-shrink-0" nz-icon nzType="message" nzTheme="outline"
+                        style="color: #3f87f5;"></span>
                     <div class="right">
                         <p class="text-muted mb-1">Reviews</p>
-                        <p class="fs-4 fw-bold">27</p>
+                        <p class="fs-4 fw-bold mb-0">27</p>
                     </div>
                 </div>
-                <div class="box flex-fill d-flex align-items-center gap-3 p-4 bg-white">
-                   <span class="left flex-shrink-0" >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#3f87f5" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32H544c17.7 0 32 14.3 32 32V288c0 17.7-14.3 32-32 32s-32-14.3-32-32V205.3L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160H384z"/></svg>
-                   </span>
+                <div class="box flex-fill border d-flex align-items-center gap-3 p-4 bg-white rounded">
+                    <span class="left flex-shrink-0 d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#3f87f5" height="1em"
+                            viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32H544c17.7 0 32 14.3 32 32V288c0 17.7-14.3 32-32 32s-32-14.3-32-32V205.3L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160H384z" />
+                        </svg>
+                    </span>
                     <div class="right">
                         <p class="text-muted mb-1">Available Stock</p>
-                        <p class="fs-4 fw-bold">152</p>
+                        <p class="fs-4 fw-bold mb-0">152</p>
                     </div>
                 </div>
             </div>
-            <div class="basic-info">
-                
-            </div>
+            <nz-card nzTitle="Basic Info" class="basic-info rounded border py-3 mx-4">
+                <div class="row">
+                    <div class="col-3"><span class="text-color-shade-1">Price :</span></div>
+                    <div class="col-9"><span class="fs-5 fw-bold">$199.00</span></div>
+                    <nz-divider></nz-divider>
+                    <div class="col-3"><span class="text-color-shade-1">Category :</span></div>
+                    <div class="col-9"><span class="text-color-shade-1">Cloths</span></div>
+                    <nz-divider></nz-divider>
+                    <div class="col-3"><span class="text-color-shade-1">Brand :</span></div>
+                    <div class="col-9"><span class="text-color-shade-1">H&M</span></div>
+                    <nz-divider></nz-divider>
+                    <div class="col-3"><span class="text-color-shade-1">Tax Rate :</span></div>
+                    <div class="col-9"><span class="text-color-shade-1">10%</span></div>
+                    <nz-divider></nz-divider>
+                    <div class="col-3"><span class="text-color-shade-1">Status :</span></div>
+                    
+                    <div class="col-9"><span class="chip"><nz-tag [nzColor]="'green'">In Stock</nz-tag></span></div>
+                </div>
+            </nz-card>
         </nz-tab>
         <nz-tab nzTitle="Product Images">Content of Tab Pane 2</nz-tab>
-      </nz-tabset>
+    </nz-tabset>
 </div>
