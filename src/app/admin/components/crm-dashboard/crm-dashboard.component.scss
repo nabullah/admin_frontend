@@ -1,0 +1,43 @@
+.main{
+  gap:10px;
+}
+.content{
+  display:grid;
+  row-gap: 5vh;
+}
+nz-avatar{
+ display:grid;
+ place-items: center;
+ height:40px;
+ width:40px;
+
+}
+[nzIcon="dollar"]{
+  background-color:#3f87f5 ;
+
+}
+[nzIcon="profile"]{
+  background-color:#de4436 ;
+
+}
+
+[nzIcon="bar-chart"]{
+  background-color:#ffc107 ;
+
+}
+.steps{
+  font-display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-success{
+ color: #00c9a7!important
+}
+nz-progress {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+nz-card{
+  height:100%;
+}

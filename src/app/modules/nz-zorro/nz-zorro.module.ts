@@ -13,12 +13,14 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
-import { NzRateModule } from 'ng-zorro-antd/rate';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzRateModule } from 'ng-zorro-antd/rate';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzProgressModule } from 'ng-zorro-antd/progress';
 
 const MODULES: any = [
   NzLayoutModule,
@@ -39,8 +41,14 @@ const MODULES: any = [
   NzTableModule,
   NzDividerModule,
   NzSwitchModule,
-  NzTagModule
-  
+  NzTagModule,
+
+  NzCardModule,
+  NzRateModule,
+  NzBadgeModule,
+  NzProgressModule,
+  NzTableModule,
+  NzDividerModule
 ];
 
 @NgModule({
