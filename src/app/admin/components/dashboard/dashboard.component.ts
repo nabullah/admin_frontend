@@ -67,7 +67,8 @@ export class DashboardComponent implements OnInit {
 					},
 				},
         responsive:true,
-        aspectRatio:2|1
+        // aspectRatio:2|1
+        maintainAspectRatio : false
 			}
 		});
 
@@ -78,10 +79,9 @@ export class DashboardComponent implements OnInit {
 				labels: this.localData.customers.labels,
 			},
 			options: {
-				maintainAspectRatio:true,
         responsive:true,
         cutout:"90%",
-        aspectRatio:1,
+        aspectRatio: 1,
         plugins:{
           legend:{
             display:false
@@ -106,7 +106,9 @@ export class DashboardComponent implements OnInit {
 					},
 				},
         responsive:true,
-        aspectRatio:1
+        // aspectRatio:2,
+        maintainAspectRatio : false
+
 			}
 		});
 	}

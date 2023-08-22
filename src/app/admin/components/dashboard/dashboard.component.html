@@ -49,7 +49,9 @@
     <div class="row">
       <div class="col-lg-8 chart-container">
         <nz-card [nzBordered]="false" nzTitle="Total Revenue" [nzExtra]="radioButtons">
-          <canvas #revenueChart></canvas>
+          <div class="revenue-chart-container">
+            <canvas #revenueChart></canvas>
+          </div>
         </nz-card>
         <ng-template #radioButtons>
           <nz-radio-group ngModel="month" nzSize="large">
@@ -59,7 +61,7 @@
         </ng-template>
       </div>
       <div class="col-lg-4 chart-container">
-        <nz-card [nzBordered]="false" nzTitle="Customers" class="h-100">
+        <nz-card [nzBordered]="false" nzTitle="Customers" class="h-100 d-flex flex-column justify-content-between">
           <div class="doughnut-chart-container d-flex justify-content-center">
             <canvas #customerChart></canvas>
           </div>
@@ -91,21 +93,27 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-4 chart-container">
-        <nz-card [nzBordered]="false" class="h-100">
+    <div class="row third-row">
+      <div class="col-lg-4">
+        <nz-card [nzBordered]="false" class="h-100 d-flex flex-column justify-content-between"[nzTitle]="titleTem" [nzExtra]="profit">
+
+          <div class="average-chart-container">
+            <canvas #averageProfitChart></canvas>
+          </div>
+        </nz-card>
+        <ng-template #profit>
           <div class="d-flex justify-content-between mb-3">
-            <div>
-              <h5>$17,267</h5>
-              <span>Avg.Profit</span>
-            </div>
             <span><nz-tag class="rounded-pill" nzColor="processing">+ 5.7%</nz-tag></span>
           </div>
-          <canvas #averageProfitChart></canvas>
-        </nz-card>
+        </ng-template>
+        <ng-template #titleTem>
+              <h5>$17,267</h5>
+              <span>Avg.Profit</span>
+            <!-- <span><nz-tag class="rounded-pill" nzColor="processing">+ 5.7%</nz-tag></span> -->
+        </ng-template>
       </div>
       <div class="col-lg-8 chart-container">
-        <nz-card [nzBordered]="false" nzTitle="Total Revenue" [nzExtra]="viewMoreButton">
+        <nz-card [nzBordered]="false" nzTitle="Total Revenue" [nzExtra]="viewMoreButton" class="h-100">
           <nz-table #basicTable nzShowPagination="false" [nzData]="listOfData">
             <thead>
               <tr>
@@ -138,7 +146,7 @@
 
     <div class="row">
       <div class="uploads col-4">
-        <nz-card nzTitle="Latest Upload"  [nzExtra]="uploadsExtraTemplate" class="h-100">
+        <nz-card nzTitle="Latest Upload" [nzExtra]="uploadsExtraTemplate">
           <ul class="upload-list">
             <li class="d-flex justify-content-between" *ngFor="let item of latestUpload">
               <div class="file d-flex">
@@ -208,7 +216,7 @@
         </ng-template>
       </div>
       <div class="task col-4">
-        <nz-card nzTitle="Task" class="h-100">
+        <nz-card nzTitle="Task">
           <nz-tabset [nzSize]="'large'" nzCentered [nzTabBarGutter]="50">
             <nz-tab nzTitle="Today">
               <div class="list pt-2">

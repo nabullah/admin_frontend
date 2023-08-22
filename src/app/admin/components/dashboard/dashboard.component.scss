@@ -1,72 +1,84 @@
-.dollar-avatar{
-  background-color:rgb(24, 144, 255);
+.dollar-avatar {
+	background-color: rgb(24, 144, 255);
 }
-.line-chart-avatar{
-  background-color:rgb(0, 201, 167);
+.line-chart-avatar {
+	background-color: rgb(0, 201, 167);
 }
-.profile-avatar{
-  background-color:rgb(255, 193, 7);
+.profile-avatar {
+	background-color: rgb(255, 193, 7);
 }
-.user-avatar{
-  background-color:rgb(136, 108, 255);
+.user-avatar {
+	background-color: rgb(136, 108, 255);
 }
 nz-avatar {
-  display:grid;
-  place-items: center;
+	display: grid;
+	place-items: center;
 }
-.spaced-container{
-  display:grid;
-  row-gap: 1.5vw;
+.spaced-container {
+	display: grid;
+	row-gap: 1.5vw;
 }
-.analytics-container{
-  display:grid;
-  grid-template-columns: repeat(4,1fr);
-  column-gap: 1vw;
+.analytics-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 1vw;
 }
-.product{
-  gap:10px;
+.product {
+	gap: 10px;
 }
-nz-card{
-  min-height:500px;
+.upload-list {
+	list-style: none;
+	display: grid;
+	row-gap: 1vw;
 }
-.doughnut-chart-container{
-  height:275px;
-  width:100%;
+.ppt-file {
+	color: rgb(255, 193, 7);
 }
-.upload-list{
-  list-style: none;
-  display:grid;
-  row-gap:1vw;
+.xls-file {
+	color: rgb(5, 201, 167);
 }
-.ppt-file{
-  color:rgb(255, 193, 7);
+.doc-file {
+	color: rgb(63, 135, 245);
 }
-.xls-file{
-  color:rgb(5, 201, 167);
+.txt-file {
+	color: rgb(136, 108, 255);
 }
-.doc-file{
-  color:rgb(63, 135, 245);
+.pdf-file {
+	color: rgb(222, 68, 54);
 }
-.txt-file{
-  color:rgb(136, 108, 255);
+li .file-icon span {
+	font-size: 2vw;
 }
-.pdf-file{
-  color:rgb(222, 68, 54);
+.timeline-dot {
+	width: 30px;
+	display: grid;
+	place-items: center;
 }
-li .file-icon span{
-  font-size: 2vw;
+.timeline {
+	height: 440px;
+	overflow-y: scroll;
 }
-.timeline-dot{
-  width:30px;
-  display:grid;
-  place-items: center;
+.list {
+	display: grid;
+	row-gap: 1.5vw;
+	grid-template-columns: 1fr;
 }
-.timeline{
-  height:440px;
-  overflow-y: scroll;
+  nz-card {
+    min-height: 500px;
+  }
+.doughnut-chart-container {
+  height: 275px;
 }
-.list{
-  display:grid;
-  row-gap:1.5vw;
-  grid-template-columns: 1fr;
-}
+// @media only screen and (min-width: 110px) and (max-width: 1400px) {
+// 	.revenue-chart-container {
+//     height: 38vh;
+//   }
+//   .average-chart-container {
+//     height: 41vh;
+//   }
+//
+
+//   .third-row nz-card {
+//     height: 55vh;
+//   }
+// }
