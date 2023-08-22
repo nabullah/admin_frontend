@@ -18,14 +18,14 @@ export class CrmDashboardComponent {
 	myLinechart!: Chart;
 	@ViewChild("mychart2", { static: true }) mychart2!: ElementRef;
 	mybarchart!: Chart;
-
+  formatOne = (percent: number): string => `$${percent},237`;
 	value = 5;
 	listOfData: Person[] = [
 		{
 			productimage: "thumb-1",
 			ID: 1,
 			Customer: "Erin Gonzale",
-			Date: "8 may 2019",
+			Date: "8 May 2019",
 			Amount: 137.002,
 			Status: "Approved",
 		},
@@ -33,7 +33,7 @@ export class CrmDashboardComponent {
 			productimage: "thumb-2",
 			ID: 2,
 			Customer: "Erin Gonzale",
-			Date: "10 may 2019",
+			Date: "10 May 2019",
 			Amount: 136.005,
 			Status: "Approved",
 		},
@@ -41,7 +41,7 @@ export class CrmDashboardComponent {
 			productimage: "thumb-3",
 			ID: 3,
 			Customer: "Erin Gonzale",
-			Date: "12 may 2019",
+			Date: "12 May 2019",
 			Amount: 237.007,
 			Status: "Approved",
 		},
@@ -49,15 +49,15 @@ export class CrmDashboardComponent {
 			productimage: "thumb-4",
 			ID: 4,
 			Customer: "Martin luthar",
-			Date: "14 may 2019",
+			Date: "14 May 2019",
 			Amount: 437.006,
-			Status: "pending",
+			Status: "Pending",
 		},
 		{
 			productimage: "thumb-5",
 			ID: 5,
 			Customer: "Martin Gonzale",
-			Date: "16 may 2019",
+			Date: "16 May 2019",
 			Amount: 197.005,
 			Status: "Approved",
 		},
@@ -65,9 +65,9 @@ export class CrmDashboardComponent {
 			productimage: "thumb-1",
 			ID: 6,
 			Customer: "Erin Gonzale",
-			Date: "118 may 2019",
+			Date: "18 May 2019",
 			Amount: 137.001,
-			Status: "pending",
+			Status: "Pending",
 		},
 	];
 
@@ -97,8 +97,8 @@ export class CrmDashboardComponent {
 						display: false,
 					},
 				},
-        aspectRatio:1|1.5,
         responsive:true,
+        maintainAspectRatio:true,
         scales:{
           x:{
             grid:{

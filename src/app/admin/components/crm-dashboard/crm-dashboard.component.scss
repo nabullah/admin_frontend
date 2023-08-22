@@ -34,10 +34,19 @@ nz-avatar{
  color: #00c9a7!important
 }
 nz-progress {
-  margin-right: 8px;
   margin-bottom: 8px;
   display: inline-block;
 }
 nz-card{
   height:100%;
 }
+
+::ng-deep{
+  nz-badge{
+    .ant-badge-status-dot{
+      height:8px;
+      width:8px ;
+    }
+  }
+}
+
