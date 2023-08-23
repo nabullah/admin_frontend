@@ -7,6 +7,7 @@ import { ProductOrderListComponent } from "./components/product-order-list/produ
 import { ProductsComponent } from "./components/products/products.component";
 import { ProductsListComponent } from "./components/products-list/products-list.component";
 import { PageNotFoundComponent } from "../shared/components/page-not-found/page-not-found.component";
+import { BlogEditorComponent } from "./components/blog-editor/blog-editor.component";
 
 const routes: Routes = [
 	{
@@ -23,6 +24,7 @@ const routes: Routes = [
 			{ path: "order-list", component: ProductOrderListComponent },
 			{ path: "products", component: ProductsComponent },
 			{ path: "products-list", component: ProductsListComponent },
+			{ path: "blog-edit", component: BlogEditorComponent },
 		],
 	},
 ];
