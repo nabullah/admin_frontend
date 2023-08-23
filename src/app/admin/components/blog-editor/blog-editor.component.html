@@ -1,0 +1,7 @@
+<div class="container-fluid g-0">
+  <div class="NgxEditor__Wrapper">
+    <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
+    <ngx-editor [editor]="editor" [ngModel]="html" [disabled]="false" (ngModelChange)="editorChange($event)" [placeholder]="'Type here...'"></ngx-editor>
+  </div>
+</div>
+
