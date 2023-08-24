@@ -1,0 +1,17 @@
+img{
+  width:100%;
+  object-fit: scale-down;
+}
+.button:hover{
+  background-color: rgb(237, 241, 243);
+}
+.text-right{
+  text-align: right;
+}
+.main-content{
+  display: grid;
+  row-gap: 4vh;
+}
+.delete{
+  color:rgb(198, 16, 16);
+}

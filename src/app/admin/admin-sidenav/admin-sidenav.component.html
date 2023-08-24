@@ -39,6 +39,10 @@
                   </li>
                 </ul>
               </li>
+              <li nz-menu-item [nzMatchRouter]="true" [routerLink]="['/admin/blog']">
+                <span nz-icon nzType="user"></span>
+                <span>Blog</span>
+            </li>
         </ul>
     </nz-sider>
     <nz-layout class="right-layout" [ngStyle]="{'margin-left': isCollapsed ? '0' : '290px' }">
@@ -47,10 +51,10 @@
                 <div class="left">
                     <span class="trigger hover-primary p-3" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
                         (click)="isCollapsed = !isCollapsed"></span>
-                   
+
                 </div>
                 <div class="right">
-                    
+
                     <nz-avatar [nzSize]="35" nzIcon="user" nz-dropdown nzTrigger="click"
                         [nzDropdownMenu]="menu"></nz-avatar>
                     <nz-dropdown-menu #menu="nzDropdownMenu">
@@ -67,7 +71,7 @@
                             <li nz-menu-item><span nz-icon nzType="user" nzTheme="outline" class="me-2 py-2"></span>Edit Profile</li>
                             <li nz-menu-item><span nz-icon nzType="lock" nzTheme="outline" class="me-2 py-2"></span>Account Setting</li>
                             <li nz-menu-item><span nz-icon nzType="bg-colors" nzTheme="outline" class="me-2 py-2"></span>Dark Theme :<span class="header-trigger ms-2" (click)="toggleTheme()">
-                                <nz-switch [(ngModel)]="switchValue"></nz-switch> 
+                                <nz-switch [(ngModel)]="switchValue"></nz-switch>
                             </span></li>
                             <li nz-menu-item (click)="logOut()"><span nz-icon nzType="logout" nzTheme="outline" class="me-2 py-2"></span>Logout</li>
 

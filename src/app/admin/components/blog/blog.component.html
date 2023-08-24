@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="row main-content">
+
+		<div class="col-12" *ngFor="let blog of data">
+			<nz-card [nzBordered]="false">
+				<div class="d-flex gap-3">
+					<div class="col-lg-4">
+						<img src="../../../../assets/Images/{{blog.blogImg}}.jpg" alt="blog" />
+					</div>
+					<div class="col-lg-8">
+						<div class="d-flex justify-content-between">
+							<div class="text">
+								<h5 class="m-b-10">{{blog.heading}}</h5>
+							</div>
+							<div class="delete-edit d-flex align-items-center">
+                <span nz-icon nzType="edit" nzTheme="outline"></span>
+                <a nz-button class="button font-weight-semibold" nzType="link">Edit</a>
+								<a nz-button class="button delete font-weight-semibold" nzType="link">Delete</a>
+                <span nz-icon nzType="delete" nzTheme="outline"></span>
+							</div>
+						</div>
+						<div class="d-flex align-items-center">
+							<div class="d-flex align-items-center gap-2">
+								<div class="profile"><img src=".../../../../../../assets/Images/{{blog.avatar}}.jpg" height="30" class="rounded-circle"/></div>
+								<div class="m-l-10">
+									<span class="text-muted fw-bolder">{{blog.username}}</span>
+								</div>
+							</div>
+							<div class="text-gray">
+								<nz-divider nzType="vertical"></nz-divider>
+
+								<span class="text-muted">{{blog.createdAt}}</span>
+							</div>
+						</div>
+						<p class=" mt-3 text-muted pe-4">
+							{{blog.content}}
+						</p>
+						<div class="text-right">
+							<a nz-button class="button font-weight-semibold" [queryParams]="{ id:blog.id }" nzType="link" routerLink="blogpost">Read More</a>
+						</div>
+					</div>
+				</div>
+			</nz-card>
+		</div>
+
+    <div class="text-center">
+      <nz-pagination [nzPageIndex]="1" [nzResponsive]	="true" [nzTotal]="50"></nz-pagination>
+    </div>
+	</div>
+</div>

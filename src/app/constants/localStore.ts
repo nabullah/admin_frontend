@@ -223,3 +223,60 @@ export const dashboard = {
     ],
   }
 }
+
+export const blogData = [
+  {
+    id:"1",
+    blogImg:"blog-1",
+    heading:"You should know about Enlink",
+    username:"Derry micheal",
+    createdAt:"Jan 2, 2019",
+    content:"Jelly-o sesame snaps halvah croissant oat cake cookie. Cheesecake bear topping. Chupa chups apple pie carrot cake chocolate cake caramels",
+    avatar:"thumb-1"
+  },
+  {
+    id:"2",
+    blogImg:"blog-5",
+    heading:"Enlink Has The Answer",
+    username:"Marshall Nichols",
+    createdAt:"Jan 6, 2019",
+    content:"Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar",
+    avatar:"thumb-2"
+  },
+  {
+    id:"3",
+    blogImg:"blog-3",
+    heading:"You should kThe Miracle Of Enlink",
+    username:"Virgil Gonzales",
+    createdAt:"Jan 8, 2019",
+    content:"Climb leg rub face on everything give attitude nap all day for under the bed. Chase mice attack feet but rub face on everything hopped up on goofballs.    ",
+    avatar:"thumb-3"
+  },
+  {
+    id:"4",
+    blogImg:"blog-4",
+    heading:"Enlink Has The Answer    ",
+    username:" Nicole Wyne",
+    createdAt:"Jan 16, 2019",
+    content:"European minnow priapumfish mosshead warbonnet shrimpfish bigscale. Cutlassfish porbeagle shark ricefish walking catfish glassfish Black swallower.",
+    avatar:"thumb-4"
+  },
+  {
+    id:"5",
+    blogImg:"blog-5",
+    heading:"oSeven Clarifications On Hand    ",
+    username:"Riley Newman",
+    createdAt:"Jan 22, 2019",
+    content:"Let’s see what Chef Dee got that they don’t want us to eat. Let me be clear, you have to make it through the jungle to make it to paradise, that’s the key.    ",
+    avatar:"thumb-5"
+  },
+  {
+    id:"6",
+    blogImg:"blog-6",
+    heading:"You should know about Enlink",
+    username:"Derry micheal",
+    createdAt:"Jan 2, 2019",
+    content:"Jelly-o sesame snaps halvah croissant oat cake cookie. Cheesecake bear topping. Chupa chups apple pie carrot cake chocolate cake caramels",
+    avatar:"thumb-1"
+  },
+]
