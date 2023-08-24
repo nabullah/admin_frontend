@@ -1,0 +1,27 @@
+img{
+  width:100%;
+}
+.blockquote{
+  font-family: serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 25px;
+  line-height: 1.58;
+  border-left: 3px solid #2a2a2a;
+  padding-left: 20px;
+  padding-bottom: 2px;
+}
+::ng-deep{
+  .share-icon  {
+    span{
+     svg{
+       height:20px;
+       width:20px;
+     }
+    }
+   }
+}
+.demo-loadmore-list {
+  min-height: 350px;
+}
+
