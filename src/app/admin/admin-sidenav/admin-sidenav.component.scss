@@ -43,7 +43,6 @@ nz-header {
 	}
 }
 
-
 nz-content {
 	overflow: initial;
 }
@@ -77,4 +76,18 @@ nz-footer {
 		width: auto !important;
 		margin: auto !important;
 	}
+}
+
+.notification-menu {
+	min-width: 385px;
+	border-radius: 0.4rem;
+	height: 445px;
+	overflow: auto;
+}
+
+.notification-wrapper{
+	// position: sticky;
+	// top: 0;
+	// background: rgba(var(--primary-bg-dark));
+	// z-index: 1;
 }

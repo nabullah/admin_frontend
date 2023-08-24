@@ -24,7 +24,8 @@
 	--v-theme-surface-dark: 47, 51, 73;
 	--v-theme-on-background-dark: 208, 212, 241;
 
-	--border-color: #303030;
+	--border-color: rgba(208, 212, 241);
+	--v-theme-perfect-scrollbar-thumb: 74, 80, 114;
 
 	--v-high-emphasis-opacity: 0.78;
 	--v-selected-opacity: 0.06;
@@ -78,7 +79,8 @@
 
 body,
 .timeline,
-.editor {
+.editor,
+.notification-menu {
 	&::-webkit-scrollbar {
 		width: 4px;
 		border-radius: 10px;
@@ -87,7 +89,7 @@ body,
 		background: #ffffff;
 	}
 	&::-webkit-scrollbar-thumb {
-		background: #675b71;
+		background: rgba(var(--v-theme-perfect-scrollbar-thumb));
 		border-radius: 4px;
 	}
 }
@@ -143,6 +145,16 @@ router-outlet + * {
 
 .text-color-shade-1 {
 	color: #53535f;
+}
+
+.icon-size-1 {
+	font-size: 1.3rem;
+}
+
+.ant-dropdown-menu-item-divider {
+	background-color: var(--border-color) !important;
+	opacity: 0.1 !important;
+	height: 0.3px !important;
 }
 
 // Dark theme
@@ -211,7 +223,7 @@ router-outlet + * {
 		background: none;
 	}
 
-	.text-color-shade-1{
+	.text-color-shade-1 {
 		color: rgba(var(--primary-bg-light));
 	}
 }
