@@ -13,14 +13,17 @@ import { PageNotFoundComponent } from '../shared/components/page-not-found/page-
 import { FormsModule } from '@angular/forms';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogpostComponent } from './components/blogpost/blogpost.component';
+import { BlogEditorComponent } from './components/blog-editor/blog-editor.component';
+import { NgxEditorModule } from 'ngx-editor';
 
 @NgModule({
-  declarations: [AdminSidenavComponent, DashboardComponent, CrmDashboardComponent, ProductOrderListComponent, ProductsComponent, ProductsListComponent, PageNotFoundComponent, BlogComponent, BlogpostComponent],
+  declarations: [AdminSidenavComponent, DashboardComponent, CrmDashboardComponent, ProductOrderListComponent, ProductsComponent, ProductsListComponent, PageNotFoundComponent, BlogComponent, BlogpostComponent, BlogEditorComponent, ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     NzZorroModule, FormsModule,
-    FormsModule
+    FormsModule,
+    NgxEditorModule
   ],
 })
 export class AdminModule {}
