@@ -50,7 +50,7 @@ export class DashboardComponent implements OnInit {
 		this.week = this.localData.task.week;
 		this.month = this.localData.task.month;
 		this.chartInitiation();
-		this.getData();
+		// this.getData();
 	}
 
 	chartInitiation() {

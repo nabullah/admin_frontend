@@ -1,17 +1,23 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Renderer2, RendererFactory2, inject } from "@angular/core";
 
 enum ThemeType {
 	dark = "dark",
 	default = "default",
+}
+enum ThemeTypeDup {
+	dark = "theme-dark",
+	default = "theme-light",
 }
 
 @Injectable({
 	providedIn: "root",
 })
 export class ThemeService {
-	currentTheme = ThemeType.default;
-
-	constructor() {}
+	public renderer: Renderer2;
+	currentTheme = ThemeType.dark;
+	constructor(private _renderer: RendererFactory2) {
+		this.renderer = this._renderer.createRenderer(null, null);
+	}
 
 	private reverseTheme(theme: string): ThemeType {
 		return theme === ThemeType.dark ? ThemeType.default : ThemeType.dark;
@@ -41,6 +47,7 @@ export class ThemeService {
 		const theme = this.currentTheme;
 		if (firstLoad) {
 			document.documentElement.classList.add(theme);
+			theme === ThemeType.dark ? this.renderer.addClass(document.body, ThemeTypeDup.dark) : this.renderer.addClass(document.body, ThemeTypeDup.default);
 		}
 		return new Promise<Event>((resolve, reject) => {
 			this.loadCss(`${theme}.css`, theme).then(
@@ -58,6 +65,13 @@ export class ThemeService {
 
 	public toggleTheme(): Promise<Event> {
 		this.currentTheme = this.reverseTheme(this.currentTheme);
+		if (this.currentTheme === ThemeType.dark) {
+			this.renderer.addClass(document.body, ThemeTypeDup.dark);
+			this.renderer.removeClass(document.body, ThemeTypeDup.default);
+		} else {
+			this.renderer.addClass(document.body, ThemeTypeDup.default);
+			this.renderer.removeClass(document.body, ThemeTypeDup.dark);
+		}
 		return this.loadTheme(false);
 	}
 }

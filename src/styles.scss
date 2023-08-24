@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+@import url("./styles/themes/variables.scss");
 // @import url("./styles/themes/mixin.less");
 
 * {
@@ -9,49 +10,62 @@
 }
 
 :root {
-	--primary-bg-light: #fff;
+	--primary-bg-light: rgb(255, 255, 255);
+	--v-theme-on-background: 47, 43, 61;
+	--v-shadow-key-umbra-color: 47, 43, 61;
+	--v-theme-background: 248, 247, 250;
+	--v-theme-surface: 255, 255, 255;
 
-	--primary-bg-dark: #001529;
+	--primary-bg-dark: rgb(47, 51, 73);
 	--primary-bg-dark-shade: #3f87f508;
+	--v-global-theme-primary-dark: 115, 103, 240;
+	--v-shadow-key-umbra-color-dark: 15, 20, 34;
+	--v-theme-background-dark: 37, 41, 60;
+	--v-theme-surface-dark: 47, 51, 73;
+	--v-theme-on-background-dark: 208, 212, 241;
+
 	--border-color: #303030;
+
+	--v-high-emphasis-opacity: 0.78;
+	--v-selected-opacity: 0.06;
+	--v-theme-overlay-multiplier: 1;
 }
 
-// Dark theme
-.dark {
-	.menu-sidebar {
-		background: var(--primary-bg-dark) !important;
-		border-right: 1px solid var(--primary-bg-dark) !important;
-	}
-	.inner-content,
-	.theme-bg {
-		background: var(--primary-bg-dark) !important;
-	}
-
-	.border,
-	.border-end,
-	.border-start,
-	.border-bottom,
-	.border-top {
-		border: 1px solid var(--border-color) !important;
-	}
-
-	.bg-white {
-		background: var(--primary-bg-dark-shade) !important;
-	}
-	nz-card, .analytics-container > div {
-		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+.menu-links {
+	li:not(.ant-menu-submenu) {
+		margin: auto 12px !important;
+		width: calc(100% - 23px) !important;
+		border-radius: 0.4rem;
 	}
 }
 
-// Light Theme
-.default {
-	.wrapper-top,
-	.tabs .ant-tabs-nav-wrap {
-		background: var(--primary-bg-light);
+.menu-links .ant-menu-submenu {
+	li {
+		padding-left: 24px !important;
 	}
-	nz-card, .analytics-container > div {
-		box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-	}
+}
+.ant-menu-submenu-selected {
+	color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity)) !important;
+	font-weight: 500;
+	border-radius: 0.4rem;
+}
+.ant-menu-submenu-selected .ant-menu-submenu-title::before {
+	content: "";
+	opacity: calc(var(--v-selected-opacity) * var(--v-theme-overlay-multiplier));
+	position: absolute;
+	background: currentcolor;
+	block-size: 100%;
+	inline-size: 100%;
+	inset: 0;
+	pointer-events: none;
+	border-radius: 0.4rem;
+}
+
+.ant-menu-inline .ant-menu-submenu-title {
+	margin: auto 12px !important;
+	width: calc(100% - 23px) !important;
+	padding-right: 0 !important;
+	margin-bottom: 0.2rem !important;
 }
 
 .hover-primary:hover {
@@ -63,7 +77,8 @@
 }
 
 body,
-.timeline, .editor {
+.timeline,
+.editor {
 	&::-webkit-scrollbar {
 		width: 4px;
 		border-radius: 10px;
@@ -92,7 +107,7 @@ router-outlet + * {
 }
 
 .ant-menu-inline > .ant-menu-item {
-	height: 49px !important;
+	// height: 49px !important;
 }
 
 .ant-input {
@@ -128,4 +143,128 @@ router-outlet + * {
 
 .text-color-shade-1 {
 	color: #53535f;
+}
+
+// Dark theme
+.dark {
+	.menu-sidebar,
+	.mainside-logo {
+		background: var(--primary-bg-dark) !important;
+		box-shadow: 0 2px 6px rgba(var(--v-shadow-key-umbra-color-dark), 0.14), 0 0 transparent, 0 0 transparent;
+	}
+	.inner-content {
+		background: rgba(var(--v-theme-background-dark)) !important;
+	}
+
+	.border,
+	.border-end,
+	.border-start,
+	.border-bottom,
+	.border-top {
+		border: 1px solid var(--border-color) !important;
+	}
+
+	.card-dashboard {
+		background: rgba(var(--v-theme-surface-dark)) !important;
+	}
+
+	nz-card,
+	.analytics-container > div {
+		box-shadow: 0 4px 18px rgba(var(--v-shadow-key-umbra-color-dark), 0.1), 0 0 transparent, 0 0 transparent;
+	}
+
+	.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+		background: linear-gradient(72.47deg, rgb(var(--v-global-theme-primary-dark)) 22.16%, rgba(var(--v-global-theme-primary-dark), 0.7) 76.47%) !important;
+		box-shadow: 0 2px 6px rgba(var(--v-global-theme-primary-dark), 0.48) !important;
+		font-weight: 500;
+		color: var(--primary-bg-light) !important;
+	}
+
+	.background-class {
+		background: rgba(var(--v-theme-surface-dark));
+		box-shadow: 0 2px 6px rgba(var(--v-shadow-key-umbra-color-dark), 0.14), 0 0 transparent, 0 0 transparent;
+	}
+
+	nz-header {
+		background: rgba(var(--v-theme-background-dark)) !important;
+		.header-inner {
+			-webkit-backdrop-filter: blur(6px);
+			backdrop-filter: blur(6px);
+			background-color: rgb(var(--v-theme-surface-dark), 0.9);
+			box-shadow: 0 2px 6px rgba(var(--v-shadow-key-umbra-color-dark), 0.14), 0 0 transparent, 0 0 transparent;
+		}
+	}
+
+	.ant-menu-submenu-selected .ant-menu-submenu-title::before {
+		content: "";
+		opacity: calc(var(--v-selected-opacity) * var(--v-theme-overlay-multiplier));
+		position: absolute;
+		background: currentcolor;
+		color: var(--primary-bg-light);
+	}
+
+	.ant-menu-submenu-selected {
+		color: rgba(var(--v-theme-on-background-dark), var(--v-high-emphasis-opacity)) !important;
+	}
+
+	.ant-menu-sub.ant-menu-inline {
+		background: none;
+	}
+
+	.text-color-shade-1{
+		color: rgba(var(--primary-bg-light));
+	}
+}
+
+// Light Theme
+.default {
+	.menu-sidebar,
+	.mainside-logo {
+		background: var(--primary-bg-light) !important;
+		box-shadow: 0 2px 6px rgba(var(--v-shadow-key-umbra-color), 0.14), 0 0 transparent, 0 0 transparent;
+	}
+	.wrapper-top,
+	.tabs .ant-tabs-nav-wrap {
+		background: var(--primary-bg-light);
+	}
+	nz-card,
+	.analytics-container > div {
+		box-shadow: 0 4px 18px rgba(var(--v-shadow-key-umbra-color), 0.1), 0 0 transparent, 0 0 transparent;
+		border-radius: 6px;
+	}
+
+	.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+		background: linear-gradient(72.47deg, rgb(var(--v-global-theme-primary-dark)) 22.16%, rgba(var(--v-global-theme-primary-dark), 0.7) 76.47%) !important;
+		box-shadow: 0 2px 6px rgba(var(--v-global-theme-primary-dark), 0.48) !important;
+		font-weight: 500;
+		color: var(--primary-bg-light) !important;
+	}
+
+	.ant-menu-sub.ant-menu-inline {
+		background: none;
+	}
+
+	.ant-menu {
+		color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+	}
+
+	.inner-content,
+	nz-header {
+		background: rgba(var(--v-theme-background)) !important;
+		.header-inner {
+			-webkit-backdrop-filter: blur(6px);
+			backdrop-filter: blur(6px);
+			background-color: rgb(var(--v-theme-surface), 0.9);
+			box-shadow: 0 2px 6px rgba(var(--v-shadow-key-umbra-color), 0.14), 0 0 transparent, 0 0 transparent;
+		}
+	}
+
+	.background-class {
+		background: rgba(var(--v-theme-surface));
+	}
+
+	.card-dashboard {
+		background: rgba(var(--v-theme-surface)) !important;
+		box-shadow: 0 2px 6px rgba(var(--v-shadow-key-umbra-color), 0.14), 0 0 transparent, 0 0 transparent;
+	}
 }
