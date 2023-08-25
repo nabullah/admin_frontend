@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from "../shared/components/page-not-found/page-
 import { BlogComponent } from "./components/blog/blog.component";
 import { BlogpostComponent } from "./components/blogpost/blogpost.component";
 import { BlogEditorComponent } from "./components/blog-editor/blog-editor.component";
+import { EcommerceDashboardComponent } from "./components/ecommerce-dashboard/ecommerce-dashboard.component";
 
 const routes: Routes = [
 	{
@@ -24,6 +25,7 @@ const routes: Routes = [
 			{ path: "dashboard", component: DashboardComponent },
 			{ path: "crm", component: CrmDashboardComponent },
 			{ path: "order-list", component: ProductOrderListComponent },
+			{ path: "ecommerce-dashboard", component: EcommerceDashboardComponent },
 			{ path: "products", component: ProductsComponent },
 			{ path: "products-list", component: ProductsListComponent },
 			{ path: "blog", component: BlogComponent },

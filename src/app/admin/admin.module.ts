@@ -15,9 +15,10 @@ import { BlogComponent } from './components/blog/blog.component';
 import { BlogpostComponent } from './components/blogpost/blogpost.component';
 import { BlogEditorComponent } from './components/blog-editor/blog-editor.component';
 import { NgxEditorModule } from 'ngx-editor';
+import { EcommerceDashboardComponent } from './components/ecommerce-dashboard/ecommerce-dashboard.component';
 
 @NgModule({
-  declarations: [AdminSidenavComponent, DashboardComponent, CrmDashboardComponent, ProductOrderListComponent, ProductsComponent, ProductsListComponent, PageNotFoundComponent, BlogComponent, BlogpostComponent, BlogEditorComponent, ],
+  declarations: [AdminSidenavComponent, DashboardComponent, CrmDashboardComponent, ProductOrderListComponent, ProductsComponent, ProductsListComponent, PageNotFoundComponent, BlogComponent, BlogpostComponent, BlogEditorComponent, EcommerceDashboardComponent, ],
   imports: [
     CommonModule,
     AdminRoutingModule,
