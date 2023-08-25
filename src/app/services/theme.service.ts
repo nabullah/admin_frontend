@@ -1,4 +1,5 @@
 import { Injectable, Renderer2, RendererFactory2, inject } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
 enum ThemeType {
 	dark = "dark",
@@ -14,7 +15,10 @@ enum ThemeTypeDup {
 })
 export class ThemeService {
 	public renderer: Renderer2;
-	currentTheme = ThemeType.dark;
+	currentTheme = ThemeType.default;
+
+	pushTheme$: BehaviorSubject<string> = new BehaviorSubject("");
+
 	constructor(private _renderer: RendererFactory2) {
 		this.renderer = this._renderer.createRenderer(null, null);
 	}
@@ -68,10 +72,13 @@ export class ThemeService {
 		if (this.currentTheme === ThemeType.dark) {
 			this.renderer.addClass(document.body, ThemeTypeDup.dark);
 			this.renderer.removeClass(document.body, ThemeTypeDup.default);
+			this.pushTheme$.next("dark");
 		} else {
 			this.renderer.addClass(document.body, ThemeTypeDup.default);
 			this.renderer.removeClass(document.body, ThemeTypeDup.dark);
+			this.pushTheme$.next("default");
 		}
 		return this.loadTheme(false);
 	}
+
 }
