@@ -55,6 +55,7 @@
               [chart]="totalRevenueChartOptions.chart!"
               [xaxis]="totalRevenueChartOptions.xaxis!"
               [yaxis]="totalRevenueChartOptions.yaxis!"
+              [colors]="totalRevenueChartOptions.colors!"
             ></apx-chart>
           </div>
         </nz-card>
@@ -72,12 +73,17 @@
               [series]="customerChartOptions.series!"
               [chart]="customerChartOptions.chart!"
               [colors]="customerChartOptions.colors!"
+              [dataLabels]="customerChartOptions.dataLabels!"
+              [legend]="customerChartOptions.legend!"
+              [labels]="customerChartOptions.labels!"
+              [fill]="customerChartOptions.fill!"
+              [responsive]="customerChartOptions.responsive!"
             ></apx-chart>
           </div>
           <nz-divider></nz-divider>
           <div class="legends d-flex align-items-center justify-content-evenly">
             <div class="d-flex align-items-center">
-              <nz-badge nzStatus="success"></nz-badge>
+              <nz-badge nzColor="#7367f0"></nz-badge>
               <div>
                 <h4 class="m-0">350</h4>
                 <p class="text-muted">New</p>

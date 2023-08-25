@@ -38,6 +38,7 @@ export type totalRevenueChartOptions = {
 	chart: ApexChart;
 	xaxis: ApexXAxis;
 	yaxis: ApexYAxis;
+  colors:string[];
 };
 
 export type customerChartOptions = {
@@ -48,6 +49,7 @@ export type customerChartOptions = {
 	fill: ApexFill;
 	legend: ApexLegend;
 	colors: any;
+  dataLabels:ApexDataLabels
 };
 
 export type averageProfitChartOptions = {
@@ -154,6 +156,9 @@ export class DashboardComponent implements OnInit {
       chart: {
         height: 350,
         type: "line",
+        toolbar:{
+          show:false
+        }
       },
       xaxis: {
         categories: this.localData.totalRevenue.categories,
@@ -170,6 +175,7 @@ export class DashboardComponent implements OnInit {
           },
         },
       },
+      colors:["#7367f0"]
     };
 
     this.customerChartOptions = {
@@ -177,12 +183,16 @@ export class DashboardComponent implements OnInit {
       chart: {
         width: 350,
         type: "donut",
+        toolbar:{
+          show:false
+        }
       },
       fill: {
         type: "gradient",
       },
       legend: {
         position: "bottom",
+        show:false
       },
       labels: this.localData.customers.labels,
       responsive: [
@@ -198,7 +208,10 @@ export class DashboardComponent implements OnInit {
           },
         },
       ],
-      colors: ["#52c41a", "#1890ff", "#faad14"],
+      colors: ["#7367f0", "#1890ff", "#faad14"],
+      dataLabels: {
+        // enabled: false,
+      }
     };
 
     this.averageProfitChartOptions = {
@@ -208,7 +221,7 @@ export class DashboardComponent implements OnInit {
         height: 350,
         stacked: true,
         toolbar: {
-          show: true,
+          show: false,
         },
         zoom: {
           enabled: false,
@@ -271,7 +284,7 @@ export class DashboardComponent implements OnInit {
         height: 200,
         stacked: true,
         toolbar: {
-          show: true,
+          show: false,
         },
         zoom: {
           enabled: false,
@@ -335,6 +348,9 @@ export class DashboardComponent implements OnInit {
         height: 350,
         type: "radialBar",
         offsetY: -10,
+        toolbar:{
+          show:false
+        }
       },
       plotOptions: {
         radialBar: {
@@ -390,7 +406,10 @@ export class DashboardComponent implements OnInit {
       chart:{
         type:'bar',
         height:240,
-        stacked:true
+        stacked:true,
+        toolbar:{
+          show:false
+        }
       },
       xaxis:{
         labels:{
@@ -409,7 +428,6 @@ export class DashboardComponent implements OnInit {
         bar: {
           horizontal: false,
           columnWidth: "55%",
-          // borderRadiusApplication:"end",
           borderRadius:5,
         }
       },
