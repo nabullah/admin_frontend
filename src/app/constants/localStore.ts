@@ -4,42 +4,31 @@ export const localStore = {
 };
 export const dashboard = {
   totalRevenue:{
-    labels: ["16th","17th","18th","19th","20th","21th","22th","23th","24th","25th","26th"],
-    datasets: [
+    categories: ["16th","17th","18th","19th","20th","21th","22th","23th","24th","25th","26th"],
+    series: [
       {
-        label: "Series A",
-        data: [30,60,40,50,40,55,85,65,75,50,70],
-        borderWidth: 2,
-        tension: 0.5,
+        name: "Series A",
+        data: [30,60,40,50,40,55,85,65,75,50,70]
       },
     ]
   },
   customers:{
-    datasets:[
-      {
-        data: [350, 450, 100],
-        borderWidth: 1,
-        weight:1
-      },
-    ],
+    series: [350, 450, 100],
     labels:["New", "Returning", "Others"]
   },
   averageProfit:{
-    labels:["Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-    data:[
+    xaxis:["Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+    series:[
       {
-        label: "Series A",
-        backgroundColor: "rgb(24, 144, 255)",
-        data: [12, 59, 5, 56, 58, 12, 59],
-        barThickness: 10
+        name: "Series A",
+        data: [12, 59, 5, 56, 58, 12, 59]
       },
       {
-        label: "Series B",
-        backgroundColor: "rgba(24, 144, 255,0.5)",
-        data: [12, 59, 5, 56, 58, 12, 59],
-        barThickness: 10
-      }
-    ]
+        name: "Series B",
+        data: [12, 59, 5, 56, 58, 12, 59]
+      },
+    ],
+    colors:["rgb(115,103,240)","rgba(115,103,240,0.5)"]
   },
   topProducts:[
     {
