@@ -13,6 +13,7 @@ import {
 	ApexGrid,
 	ApexYAxis,
 	ApexStroke,
+  ApexTooltip,
 } from "ng-apexcharts";
 import { dashboard } from "src/app/constants/localStore";
 import { ThemeService } from "src/app/services/theme.service";
@@ -84,6 +85,21 @@ export type supportTrackerChartOptions = {
 	stroke: ApexStroke;
   colors:any;
 };
+
+export type totalEarningChartOptions = {
+  series:ApexAxisChartSeries;
+  chart:ApexChart;
+  colors:any;
+  xaxis:ApexXAxis;
+  yaxis:ApexYAxis;
+  dataLabels: ApexDataLabels;
+  plotOptions: ApexPlotOptions;
+  fill: ApexFill;
+  tooltip: ApexTooltip;
+  stroke: ApexStroke;
+  legend: ApexLegend;
+  grid:ApexGrid;
+}
 export interface task {
 	head: string;
 	detail: string;
@@ -113,8 +129,7 @@ export class DashboardComponent implements OnInit {
   public averageProfitChartOptions!: Partial<averageProfitChartOptions>;
   public earningReportChartOptions!: Partial<earningReportChartOptions>;
   public supportTrackerChartOptions!: Partial<supportTrackerChartOptions>;
-
-
+  public totalEarningChartOptions!: Partial<totalEarningChartOptions>;
 
 	constructor(private http: HttpClient) {
     this.theme.pushTheme$.subscribe(res => {
@@ -359,6 +374,57 @@ export class DashboardComponent implements OnInit {
         dashArray: 10,
       },
       colors:["#7367f0"]
+    };
+
+    this.totalEarningChartOptions = {
+      series:[
+        {
+          name:"Sales",
+          data:[20,10,30,5,8,20,15,10]
+        },
+        {
+          name:"Revenue",
+          data:[-4,-10,-25,-15,-30,-22,-5,-12]
+        },
+      ],
+      chart:{
+        type:'bar',
+        height:240,
+        stacked:true
+      },
+      xaxis:{
+        labels:{
+          show:false
+        },
+        axisBorder:{
+          show:false
+        }
+      },
+      yaxis:{
+        labels:{
+          show:false
+        }
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: "55%",
+          // borderRadiusApplication:"end",
+          borderRadius:5,
+        }
+      },
+      dataLabels:{
+        enabled:false
+      },
+      legend:{
+        show:false
+      },
+      grid:{
+        show:false
+      },
+      tooltip:{
+        enabled:false
+      }
     };
   }
 
