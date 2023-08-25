@@ -1,33 +1,5 @@
-.editor{
-  height:88vh;
-}
-.font-color-picker-button{
-  text-decoration-line: underline;
-  text-decoration-color: red;
-  text-decoration-thickness:3px;
-}
-button{
-  border:none;
-  background:transparent;
-  font-size:0.9vw;
-  border:1px solid transparent;
-}
-button:hover>*{
-  background-color: #f1f3f4;
-  border:1px solid #e2e2e2;
-}
-button>*{
-  padding:5px;
-}
-.down-arrow{
-  font-size:0.6vw;
-  padding-left: 2px;
-}
-.divider{
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  height:1.7vw;
-}
-
 :host ::ng-deep.NgxEditor{
   min-height: 500px;
+  max-height: 700px;
+  overflow-y: scroll;
 }

@@ -49,8 +49,13 @@
     <div class="row">
       <div class="col-lg-8 chart-container">
         <nz-card [nzBordered]="false" nzTitle="Total Revenue" [nzExtra]="radioButtons">
-          <div class="revenue-chart-container">
-            <canvas #revenueChart></canvas>
+          <div class="revenue-chart-container" style="height:380px;">
+            <apx-chart
+              [series]="totalRevenueChartOptions.series!"
+              [chart]="totalRevenueChartOptions.chart!"
+              [xaxis]="totalRevenueChartOptions.xaxis!"
+              [yaxis]="totalRevenueChartOptions.yaxis!"
+            ></apx-chart>
           </div>
         </nz-card>
         <ng-template #radioButtons>
@@ -60,10 +65,14 @@
           </nz-radio-group>
         </ng-template>
       </div>
-      <div class="col-lg-4 chart-container">
-        <nz-card [nzBordered]="false" nzTitle="Customers" class="h-100 d-flex flex-column justify-content-between">
+      <div class="col-lg-4">
+        <nz-card [nzBordered]="false" nzTitle="Customers" class="">
           <div class="doughnut-chart-container d-flex justify-content-center">
-            <canvas #customerChart></canvas>
+            <apx-chart
+              [series]="customerChartOptions.series!"
+              [chart]="customerChartOptions.chart!"
+              [colors]="customerChartOptions.colors!"
+            ></apx-chart>
           </div>
           <nz-divider></nz-divider>
           <div class="legends d-flex align-items-center justify-content-evenly">
@@ -94,12 +103,113 @@
     </div>
 
     <div class="row third-row">
-      <div class="col-lg-4">
-        <nz-card [nzBordered]="false" class="h-100 d-flex flex-column justify-content-between" [nzTitle]="titleTem" [nzExtra]="profit">
-          <!-- d-flex flex-column justify-content-between -->
+      <div class="col-6">
+        <nz-card nzTitle="Earning Reports">
+          <div class="d-flex">
+            <div class="col-4 d-flex flex-column justify-content-center">
+              <div class="amount d-flex gap-2">
+                <h2 class="earning-head m-0">$468</h2>
+                <span><nz-tag class="rounded-pill" nzColor="processing">+ 5.7%</nz-tag></span>
+              </div>
+              <p class="text-muted">You informed of this week compared to last week</p>
+            </div>
+            <div class="col-8">
+              <apx-chart
+              [series]="earningReportChartOptions.series!"
+              [chart]="earningReportChartOptions.chart!"
+              [legend]="earningReportChartOptions.legend!"
+              [responsive]="earningReportChartOptions.responsive!"
+              [fill]="earningReportChartOptions.fill!"
+              [plotOptions]="earningReportChartOptions.plotOptions!"
+              [xaxis]="earningReportChartOptions.xaxis!"
+              [yaxis]="earningReportChartOptions.yaxis!"
+              [colors]="earningReportChartOptions.colors!"
+              [dataLabels]="earningReportChartOptions.dataLabels!"
+              [grid]="earningReportChartOptions.grid!"
+              ></apx-chart>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center px-4 py-3">
+            <div class="col-4 px-3">
+              <p class="fs-4 d-flex align-items-center"><span nz-icon nzType="dollar-circle" class="text-success me-2 rounded-circle" nzTheme="outline"></span> <span>Earnings</span></p>
+              <p>$545.69</p>
+              <nz-progress [nzPercent]="100" nzSize="small" [nzShowInfo]="false"></nz-progress>
+            </div>
+            <div class="col-4 px-3">
+              <p class="fs-4 d-flex align-items-center"><span nz-icon nzType="clock-circle" class="text-primary me-2 rounded-circle" nzTheme="outline"></span> <span>Profit</span></p>
+              <p>$265.34</p>
+              <nz-progress [nzPercent]="50" nzSize="small" [nzShowInfo]="false"></nz-progress>
+            </div>
+            <div class="col-4 px-3">
+              <p class="fs-4 d-flex align-items-center"><span nz-icon nzType="dollar-circle" class="text-danger me-2 rounded-circle" nzTheme="outline"></span> <span>Expense</span></p>
+              <p>$45.69</p>
+              <nz-progress [nzPercent]="20" nzSize="small" nzStatus="exception" [nzShowInfo]="false"></nz-progress>
+            </div>
+          </div>
+        </nz-card>
+      </div>
+      <div class="col-6">
+        <nz-card nzTitle="Support Tracker">
+          <div class="d-flex">
+            <div class="col-6 p-3">
+              <p class="d-flex flex-column">
+                <span style="font-size:3vw;">164</span>
+                <span class="text-muted">Total Tickets</span>
+              </p>
+              <div class="d-flex gap-2">
+                <img src="../../../../assets/Images/ticket.png" height="20" alt="">
+                <p class="d-flex flex-column">
+                  <span class="fw-bold">New Tickets</span>
+                  <span class="text-muted">142</span>
+                </p>
+              </div>
+              <div class="d-flex gap-2">
+                <img src="../../../../assets/Images/correct.png" height="20" alt="">
+                <p class="d-flex flex-column">
+                  <span class="fw-bold">Open Tickets</span>
+                  <span class="text-muted">28</span>
+                </p>
+              </div>
+              <div class="d-flex gap-2">
+                <img src="../../../../assets/Images/clock.png" height="20" alt="">
+                <p class="d-flex flex-column">
+                  <span class="fw-bold">Response Time</span>
+                  <span class="text-muted">1 Day</span>
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <apx-chart
+                [chart]="supportTrackerChartOptions.chart!"
+                [series]="supportTrackerChartOptions.series!"
+                [plotOptions]="supportTrackerChartOptions.plotOptions!"
+                [fill]="supportTrackerChartOptions.fill!"
+                [stroke]="supportTrackerChartOptions.stroke!"
+                [colors]="supportTrackerChartOptions.colors!"
+              ></apx-chart>
+            </div>
+          </div>
+        </nz-card>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-lg-4">
+        <nz-card [nzBordered]="false" class="h-100 d-flex flex-column justify-content-between" [nzTitle]="titleTem"
+          [nzExtra]="profit">
           <div class="average-chart-container">
-            <canvas #averageProfitChart height="400"></canvas>
+            <apx-chart
+              [series]="averageProfitChartOptions.series!"
+              [chart]="averageProfitChartOptions.chart!"
+              [legend]="averageProfitChartOptions.legend!"
+              [responsive]="averageProfitChartOptions.responsive!"
+              [fill]="averageProfitChartOptions.fill!"
+              [plotOptions]="averageProfitChartOptions.plotOptions!"
+              [xaxis]="averageProfitChartOptions.xaxis!"
+              [colors]="averageProfitChartOptions.colors!"
+              [dataLabels]="averageProfitChartOptions.dataLabels!"
+              [yaxis]="averageProfitChartOptions.yaxis!"
+              ></apx-chart>
           </div>
         </nz-card>
         <ng-template #profit>
@@ -108,13 +218,13 @@
           </div>
         </ng-template>
         <ng-template #titleTem>
-              <h5>$17,267</h5>
-              <span class="text-muted">Avg.Profit</span>
-            <!-- <span><nz-tag class="rounded-pill" nzColor="processing">+ 5.7%</nz-tag></span> -->
+          <h5>$17,267</h5>
+          <span class="text-muted">Avg.Profit</span>
+          <!-- <span><nz-tag class="rounded-pill" nzColor="processing">+ 5.7%</nz-tag></span> -->
         </ng-template>
       </div>
       <div class="col-lg-8 chart-container">
-        <nz-card [nzBordered]="false" nzTitle="Total Revenue" [nzExtra]="viewMoreButton" class="h-100">
+        <nz-card [nzBordered]="false" nzTitle="Total Revenue" [nzExtra]="viewMoreButton">
           <nz-table #basicTable nzShowPagination="false" [nzData]="listOfData">
             <thead>
               <tr>
@@ -147,16 +257,21 @@
 
     <div class="row">
       <div class="uploads col-4">
-        <nz-card nzTitle="Latest Upload" [nzExtra]="uploadsExtraTemplate" class="h-100">
+        <nz-card nzTitle="Latest Upload" [nzExtra]="uploadsExtraTemplate" class="">
           <ul class="upload-list">
             <li class="d-flex justify-content-between" *ngFor="let item of latestUpload">
               <div class="file d-flex">
                 <div class="file-icon mb-3 me-2">
-                  <span nz-icon nzType="file-pdf" class="pdf-file" nzTheme="outline" *ngIf="item.extension === 'pdf'"></span>
-                  <span nz-icon nzType="file-word" class="doc-file" nzTheme="outline" *ngIf="item.extension === 'doc'"></span>
-                  <span nz-icon nzType="file-excel" class="xls-file" nzTheme="outline" *ngIf="item.extension === 'xls'"></span>
-                  <span nz-icon nzType="file-text" class="txt-file" nzTheme="outline" *ngIf="item.extension === 'txt'"></span>
-                  <span nz-icon nzType="file-ppt" class="ppt-file" nzTheme="outline" *ngIf="item.extension === 'ppt'"></span>
+                  <span nz-icon nzType="file-pdf" class="pdf-file" nzTheme="outline"
+                    *ngIf="item.extension === 'pdf'"></span>
+                  <span nz-icon nzType="file-word" class="doc-file" nzTheme="outline"
+                    *ngIf="item.extension === 'doc'"></span>
+                  <span nz-icon nzType="file-excel" class="xls-file" nzTheme="outline"
+                    *ngIf="item.extension === 'xls'"></span>
+                  <span nz-icon nzType="file-text" class="txt-file" nzTheme="outline"
+                    *ngIf="item.extension === 'txt'"></span>
+                  <span nz-icon nzType="file-ppt" class="ppt-file" nzTheme="outline"
+                    *ngIf="item.extension === 'ppt'"></span>
                 </div>
                 <div class="file-detail">
                   <h6 class="m-0">{{item.fileName}}</h6>
@@ -195,7 +310,8 @@
         <nz-card nzTitle="Activity" [nzExtra]="activityTemplate">
           <div class="timeline p-3">
             <nz-timeline [nzReverse]="true">
-              <nz-timeline-item nzPosition="left" *ngFor="let item of activity" [nzColor]="'blue'" [nzDot]="dotTemplate">
+              <nz-timeline-item nzPosition="left" *ngFor="let item of activity" [nzColor]="'blue'"
+                [nzDot]="dotTemplate">
                 <h6 class="m-0">{{item.name}}</h6>
                 <p class="text-muted">
                   <span class="fw-bold me-1">{{item.activity}}</span>
@@ -206,7 +322,8 @@
                   <span>{{item.time}}</span>
                 </p>
                 <ng-template #dotTemplate>
-                  <div class="rounded-circle text-white timeline-dot p-2" [ngStyle]="{'background-color':item.dotColor}">{{item.name.substring(0,1)}}</div>
+                  <div class="rounded-circle text-white timeline-dot p-2"
+                    [ngStyle]="{'background-color':item.dotColor}">{{item.name.substring(0,1)}}</div>
                 </ng-template>
               </nz-timeline-item>
             </nz-timeline>
@@ -217,7 +334,7 @@
         </ng-template>
       </div>
       <div class="task col-4">
-        <nz-card nzTitle="Task" class="h-100">
+        <nz-card nzTitle="Task" class="">
           <nz-tabset [nzSize]="'large'" nzCentered [nzTabBarGutter]="50">
             <nz-tab nzTitle="Today">
               <div class="list pt-2">

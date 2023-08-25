@@ -10,11 +10,12 @@ import { ProductOrderListComponent } from './components/product-order-list/produ
 import { ProductsComponent } from './components/products/products.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { PageNotFoundComponent } from '../shared/components/page-not-found/page-not-found.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogpostComponent } from './components/blogpost/blogpost.component';
 import { BlogEditorComponent } from './components/blog-editor/blog-editor.component';
 import { NgxEditorModule } from 'ngx-editor';
+import { NgApexchartsModule } from 'ng-apexcharts';
 import { EcommerceDashboardComponent } from './components/ecommerce-dashboard/ecommerce-dashboard.component';
 
 @NgModule({
@@ -24,7 +25,9 @@ import { EcommerceDashboardComponent } from './components/ecommerce-dashboard/ec
     AdminRoutingModule,
     NzZorroModule, FormsModule,
     FormsModule,
-    NgxEditorModule
+    NgxEditorModule,
+    ReactiveFormsModule,
+    NgApexchartsModule
   ],
 })
 export class AdminModule {}

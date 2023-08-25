@@ -3,5 +3,9 @@
     <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
     <ngx-editor [editor]="editor" [ngModel]="html" [disabled]="false" (ngModelChange)="editorChange($event)" [placeholder]="'Type here...'"></ngx-editor>
   </div>
+  <div class="button d-flex justify-content-end p-3">
+    <button nz-button nzType="default" nzSize="large" class="me-3">Cancel</button>
+    <button nz-button nzType="primary" nzSize="large" (click)="saveChanges()">Save</button>
+  </div>
 </div>
 
