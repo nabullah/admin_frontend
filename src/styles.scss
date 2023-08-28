@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 @import url("./styles/themes/variables.scss");
 // @import url("./styles/themes/mixin.less");
@@ -24,12 +24,98 @@
 	--v-theme-surface-dark: 47, 51, 73;
 	--v-theme-on-background-dark: 208, 212, 241;
 
+	--primary-color: rgba(115, 103, 240);
 	--border-color: rgba(208, 212, 241);
 	--v-theme-perfect-scrollbar-thumb: 74, 80, 114;
+	--v-theme-on-surface: 47, 43, 61;
+	--v-theme-primary: 115, 103, 240;
+	--v-theme-primary-overlay-multiplier: 1;
+	--v-theme-on-primary: 255, 255, 255;
 
 	--v-high-emphasis-opacity: 0.78;
 	--v-selected-opacity: 0.06;
 	--v-theme-overlay-multiplier: 1;
+
+	--v-btn-size: 0.9375rem;
+	--v-btn-height: 38px;
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+
+.fw-600 {
+	font-weight: 600 !important;
+}
+
+.fw-500 {
+	font-weight: 500;
+}
+
+.fw-400 {
+	font-weight: 400;
+}
+
+.fs-10 {
+	font-size: 10px;
+}
+
+.fs-12 {
+	font-size: 12px;
+}
+
+.fs-14 {
+	font-size: 14px;
+}
+.fs-16 {
+	font-size: 16px;
+}
+.fs-18 {
+	font-size: 18px;
+}
+
+.fs-20 {
+	font-size: 20px;
+}
+
+.fs-24 {
+	font-size: 24px;
+}
+.fs-32 {
+	font-size: 32px;
+}
+
+.lh-16 {
+	line-height: 16px;
+}
+
+.lh-20 {
+	line-height: 20px;
+}
+
+.lh-22 {
+	line-height: 22px;
+}
+
+.lh-24 {
+	line-height: 24px;
+}
+
+.lh-26 {
+	line-height: 26px;
+}
+
+.lh-32 {
+	line-height: 32px;
+}
+
+.text-sm {
+	font-size: 0.8125rem;
+	line-height: 1.25rem;
+}
+
+.text-purple {
+	color: var(--primary-color);
 }
 
 .menu-links {
@@ -155,6 +241,25 @@ router-outlet + * {
 	background-color: var(--border-color) !important;
 	opacity: 0.1 !important;
 	height: 0.3px !important;
+}
+
+.card-dashboard {
+	border-radius: 0.4rem;
+}
+
+.ant-btn-primary {
+	--v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+	background-color: rgb(var(--v-theme-primary)) !important;
+	color: rgb(var(--v-theme-on-primary)) !important;
+	font-size: 0.9375rem;
+	min-width: 68px;
+	padding: 0 20px;
+	border-radius: 0.4rem !important;
+	border: none !important;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+	border-radius: 0.4rem !important;
 }
 
 // Dark theme
