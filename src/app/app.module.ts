@@ -10,6 +10,7 @@ import { SharedModule } from "./shared/shared.module";
 import { LoadingInterceptor } from "./interceptor/loading.interceptor";
 import { AuthorizationInterceptor } from "./interceptor/authorization.interceptor";
 import { ThemeService } from "./services/theme.service";
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 export const AppInitializerProvider = {
 	provide: APP_INITIALIZER,
@@ -22,7 +23,7 @@ export const AppInitializerProvider = {
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, HttpClientModule, SharedModule, HttpClientModule],
+	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, HttpClientModule, SharedModule, HttpClientModule,NgApexchartsModule],
 
 	providers: [
 		{

@@ -15,7 +15,7 @@ export class BlogpostComponent implements OnInit {
   id:string | null = "";
   localData:any;
 	data: any[] = [
-		{ img: "dfsdf", name: "poiuytfgh12", description: "sdfsdfsd" },
+		{ img: "dfsdf",  name: "poiuytfgh12", description: "sdfsdfsd" },
 		{ img: "dfsdf1", name: "poiuytfgh123", description: "sdfsdfsd123456789" },
 		{ img: "dfsdf1", name: "poiuytfgh123", description: "sdfsdfsd123456789" },
 		{ img: "dfsdf1", name: "poiuytfgh123", description: "sdfsdfsd123456789" },

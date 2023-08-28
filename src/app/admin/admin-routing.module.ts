@@ -30,7 +30,7 @@ const routes: Routes = [
 			{ path: "products-list", component: ProductsListComponent },
 			{ path: "blog", component: BlogComponent },
 			{ path: "blog/blogpost", component: BlogpostComponent },
-			{ path: "blog-edit", component: BlogEditorComponent },
+
 		],
 	},
 ];

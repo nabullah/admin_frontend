@@ -25,6 +25,7 @@ import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzTimelineModule } from 'ng-zorro-antd/timeline';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzListModule } from 'ng-zorro-antd/list';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 const MODULES: any = [
   NzLayoutModule,
@@ -61,7 +62,8 @@ const MODULES: any = [
   NzTableModule,
   NzDividerModule,
   NzPaginationModule,
-  NzListModule
+  NzListModule,
+  NgApexchartsModule
 
 ];
 

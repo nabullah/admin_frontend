@@ -23,10 +23,12 @@ import { EcommerceDashboardComponent } from './components/ecommerce-dashboard/ec
   imports: [
     CommonModule,
     AdminRoutingModule,
-    NzZorroModule, FormsModule,
+    NzZorroModule,
+    FormsModule,
     FormsModule,
     NgxEditorModule,
     ReactiveFormsModule,
+    NgApexchartsModule,
     NgApexchartsModule
   ],
 })
