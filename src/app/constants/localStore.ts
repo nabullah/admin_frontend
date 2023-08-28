@@ -445,3 +445,225 @@ export const crmchart = {
 		],
 	},
 };
+
+export const eCommerce = {
+  popularProducts:[
+    {
+      itemImage:"iphone",
+      itemName:"Apple iPhone 13",
+      itemId:"#FXZ-4567",
+      itemCost:"$999.29"
+    },
+    {
+      itemImage:"jordan",
+      itemName:"Nike Air Jordan",
+      itemId:"#FXZ-3456",
+      itemCost:"$72.40"
+    },
+    {
+      itemImage:"beats-studio",
+      itemName:"Beats Studio 2",
+      itemId:"#FXZ-9485",
+      itemCost:"$99"
+    },
+    {
+      itemImage:"apple-watch",
+      itemName:"Apple Watch Series 7",
+      itemId:"#FXZ-2345",
+      itemCost:"$249.99"
+    },
+    {
+      itemImage:"amazon-echo-dot",
+      itemName:"Amazon Echo Dot",
+      itemId:" #FXZ-8959",
+      itemCost:"$79.40"
+    },
+    {
+      itemImage:"playstation-console",
+      itemName:"Play Station Console",
+      itemId:"#FXZ-7892",
+      itemCost:"$129.48"
+    },
+  ],
+  salesByOrder:{
+    new:[
+      {
+        sender:{
+          name:"Myrtle Ullrich",
+          address:"101 Boulder, California(CA), 95959"
+        },
+        receiver:{
+          name:"Barry Schowalter",
+          address:"939 Orange, California(CA),92118"
+        }
+      },
+      {
+        sender:{
+          name:"Veronica Herman",
+          address:"162 Windsor, California(CA), 95492"
+        },
+        receiver:{
+          name:"Helen Jacobs",
+          address:"487 Sunset, California(CA), 94043"
+        }
+      }
+    ],
+    preparing:[
+      {
+        sender:{
+          name:"Barry Schowalter",
+          address:"939 Orange, California(CA),92118"
+        },
+        receiver:{
+          name:"Myrtle Ullrich",
+          address:"101 Boulder, California(CA), 95959"
+        }
+      },
+      {
+        sender:{
+          name:"Veronica Herman",
+          address:"162 Windsor, California(CA), 95492"
+        },
+        receiver:{
+          name:"Helen Jacobs",
+          address:"487 Sunset, California(CA), 94043"
+        }
+      }
+    ],
+    shipping:[
+      {
+        sender:{
+          name:"Veronica Herman",
+          address:"101 Boulder, California(CA), 95959"
+        },
+        receiver:{
+          name:"Barry Schowalter",
+          address:"939 Orange, California(CA),92118"
+        }
+      },
+      {
+        sender:{
+          name:"Myrtle Ullrich",
+          address:"162 Windsor, California(CA), 95492"
+        },
+        receiver:{
+          name:"Helen Jacobs",
+          address:"487 Sunset, California(CA), 94043"
+        }
+      }
+    ],
+  },
+  transactions:[
+    {
+      icon:"wallet",
+      color:"rgb(115,103,240)",
+      bgcolor:"rgba(115,103,240,0.3)",
+      name:"Wallet",
+      detail:"Starbucks",
+      amount:"-$75",
+      type:"debit"
+    },
+    {
+      icon:"calendar",
+      color:"rgb(40, 199, 111)",
+      bgcolor:"rgba(40, 199, 111,0.3)",
+      name:"Bank Transfer",
+      detail:"Add Money",
+      amount:"+$480",
+      type:"credit"
+    },
+    {
+      icon:"pay-circle",
+      color:"rgb(255,0,0)",
+      bgcolor:"rgba(255,0,0,0.3)",
+      name:"Paypal",
+      detail:"Client Payment",
+      amount:"+$268",
+      type:"credit"
+    },
+    {
+      icon:"credit-card",
+      color:"rgb(168, 170, 174)",
+      bgcolor:"rgba(168, 170, 174,0.3)",
+      name:"Master Card",
+      detail:"Ordered iPhone 13",
+      amount:"-$699",
+      type:"debit"
+    },
+    {
+      icon:"dollar",
+      color:"rgb(0, 207, 232)",
+      bgcolor:"rgba(0, 207, 232,0.3)",
+      name:"Bank Transactions",
+      detail:"Refund",
+      amount:"+$98",
+      type:"credit"
+    },
+    {
+      icon:"pay-circle",
+      color:"rgb(255,0,0)",
+      bgcolor:"rgba(255,0,0,0.3)",
+      name:"Paypal",
+      detail:"Client Payment",
+      amount:"+$126",
+      type:"credit"
+    },
+    {
+      icon:"calendar",
+      color:"rgb(40, 199, 111)",
+      bgcolor:"rgba(40, 199, 111,0.3)",
+      name:"Bank Transfer",
+      detail:"Pay Office Rent",
+      amount:"-$1290",
+      type:"debit"
+    },
+  ],
+  invoiceTable:{
+    select1:["6","10","25","50","100","All"],
+    select2:["Downloaded","Draft","Sent","Paid","Partial Payment","Past Due"],
+    tableData:[
+      {
+        id:"#5036",
+        icon:"pie-chart",
+        total:"$3171",
+        issuedDate:"2023-08-19",
+        color:"rgb(255, 159, 67)"
+      },
+      {
+        id:"#5035",
+        icon:"file",
+        total:"$4263",
+        issuedDate:"2023-08-20",
+        color:"rgb(115, 103, 240)"
+      },
+      {
+        id:"#5034",
+        icon:"pie-chart",
+        total:"$4836",
+        issuedDate:"2023-08-10",
+        color:"rgb(255, 159, 67)"
+      },
+      {
+        id:"#5033",
+        icon:"pound-circle",
+        total:"$2869",
+        issuedDate:"2023-08-12",
+        color:"rgb(40, 199, 111)"
+      },
+      {
+        id:"#5032",
+        icon:"exclamation-circle",
+        total:"$3171",
+        issuedDate:"2023-08-19",
+        color:"rgb(234, 84, 85)"
+      },
+      {
+        id:"#5031",
+        icon:"pound-circle",
+        total:"$3171",
+        issuedDate:"2023-08-19",
+        color:"rgb(40, 199, 111)"
+      }
+    ]
+  }
+}
