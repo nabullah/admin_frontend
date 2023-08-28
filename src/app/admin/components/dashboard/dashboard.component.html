@@ -6,7 +6,7 @@
 
       <div class="col card-dashboard p-4">
         <div class="d-flex justify-content-start align-items-center">
-          <nz-avatar [nzSize]="64" class="dollar-avatar me-3" nzIcon="dollar"></nz-avatar>
+          <nz-avatar [nzSize]="44" class="dollar-avatar me-3" nzIcon="dollar"></nz-avatar>
           <div class="text">
             <h4 class="m-0">$23,523</h4>
             <span class="text-muted">Profit</span>
@@ -16,7 +16,7 @@
 
       <div class="col card-dashboard p-4">
         <div class="d-flex justify-content-start align-items-center">
-          <nz-avatar [nzSize]="64" class="line-chart-avatar me-3" nzIcon="line-chart"></nz-avatar>
+          <nz-avatar [nzSize]="44" class="line-chart-avatar me-3" nzIcon="line-chart"></nz-avatar>
           <div class="text">
             <h4 class="m-0">+ 17.21%</h4>
             <span class="text-muted">Growth</span>
@@ -26,7 +26,7 @@
 
       <div class="col card-dashboard p-4">
         <div class="d-flex justify-content-start align-items-center">
-          <nz-avatar [nzSize]="64" class="profile-avatar me-3" nzIcon="profile"></nz-avatar>
+          <nz-avatar [nzSize]="44" class="profile-avatar me-3" nzIcon="profile"></nz-avatar>
           <div class="text">
             <h4 class="m-0">3,685</h4>
             <span class="text-muted">Orders</span>
@@ -36,7 +36,7 @@
 
       <div class="col card-dashboard p-4">
         <div class="d-flex justify-content-start align-items-center">
-          <nz-avatar [nzSize]="64" class="user-avatar me-3" nzIcon="user"></nz-avatar>
+          <nz-avatar [nzSize]="44" class="user-avatar me-3" nzIcon="user"></nz-avatar>
           <div class="text">
             <h4 class="m-0">1,832</h4>
             <span class="text-muted">Customers</span>
@@ -56,6 +56,8 @@
               [xaxis]="totalRevenueChartOptions.xaxis!"
               [yaxis]="totalRevenueChartOptions.yaxis!"
               [colors]="totalRevenueChartOptions.colors!"
+              [grid]="totalRevenueChartOptions.grid!"
+              [stroke]="totalRevenueChartOptions.stroke!"
             ></apx-chart>
           </div>
         </nz-card>
@@ -83,23 +85,23 @@
           <nz-divider></nz-divider>
           <div class="legends d-flex align-items-center justify-content-evenly">
             <div class="d-flex align-items-center">
-              <nz-badge nzColor="#7367f0"></nz-badge>
+              <nz-badge nzColor="#7367f0" class="me-2 mb-3"></nz-badge>
               <div>
-                <h4 class="m-0">350</h4>
+                <h5 class="m-0">350</h5>
                 <p class="text-muted">New</p>
               </div>
             </div>
             <div class="d-flex align-items-center">
-              <nz-badge nzStatus="processing"></nz-badge>
+              <nz-badge nzStatus="processing" class="me-2 mb-3"></nz-badge>
               <div>
-                <h4 class="m-0">450</h4>
+                <h5 class="m-0">450</h5>
                 <p class="text-muted">Returning</p>
               </div>
             </div>
             <div class="d-flex align-items-center">
-              <nz-badge nzStatus="warning"></nz-badge>
+              <nz-badge nzStatus="warning" class="me-2 mb-3"></nz-badge>
               <div>
-                <h4 class="m-0">100</h4>
+                <h5 class="m-0">100</h5>
                 <p class="text-muted">Others</p>
               </div>
             </div>
@@ -109,12 +111,12 @@
     </div>
 
     <div class="row third-row">
-      <div class="col-6">
-        <nz-card nzTitle="Earning Reports">
+      <div class="col-6 earning-reports">
+        <nz-card nzTitle="Earning Reports" >
           <div class="d-flex">
             <div class="col-4 d-flex flex-column justify-content-center">
-              <div class="amount d-flex gap-2">
-                <h2 class="earning-head m-0">$468</h2>
+              <div class="amount d-flex gap-2 align-items-center">
+                <h2 class="earning-head m-0 d-flex align-items-center">$468</h2>
                 <span><nz-tag class="rounded-pill" nzColor="processing">+ 5.7%</nz-tag></span>
               </div>
               <p class="text-muted">You informed of this week compared to last week</p>
@@ -135,19 +137,19 @@
               ></apx-chart>
             </div>
           </div>
-          <div class="d-flex justify-content-center px-4 pt-3">
+          <div class="d-flex justify-content-center pt-3 pb-3 border rounded">
             <div class="col-4 px-3">
-              <p class="fs-4 d-flex align-items-center"><span nz-icon nzType="dollar-circle" class="text-success me-2 rounded-circle" nzTheme="outline"></span> <span>Earnings</span></p>
+              <p class="fs-5 fw-500 d-flex align-items-center"><span nz-icon nzType="dollar-circle" class="text-success me-2 rounded icon-style" nzTheme="outline"></span> <span>Earnings</span></p>
               <p>$545.69</p>
               <nz-progress [nzPercent]="100" nzSize="small" [nzShowInfo]="false"></nz-progress>
             </div>
             <div class="col-4 px-3">
-              <p class="fs-4 d-flex align-items-center"><span nz-icon nzType="clock-circle" class="text-primary me-2 rounded-circle" nzTheme="outline"></span> <span>Profit</span></p>
+              <p class="fs-5 fw-500 d-flex align-items-center"><span nz-icon nzType="clock-circle" class="text-primary me-2 rounded icon-style" nzTheme="outline"></span> <span>Profit</span></p>
               <p>$265.34</p>
               <nz-progress [nzPercent]="50" nzSize="small" [nzShowInfo]="false"></nz-progress>
             </div>
             <div class="col-4 px-3">
-              <p class="fs-4 d-flex align-items-center"><span nz-icon nzType="dollar-circle" class="text-danger me-2 rounded-circle" nzTheme="outline"></span> <span>Expense</span></p>
+              <p class="fs-5 fw-500 d-flex align-items-center"><span nz-icon nzType="dollar-circle" class="text-danger me-2 rounded icon-style" nzTheme="outline"></span> <span>Expense</span></p>
               <p>$45.69</p>
               <nz-progress [nzPercent]="20" nzSize="small" nzStatus="exception" [nzShowInfo]="false"></nz-progress>
             </div>
@@ -157,31 +159,40 @@
       <div class="col-6">
         <nz-card nzTitle="Support Tracker">
           <div class="d-flex">
-            <div class="col-6 p-3">
-              <p class="d-flex flex-column">
-                <span style="font-size:3vw;">164</span>
+            <div class="col-6 py-3">
+              <div class="d-flex flex-column">
+                <span style="font-size:3vw;">144</span>
                 <span class="text-muted">Total Tickets</span>
-              </p>
-              <div class="d-flex gap-2 mt-3">
-                <img src="../../../../assets/Images/ticket.png" height="20" alt="">
-                <p class="d-flex flex-column">
+              </div>
+              <div class="d-flex gap-2 align-items-center mt-3">
+                <div class="p-2 d-flex align-items-center new-ticktes" style="height: 30px;">
+                  <!-- <img src="../../../../assets/Images/ticket.png" height="15" alt=""> -->
+                  <span nz-icon nzType="border-outer" nzTheme="outline"></span>
+                </div>
+                <div class="d-flex flex-column">
                   <span class="fw-bold">New Tickets</span>
                   <span class="text-muted">142</span>
-                </p>
+                </div>
               </div>
-              <div class="d-flex gap-2">
-                <img src="../../../../assets/Images/correct.png" height="20" alt="">
-                <p class="d-flex flex-column">
+              <div class="d-flex gap-2 align-items-center mt-3">
+                <div class="p-2 d-flex align-items-center open-ticktes" style="height: 30px;">
+                  <!-- <img src="../../../../assets/Images/correct.png" height="15" alt=""> -->
+                  <span nz-icon nzType="check-circle" nzTheme="outline"></span>
+                </div>
+                <div class="d-flex flex-column">
                   <span class="fw-bold">Open Tickets</span>
                   <span class="text-muted">28</span>
-                </p>
+                </div>
               </div>
-              <div class="d-flex gap-2">
-                <img src="../../../../assets/Images/clock.png" height="20" alt="">
-                <p class="d-flex flex-column">
+              <div class="d-flex gap-2 align-items-center mt-3">
+                <div class="p-2 d-flex align-items-center response-ticktes" style="height: 30px;">
+                  <!-- <img src="../../../../assets/Images/clock.png" height="15" alt=""> -->
+                  <span nz-icon nzType="field-time" nzTheme="outline"></span>
+                </div>
+                <div class="d-flex flex-column">
                   <span class="fw-bold">Response Time</span>
                   <span class="text-muted">1 Day</span>
-                </p>
+                </div>
               </div>
             </div>
             <div class="col-6 align-items-center">
@@ -215,6 +226,8 @@
               [colors]="averageProfitChartOptions.colors!"
               [dataLabels]="averageProfitChartOptions.dataLabels!"
               [yaxis]="averageProfitChartOptions.yaxis!"
+              [grid]="averageProfitChartOptions.grid!"
+              [colors]="averageProfitChartOptions.colors!"
               ></apx-chart>
           </div>
         </nz-card>
@@ -306,14 +319,14 @@
           </div>
           <div>
             <div class="d-flex justify-content-between">
-              <div class="d-flex gap-2">
+              <div class="d-flex gap-2 align-items-center">
                 <p class="icon"><span nz-icon nzType="dollar" nzTheme="outline"></span></p>
                 <p class="fw-medium">Total Sales</p>
               </div>
               <p class="text-success fw-medium">+$98</p>
             </div>
             <div class="d-flex justify-content-between">
-              <div class="d-flex gap-2">
+              <div class="d-flex gap-2 align-items-center">
                 <p class="icon"><span nz-icon nzType="check-circle" nzTheme="outline"></span></p>
                 <p class="fw-medium">Total Revenue</p>
               </div>
@@ -325,11 +338,13 @@
       <div class="col-4">
         <nz-card [nzTitle]="MonthlyCampaignStateTitle">
           <div class="d-flex justify-content-between mb-3" *ngFor="let item of localData.monthlyCampaignState">
-            <div class="d-flex gap-2 align-items-center">
-              <img src="../../../../assets/Images/{{item.icon}}.png" height="20" alt="">
-              <p class="fw-medium fs-5 m-0">{{item.name}}</p>
+            <div class="d-flex gap-2 align-items-center montly-campaigns">
+              <div class="image">
+                <img src="../../../../assets/Images/{{item.icon}}.png" height="10" alt="">
+              </div>
+              <p class="fw-400 fs-14 m-0">{{item.name}}</p>
             </div>
-            <div class="d-flex gap-2 fw-medium">
+            <div class="d-flex gap-2 align-items-center">
               <p>{{item.number}}</p>
               <p class="text-success">{{item.percentage}}</p>
             </div>

@@ -1,86 +1,116 @@
-.dollar-avatar{
-  background-color:rgb(24, 144, 255);
+.dollar-avatar {
+	background-color: rgb(24, 144, 255);
 }
-.line-chart-avatar{
-  background-color:rgb(0, 201, 167);
+.line-chart-avatar {
+	background-color: rgb(0, 201, 167);
 }
-.profile-avatar{
-  background-color:rgb(255, 193, 7);
+.profile-avatar {
+	background-color: rgb(255, 193, 7);
 }
-.user-avatar{
-  background-color:rgb(136, 108, 255);
+.user-avatar {
+	background-color: rgb(136, 108, 255);
 }
 nz-avatar {
-  display:grid;
-  place-items: center;
+	display: grid;
+	place-items: center;
 }
-.spaced-container{
-  display:grid;
-  row-gap: 1.5vw;
+.spaced-container {
+	display: grid;
+	row-gap: 1.5vw;
 }
-.analytics-container{
-  display:grid;
-  grid-template-columns: repeat(4,1fr);
-  column-gap: 1vw;
+.analytics-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 1vw;
 }
-.product{
-  gap:10px;
+.product {
+	gap: 10px;
 }
-nz-card{
-  min-height:500px;
+nz-card {
+	min-height: 500px;
 }
-.doughnut-chart-container{
-  height:275px;
-  width:100%;
+.doughnut-chart-container {
+	height: 275px;
+	width: 100%;
 }
-.upload-list{
-  list-style: none;
-  display:grid;
-  row-gap:1vw;
+.upload-list {
+	list-style: none;
+	display: grid;
+	row-gap: 1vw;
 }
-.ppt-file{
-  color:rgb(255, 193, 7);
+.ppt-file {
+	color: rgb(255, 193, 7);
 }
-.xls-file{
-  color:rgb(5, 201, 167);
+.xls-file {
+	color: rgb(5, 201, 167);
 }
-.doc-file{
-  color:rgb(63, 135, 245);
+.doc-file {
+	color: rgb(63, 135, 245);
 }
-.txt-file{
-  color:rgb(136, 108, 255);
+.txt-file {
+	color: rgb(136, 108, 255);
 }
-.pdf-file{
-  color:rgb(222, 68, 54);
+.pdf-file {
+	color: rgb(222, 68, 54);
 }
-li .file-icon span{
-  font-size: 2vw;
+li .file-icon span {
+	font-size: 2vw;
 }
-.timeline-dot{
-  width:30px;
-  display:grid;
-  place-items: center;
+.timeline-dot {
+	width: 30px;
+	display: grid;
+	place-items: center;
 }
-.timeline{
-  height:440px;
-  overflow-y: scroll;
+.timeline {
+	height: 440px;
+	overflow-y: scroll;
 }
-.list{
-  display:grid;
-  row-gap:1.5vw;
-  grid-template-columns: 1fr;
+.list {
+	display: grid;
+	row-gap: 1.5vw;
+	grid-template-columns: 1fr;
 }
-tr img{
-  background-blend-mode: darken;
+tr img {
+	background-blend-mode: darken;
 }
-th{
-    background-color: #3f87f508;
+th {
+	background-color: #3f87f508;
 }
-.earning-head{
-  font-size:3vw;
-  font-weight:400;
+.earning-head {
+	font-size: 3vw;
+	font-weight: 400;
 }
-.third-row nz-card{
-  min-height:300px;
-  height:460px;
+.third-row nz-card {
+	min-height: 300px;
+	height: 460px;
+}
+
+.icon-style {
+	border: 1px solid;
+	padding: 4px;
+	// background: currentColor;
+	font-size: 1rem;
+}
+
+.earning-reports {
+	::ng-deep.ant-card-body {
+		padding: 8px 24px 0px 24px !important;
+	}
+}
+
+.new-ticktes, .open-ticktes, .response-ticktes {
+	background: rgb(115 103 240 / 13%);
+	color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.montly-campaigns .image{
+  background: rgb(115 103 240 / 13%);
+  padding: 4px;
+  height: 25px;
+  border-radius: 4px;
+  display: flex;
+  width: 25px;
+  align-items: center;
+  justify-content: center;
 }

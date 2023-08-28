@@ -39,6 +39,8 @@ export type totalRevenueChartOptions = {
 	xaxis: ApexXAxis;
 	yaxis: ApexYAxis;
   colors:string[];
+  grid: ApexGrid;
+  stroke: ApexStroke;
 };
 
 export type customerChartOptions = {
@@ -49,7 +51,8 @@ export type customerChartOptions = {
 	fill: ApexFill;
 	legend: ApexLegend;
 	colors: any;
-  dataLabels:ApexDataLabels
+  dataLabels:ApexDataLabels,
+  xaxis: ApexXAxis | any,
 };
 
 export type averageProfitChartOptions = {
@@ -63,6 +66,7 @@ export type averageProfitChartOptions = {
 	colors: any;
 	dataLabels: ApexDataLabels;
   yaxis:ApexYAxis;
+  grid: ApexGrid
 };
 
 export type earningReportChartOptions = {
@@ -167,6 +171,10 @@ export class DashboardComponent implements OnInit {
             colors:  this.currentTheme === "dark" ? "#d0d4f1" :  "#2f2b3d",
           },
         },
+        // show: false,
+				axisBorder: { show: false },
+				axisTicks: { show: false },
+				tooltip: { enabled: false },
       },
       yaxis: {
         labels: {
@@ -175,7 +183,14 @@ export class DashboardComponent implements OnInit {
           },
         },
       },
-      colors:["#7367f0"]
+      colors:["#7367f0"],
+      grid: {
+        show:false,
+      },
+      stroke: {
+        curve: "smooth",
+        width: 3
+      },
     };
 
     this.customerChartOptions = {
@@ -188,7 +203,7 @@ export class DashboardComponent implements OnInit {
         }
       },
       fill: {
-        type: "gradient",
+        // type: "gradient",
       },
       legend: {
         position: "bottom",
@@ -210,15 +225,16 @@ export class DashboardComponent implements OnInit {
       ],
       colors: ["#7367f0", "#1890ff", "#faad14"],
       dataLabels: {
-        // enabled: false,
-      }
+        enabled: false,
+      },
+   
     };
 
     this.averageProfitChartOptions = {
       series: this.localData.averageProfit.series,
       chart: {
         type: "bar",
-        height: 350,
+        height: 450,
         stacked: true,
         toolbar: {
           show: false,
@@ -257,11 +273,15 @@ export class DashboardComponent implements OnInit {
       plotOptions: {
         bar: {
           horizontal: false,
+          borderRadius:4
         },
       },
       legend: {
-        position: "right",
-        offsetY: 40,
+        position: "top",
+				horizontalAlign: "left",
+        labels: {
+          colors: this.currentTheme === "dark" ? "#d0d4f1" :  "#2f2b3d",
+        }
       },
       fill: {
         opacity: 1,
@@ -269,6 +289,9 @@ export class DashboardComponent implements OnInit {
       colors: this.localData.averageProfit.colors,
       dataLabels: {
         enabled: false,
+      },
+      grid:{
+        show:false
       },
     };
 
@@ -324,6 +347,10 @@ export class DashboardComponent implements OnInit {
       plotOptions: {
         bar: {
           horizontal: false,
+					barHeight: "75%",
+					columnWidth: 25,
+					borderRadius: 2,
+					borderRadiusWhenStacked:'all'
         },
       },
       legend: {
@@ -360,7 +387,7 @@ export class DashboardComponent implements OnInit {
             value: {
               offsetY: 0,
               fontSize: "35px",
-              color: undefined,
+              color: this.currentTheme === "dark" ? "#d0d4f1" :  "#2f2b3d",
               formatter: function(val) {
                 return val + "%";
               }
@@ -396,11 +423,12 @@ export class DashboardComponent implements OnInit {
       series:[
         {
           name:"Sales",
-          data:[20,10,30,5,8,20,15,10]
+          data:[20,10,30,5,8,20,15,10],
+      
         },
         {
           name:"Revenue",
-          data:[-4,-10,-25,-15,-30,-22,-5,-12]
+          data:[-20,-10,-25,-15,-30,-22,-5,-12]
         },
       ],
       chart:{
@@ -427,10 +455,14 @@ export class DashboardComponent implements OnInit {
       plotOptions: {
         bar: {
           horizontal: false,
-          columnWidth: "55%",
-          borderRadius:5,
+          columnWidth: 10,
+					borderRadius: 5,
+					borderRadiusWhenStacked:'all',
+          // barHeightOffset: 5,
+          // columnWidthOffset: 5,
         }
       },
+      colors: ["#7367f0", "#ff9f43"],
       dataLabels:{
         enabled:false
       },
