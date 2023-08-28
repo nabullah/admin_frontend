@@ -66,60 +66,87 @@
 			<div class="steps col-4">
 				<nz-card [nzBordered]="false">
 					<div class="content">
-						<div class="heading d-flex justify-content-between">
-							<h6>Project</h6>
-							<h6 class="text-muted mt-0">Project Status</h6>
-						</div>
-						<div class="projects">
+            <div class="d-flex justify-content-between">
+						<div class="heading d-flex flex-column">
+							<h6>Active Projects</h6>
+							<h6 class="text-muted mt-0">Average 72% Completed</h6>
+						</div><a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+              <span nz-icon nzType="more" nzTheme="outline"></span>
+            </a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu>
+                <li nz-menu-item>Refresh</li>
+                <li nz-menu-item>Download</li>
+                <li nz-menu-item>View All</li>
+              </ul>
+            </nz-dropdown-menu></div>
+						<div class="browsers">
 							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/science.png" height="36" class="rounded-circle" />
-									<div>
-										<h5>React</h5>
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/figma.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+							Figma
 									</div>
 								</div>
-								<div class="two"><nz-progress [nzPercent]="95" nzType="circle" [nzWidth]="50"></nz-progress></div>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >75.2%</div>
+                  <nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="30"[nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress>
+                </div>
 							</div>
 							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/file.png" height="36" class="rounded-circle" />
-									<div>
-										<h5>PHP</h5>
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/file.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										<h6>PHP</h6>
 									</div>
 								</div>
-								<div class="two">
-									<nz-progress [nzPercent]="70" nzType="circle" [nzWidth]="50" [nzStrokeColor]="'green'"></nz-progress>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >45.4%</div><nz-progress [nzPercent]="45" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress></div>
+							</div>
+							<div class="d-flex justify-content-between">
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/apple-black-logo.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										<h6>IOS</h6>
+									</div>
+								</div>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >70.2%</div>
+									<nz-progress [nzPercent]="70" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress>
 								</div>
 							</div>
 							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/apple-black-logo.png" height="36" class="rounded-circle" />
-									<div>
-										<h5>IOS</h5>
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/android.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										<h6>Android</h6>
 									</div>
 								</div>
-								<div class="two"><nz-progress [nzPercent]="40" nzType="circle" [nzWidth]="50" [nzStrokeColor]="'red'"></nz-progress></div>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >50.54%</div><nz-progress [nzPercent]="50" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress></div>
 							</div>
 							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/figma.png" height="36" class="rounded-circle" />
-									<div>
-										<h5>Brave</h5>
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/science.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										<h6>React</h6>
 									</div>
 								</div>
-								<div class="two">
-									<nz-progress [nzPercent]="50" nzType="circle" [nzWidth]="50" [nzStrokeColor]="'green'"></nz-progress>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >100%</div>
+									<nz-progress [nzPercent]="100" nzType="circle" [nzWidth]="30"[nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress>
 								</div>
 							</div>
 							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/android.png" height="36" class="rounded-circle" />
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/figma.png" height="26" class="rounded-circle" />
 									<div>
-										<h5>Android</h5>
+										<h6 class=" browser-font font-weight-medium">Figma</h6>
 									</div>
 								</div>
-								<div class="two">
-									<nz-progress [nzPercent]="90" nzType="circle" [nzWidth]="50"></nz-progress>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >75.96%</div>
+									<nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="30"[nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress>
 								</div>
 							</div>
 						</div>
@@ -222,69 +249,86 @@
 			<div class="col-4">
 				<nz-card [nzBordered]="false">
 					<div class="content">
-						<div class="heading d-flex justify-content-between">
+            <div class="d-flex justify-content-between">
+						<div class="heading d-flex flex-column">
 							<h6>Browser States</h6>
 							<h6 class="text-muted mt-0">Counter April 2022</h6>
-						</div>
+						</div><a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+              <span nz-icon nzType="more" nzTheme="outline"></span>
+            </a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu>
+                <li nz-menu-item>Refresh</li>
+                <li nz-menu-item>Download</li>
+                <li nz-menu-item>View All</li>
+              </ul>
+            </nz-dropdown-menu></div>
 						<div class="browsers">
 							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/google.png" height="33" class="rounded-circle" />
-									<div>
-										<h5>Google Chrome</h5>
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/google.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										Google Chrome
 									</div>
 								</div>
-								<div class="two"><nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="40"></nz-progress></div>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >75.2%</div>
+                  <nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="30"[nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress></div>
 							</div>
 							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/safari.png" height="33" class="rounded-circle" />
-									<div>
-										<h5>Apple Safari</h5>
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/safari.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										<h6>Apple Safari</h6>
 									</div>
 								</div>
-								<div class="two"><nz-progress [nzPercent]="45" nzType="circle" [nzWidth]="40"></nz-progress></div>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >45.4%</div><nz-progress [nzPercent]="45" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress></div>
 							</div>
 							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/internet-explorer.png" height="33" class="rounded-circle" />
-									<div>
-										<h5>Internet Explorer</h5>
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/internet-explorer.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										<h6>Internet Explorer</h6>
 									</div>
 								</div>
-								<div class="two">
-									<nz-progress [nzPercent]="70" nzType="circle" [nzWidth]="40"></nz-progress>
-								</div>
-							</div>
-							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/mozilla.png" height="33" class="rounded-circle" />
-									<div>
-										<h5>Mozilla Firefox</h5>
-									</div>
-								</div>
-								<div class="two"><nz-progress [nzPercent]="50" nzType="circle" [nzWidth]="40"></nz-progress></div>
-							</div>
-							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/lion.png" height="33" class="rounded-circle" />
-									<div>
-										<h5>Brave</h5>
-									</div>
-								</div>
-								<div class="two">
-									<nz-progress [nzPercent]="100" nzType="circle" [nzWidth]="40"></nz-progress>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >70.2%</div>
+									<nz-progress [nzPercent]="70" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress>
 								</div>
 							</div>
 							<div class="d-flex justify-content-between">
-								<div class="one d-flex gap-4">
-									<img src="../../../../assets/Images/crm comp.images/google.png" height="33" class="rounded-circle" />
-									<div>
-										<h5>Google Chrome</h5>
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/mozilla.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										<h6>Mozilla Firefox</h6>
 									</div>
 								</div>
-								<div class="two">
-									<nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="40"></nz-progress>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >50.54%</div><nz-progress [nzPercent]="50" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress></div>
+							</div>
+							<div class="d-flex justify-content-between">
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/lion.png" height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										<h6>Brave</h6>
+									</div>
+								</div>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >100%</div>
+									<nz-progress [nzPercent]="100" nzType="circle" [nzWidth]="30"[nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between">
+								<div class="one d-flex gap-3">
+									<img src="../../../../assets/Images/crm comp.images/google.png" height="26" class="rounded-circle" />
+									<div>
+										<h6 class=" browser-font font-weight-medium">Google Chrome</h6>
+									</div>
+								</div>
+								<div class="two d-flex gap-3">
+                  <div class="font-weight-bold browser-font" >75.96%</div>
+									<nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="30"[nzShowInfo]="false"[nzStrokeWidth]="10"></nz-progress>
 								</div>
 							</div>
 						</div>
@@ -293,10 +337,20 @@
 			</div>
 			<div class="col-lg-4">
 				<nz-card [nzBordered]="false">
-					<div class="parameter d-flex justify-content-between flex-row mb-4">
-						<h6>Monthly Sales</h6>
-						<h6>Six Months</h6>
-					</div>
+				  <div class="d-flex justify-content-between">
+						<div class="heading d-flex flex-column">
+							<h6>Sales</h6>
+							<h6 class="text-muted mt-0">Last Six Months</h6>
+						</div><a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+              <span nz-icon nzType="more" nzTheme="outline"></span>
+            </a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu>
+                <li nz-menu-item>Refresh</li>
+                <li nz-menu-item>Download</li>
+                <li nz-menu-item>View All</li>
+              </ul>
+            </nz-dropdown-menu></div>
 					<div class="d-flex justify-content-center align-items-center flex-column mt-5">
 						<div>
 							<apx-chart
@@ -305,6 +359,7 @@
                 [labels]="radarChartOptions1.labels!"
                 [xaxis]="radarChartOptions1.xaxis!"
                 [yaxis]="radarChartOptions1.yaxis!"
+                [colors]="radarChartOptions1.colors!"
               ></apx-chart>
 						</div>
 					</div>

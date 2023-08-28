@@ -50,6 +50,8 @@ export type radarChartOptions1 = {
 	dataLabels: ApexDataLabels;
 	xaxis: ApexXAxis;
 	yaxis: ApexYAxis;
+  // plotOptions: ApexPlotOptions;
+  colors:string[];
 };
 
 export type totalRevenueChartOptions2 = {
@@ -197,6 +199,22 @@ export class CrmDashboardComponent {
 
 		this.radarChartOptions1 = {
 			series: this.localData.radarchart1.series,
+      // plotOptions: {
+      //   radar: {
+      //     size: undefined,
+      //     offsetX: 0,
+      //     offsetY: 0,
+      //     polygons: {
+      //       strokeColors: ['#8267f0',"red"],
+
+      //       connectorColors: '',
+      //       fill: {
+      //         // colors: ['#8267f0'],
+      //       }
+      //     }
+      //   }
+      // },
+      colors:["#5C00A3","blue"],
 			chart: {
 				height: 280,
 				type: "radar",
