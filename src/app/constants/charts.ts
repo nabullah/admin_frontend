@@ -38,8 +38,6 @@ export type LineChartOptions = {
 	theme: ApexTheme | any;
 	legend: ApexLegend | any;
 	tooltip: ApexTooltip | any;
-	// sparkline: ApexSparkline | any
-	// toolbar :ApexToolbar | any
 };
 
 export type DonutChartOptions = {
@@ -51,5 +49,17 @@ export type DonutChartOptions = {
 	dataLabels: ApexDataLabels | any;
 	stroke: ApexStroke | any;
 	theme: ApexTheme | any;
-
 };
+
+export type BarChartOptions = {
+  series: ApexAxisChartSeries;
+  chart:ApexChart;
+  responsive:ApexResponsive;
+  xaxis:ApexXAxis;
+  yaxis:ApexYAxis;
+  plotOptions:ApexPlotOptions;
+  colors:any;
+  grid:ApexGrid;
+  dataLabels:ApexDataLabels;
+  legend:ApexLegend;
+}

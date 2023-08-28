@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, inject } from "@angular/core";
 import { ChartComponent } from "ng-apexcharts";
-import { DonutChartOptions, LineChartOptions, RadialBarChartOptions } from "src/app/constants/charts";
+import { BarChartOptions, DonutChartOptions, LineChartOptions, RadialBarChartOptions } from "src/app/constants/charts";
 import { ThemeService } from "src/app/services/theme.service";
-
+import {eCommerce} from '../../../constants/localStore';
 @Component({
 	selector: "app-ecommerce-dashboard",
 	templateUrl: "./ecommerce-dashboard.component.html",
@@ -19,17 +19,27 @@ export class EcommerceDashboardComponent implements OnInit {
 	public generateLeadsChartOptions!: Partial<DonutChartOptions>;
 
 	@ViewChild("revenueReport") revenueReport!: ChartComponent;
-	public revenueReportOptions!: any;
+	public revenueReportOptions!: Partial<BarChartOptions>;
+
+	@ViewChild("BudgetChart") BudgetChart!: ChartComponent;
+	public BudgetLineChartOptions!: Partial<LineChartOptions>;
+
+	@ViewChild("BudgetChart") earningChart!: ChartComponent;
+	public earningChartOptions!: Partial<BarChartOptions>;
 
 	theme = inject(ThemeService);
 	currentTheme!: string;
 	totalValue: any;
+  localData = eCommerce;
+  listOfData = eCommerce.invoiceTable.tableData;
 
 	constructor() {
 		this.theme.pushTheme$.subscribe((res) => {
 			this.currentTheme = res;
 			this.expenceChartOptions();
 			this.revenueReportOptionsF();
+			this.BudgetChartOptionsF();
+			this.earningChartOptionsF();
 		});
 	}
 
@@ -186,21 +196,20 @@ export class EcommerceDashboardComponent implements OnInit {
 				{
 					name: "Males",
 					data: [100, 200, 250, 100, 200, 250, 100, 200, 250],
-					borderRadius: 5,
+					// borderRadius: 5,
 				},
 				{
 					name: "Females",
 					data: [-100, -150, -200, -100, -150, -200, -100, -150, -200],
-					borderRadius: 5,
+					// borderRadius: 5,
 				},
 			],
 			chart: {
 				type: "bar",
 				stacked: true,
 				toolbar: { show: false },
-				tooltip: { enabled: false },
-				height: 330,
-				width: 400,
+				height: 300,
+				width: 500,
 			},
 
 			colors: ["#7367f0", "#ff9f43"],
@@ -210,7 +219,7 @@ export class EcommerceDashboardComponent implements OnInit {
 					horizontal: false,
 					barHeight: "75%",
 					columnWidth: 10,
-					borderRadius: [5],
+					borderRadius: 5,
 					borderRadiusWhenStacked:'all'
 				},
 			},
@@ -220,12 +229,23 @@ export class EcommerceDashboardComponent implements OnInit {
 			},
 
 			xaxis: {
-				show: false,
-				labels: { show: false },
-				axisBorder: { show: false },
+				labels:{
+          show:false
+        },
 				axisTicks: { show: false },
 				tooltip: { enabled: false },
+        axisBorder:{
+          show:false
+        }
 			},
+			yaxis: {
+				axisTicks: { show: false },
+				tooltip: { enabled: false },
+        axisBorder:{
+          show:false
+        }
+			},
+
 			legend: {
 				position: "top",
 				horizontalAlign: "left",
@@ -248,16 +268,16 @@ export class EcommerceDashboardComponent implements OnInit {
 		};
 	}
 
-	budgeChartOptionsF() {
-		this.profitChartOptions = {
+	BudgetChartOptionsF() {
+		this.BudgetLineChartOptions = {
 			series: [
 				{
-					data: [10, 15, 25, 30, 45, 30],
+					data: [10, 5, 20, 15, 18, 4, 30, 25, 27, 15, 28],
 				},
 			],
 			chart: {
-				height: 70,
-				width: 140,
+				height: 100,
+				width: 200,
 				type: "line",
 				zoom: { enabled: false },
 				toolbar: { show: false },
@@ -268,7 +288,7 @@ export class EcommerceDashboardComponent implements OnInit {
 				enabled: false,
 			},
 			stroke: {
-				curve: "straight",
+				curve: "smooth",
 				lineCap: "round",
 				width: 4,
 			},
@@ -287,4 +307,62 @@ export class EcommerceDashboardComponent implements OnInit {
 			},
 		};
 	}
+
+  earningChartOptionsF(){
+    this.earningChartOptions =  {
+      series: [
+        {
+          name: "Series A",
+          data: [30, 60, 40, 50, 40, 55, 85],
+        },
+      ],
+      chart: {
+        type: "bar",
+        height: 210,
+        stacked: true,
+        toolbar: {
+          show: false,
+        },
+        zoom: {
+          enabled: false,
+        },
+      },
+      xaxis: {
+        categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        axisBorder: {
+          show: false,
+        },
+        axisTicks: {
+          show: false,
+        },
+        labels: {
+          style: {
+            colors:this.currentTheme === "dark" ? "#d0d4f1" :  "#2f2b3d",
+          },
+        },
+      },
+      yaxis: {
+        labels: {
+          show: false,
+        },
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+        },
+      },
+      legend: {
+        position: "right",
+        offsetY: 40,
+      },
+      colors: "#7367f0",
+      dataLabels: {
+        enabled: false,
+      },
+      grid: {
+        show: false,
+      },
+    };
+  }
+
 }

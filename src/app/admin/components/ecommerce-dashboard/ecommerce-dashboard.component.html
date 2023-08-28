@@ -1,194 +1,436 @@
 <div class="wrapper">
-    <div class="d-flex gap-3 ">
-        <div class="card-dashboard p-4">
-            <div class="row">
-                <div class="col-8">
-                    <h6 class="fs-18 fw-500"> Congratulations John! 🎉 </h6>
-                    <p class="mb-2"> Best seller of the month </p>
-                    <h4 class="fs-20 fw-700 mb-1 text-purple"> $48.9k </h4>
-                    <button nz-button nzType="primary" class="mt-1">View Sales</button>
-                </div>
-                <div class="col-4">
-                    <img class="img-fluid"
-                        src="https://demos.pixinvent.com/vuexy-vuejs-laravel-admin-template/demo-1/build/assets/congo-illustration-d94260b0.png">
-                </div>
-            </div>
+  <div class="d-flex gap-3 ">
+    <div class="card-dashboard p-4">
+      <div class="row">
+        <div class="col-8">
+          <h6 class="fs-18 fw-500"> Congratulations John! 🎉 </h6>
+          <p class="mb-2"> Best seller of the month </p>
+          <h4 class="fs-20 fw-700 mb-1 text-purple"> $48.9k </h4>
+          <button nz-button nzType="primary" class="mt-1">View Sales</button>
         </div>
-        <div class="flex-fill card-dashboard">
-            <div class=" d-flex align-items-center justify-content-between p-4">
-                <div class="">
-                    <div class="fs-18 fw-500">Statistics</div>
-                </div>
-                <div><span class="text-sm text-disabled fs-12 fw-400">Updated 1 month ago</span></div>
-            </div>
-            <div class="cards p-4">
-                <div class="row">
-                    <div class="col-md-3 col-6 d-flex align-items-center gap-3">
-                        <div class="avatar">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                aria-hidden="true" role="img" tag="i"
-                                class="v-icon notranslate v-theme--dark v-icon--size-default iconify iconify--tabler"
-                                width="1em" height="1em" viewBox="0 0 24 24">
-                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5">
-                                    <path d="M12 3v9h9"></path>
-                                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"></path>
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="text-sales">
-                            <p class="mb-0 fw-400 fs-24">230k</p>
-                            <p class="mb-0 fw-400 fs-14 text-sm">Sales</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 d-flex align-items-center gap-3">
-                        <div class="avatar">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                aria-hidden="true" role="img" tag="i"
-                                class="v-icon notranslate v-theme--light v-icon--size-default iconify iconify--tabler"
-                                width="1em" height="1em" viewBox="0 0 24 24">
-                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0-8 0M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-17.87a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.85">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="text-sales">
-                            <p class="mb-0 fw-400 fs-24">8.549k</p>
-                            <p class="mb-0 fw-400 fs-14 text-sm">Customers</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 d-flex align-items-center gap-3">
-                        <div class="avatar">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                aria-hidden="true" role="img" tag="i"
-                                class="v-icon notranslate v-theme--light v-icon--size-default iconify iconify--tabler"
-                                width="1em" height="1em" viewBox="0 0 24 24">
-                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5">
-                                    <path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0m11 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"></path>
-                                    <path d="M17 17H6V3H4"></path>
-                                    <path d="m6 5l14 1l-1 7H6"></path>
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="text-sales">
-                            <p class="mb-0 fw-400 fs-24">1.423k</p>
-                            <p class="mb-0 fw-400 fs-14 text-sm">Products</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 d-flex align-items-center gap-3">
-                        <div class="avatar">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                aria-hidden="true" role="img" tag="i"
-                                class="v-icon notranslate v-theme--light v-icon--size-default iconify iconify--tabler"
-                                width="1em" height="1em" viewBox="0 0 24 24">
-                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="text-sales">
-                            <p class="mb-0 fw-400 fs-24">$9745</p>
-                            <p class="mb-0 fw-400 fs-14 text-sm">Revenue</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-4">
+          <img class="img-fluid"
+            src="https://demos.pixinvent.com/vuexy-vuejs-laravel-admin-template/demo-1/build/assets/congo-illustration-d94260b0.png">
         </div>
+      </div>
     </div>
-    <div class="d-flex gap-3 my-3">
-        <div class=" ">
-            <div class="d-flex gap-3">
-                <div class="card-dashboard expenses-wrapper p-4 position-relative">
-                    <div class="expenses">
-                        <div class="mb-2">
-                            <h5 class="mb-1"> 82.5k </h5><span class="text-disabled text-sm">Expenses</span>
-                        </div>
-                        <div id="expenxe-chart">
-                            <apx-chart [series]="expenxeChartOptions.series" [chart]="expenxeChartOptions.chart"
-                                [plotOptions]="expenxeChartOptions.plotOptions" [labels]="expenxeChartOptions.labels"
-                                [fill]="expenxeChartOptions.fill"></apx-chart>
-                        </div>
-                        <div class="text-sm text-center clamp-text text-muted"> $21k Expenses more than last month
-                        </div>
-                    </div>
-                </div>
-                <div class="card-dashboard p-4 profit-wrapper position-relative">
-                    <div class="profit">
-                        <div class="mb-2">
-                            <h5 class="mb-1">Profit </h5><span class="text-disabled text-sm">Last Month</span>
-                        </div>
-                        <div id="profit-chart">
-                            <div id="chart">
-                                <apx-chart [series]="profitChartOptions.series" [chart]="profitChartOptions.chart"
-                                    [xaxis]="profitChartOptions.xaxis" [dataLabels]="profitChartOptions.dataLabels"
-                                    [grid]="profitChartOptions.grid" [stroke]="profitChartOptions.stroke"></apx-chart>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between gap-3 mt-3 clamp-text">
-                            <h4 class="mb-0 text-center font-weight-medium"> 624k </h4><span
-                                class="text-sm text-success"> +8.24% </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-dashboard p-4 mt-3">
-                <div class="v-card-text d-flex justify-content-between">
-                    <div class="d-flex flex-column">
-                        <div class="mb-auto">
-                            <h5 class="text-h5 text-no-wrap"> Generated Leads </h5><span class="text-sm">Monthly
-                                Report</span>
-                        </div>
-                        <div>
-                            <h4 class="text-h3 my-1"> 4,350 </h4>
-                            <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    aria-hidden="true" role="img" tag="i"
-                                    class="v-icon notranslate v-theme--light v-icon--size-default text-success me-1 iconify iconify--tabler"
-                                    width="1em" height="1em" viewBox="0 0 24 24">
-                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="1.5" d="m6 15l6-6l6 6"></path>
-                                </svg><span class="text-success fst-normal">15.8% </span></div>
-                        </div>
-                    </div>
-                    <div class="generatedLeads-container">
-                        <div id="generatedLeads">
-                            <apx-chart [series]="generateLeadsChartOptions.series"
-                                [chart]="generateLeadsChartOptions.chart" [labels]="generateLeadsChartOptions.labels"
-                                [responsive]="generateLeadsChartOptions.responsive"></apx-chart>
-                            <div class="center-label d-flex align-items-center flex-column" id="center-label">
-                                <p class="mb-0 fs-18">{{ totalValue }}</p>
-                                <p class="mb-0 fs-12">Total</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="flex-fill card-dashboard">
+      <div class=" d-flex align-items-center justify-content-between p-4">
+        <div class="">
+          <div class="fs-18 fw-500">Statistics</div>
         </div>
-        <div class="flex-fill card-dashboard d-flex p-4">
-            <div class="">
-                <h5 class="text-h5 mb-6" style="color: rgba(208,212,241);"> Revenue Report </h5>
-                <div id="revenueReport" class="me-4">
-                    <apx-chart [series]="revenueReportOptions.series" [chart]="revenueReportOptions.chart"
-                        [plotOptions]="revenueReportOptions.plotOptions" [colors]="revenueReportOptions.colors"
-                        [grid]="revenueReportOptions.grid" [dataLabels]="revenueReportOptions.dataLabels"
-                        [xaxis]="revenueReportOptions.xaxis" [legend]="revenueReportOptions.legend"></apx-chart>
-                </div>
+        <div><span class="text-sm text-disabled fs-12 fw-400">Updated 1 month ago</span></div>
+      </div>
+      <div class="cards p-4">
+        <div class="row">
+          <div class="col-md-3 col-6 d-flex align-items-center gap-3">
+            <div class="avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" tag="i" class="v-icon notranslate v-theme--dark v-icon--size-default iconify iconify--tabler"
+                width="1em" height="1em" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                  <path d="M12 3v9h9"></path>
+                  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"></path>
+                </g>
+              </svg>
             </div>
-            <div class="border-start text-center w-100">
-                <nz-select ngModel="2022">
-                    <nz-option nzValue="2022" nzLabel="2022"></nz-option>
-                    <nz-option nzValue="2021" nzLabel="2021"></nz-option>
-                    <nz-option nzValue="2020" nzLabel="2020"></nz-option>
-                </nz-select>
-                <div class="d-flex flex-column mt-5">
-                    <h3 class="fw-500 text-h3"> $25,825 </h3>
-                    <p><span class="text-high-emphasis fw-500 me-1">Budget:</span><span>56,800</span></p>
-                </div>
-                <button nz-button nzType="primary" class="mt-1">Increase Budget</button>
+            <div class="text-sales">
+              <p class="mb-0 fw-400 fs-24">230k</p>
+              <p class="mb-0 fw-400 fs-14 text-sm">Sales</p>
             </div>
+          </div>
+          <div class="col-md-3 col-6 d-flex align-items-center gap-3">
+            <div class="avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" tag="i"
+                class="v-icon notranslate v-theme--light v-icon--size-default iconify iconify--tabler" width="1em"
+                height="1em" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0-8 0M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-17.87a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.85">
+                </path>
+              </svg>
+            </div>
+            <div class="text-sales">
+              <p class="mb-0 fw-400 fs-24">8.549k</p>
+              <p class="mb-0 fw-400 fs-14 text-sm">Customers</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 d-flex align-items-center gap-3">
+            <div class="avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" tag="i"
+                class="v-icon notranslate v-theme--light v-icon--size-default iconify iconify--tabler" width="1em"
+                height="1em" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                  <path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0m11 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"></path>
+                  <path d="M17 17H6V3H4"></path>
+                  <path d="m6 5l14 1l-1 7H6"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="text-sales">
+              <p class="mb-0 fw-400 fs-24">1.423k</p>
+              <p class="mb-0 fw-400 fs-14 text-sm">Products</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 d-flex align-items-center gap-3">
+            <div class="avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" tag="i"
+                class="v-icon notranslate v-theme--light v-icon--size-default iconify iconify--tabler" width="1em"
+                height="1em" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3">
+                </path>
+              </svg>
+            </div>
+            <div class="text-sales">
+              <p class="mb-0 fw-400 fs-24">$9745</p>
+              <p class="mb-0 fw-400 fs-14 text-sm">Revenue</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex gap-3 my-3">
+    <div class=" ">
+      <div class="d-flex gap-3">
+        <div class="card-dashboard expenses-wrapper p-4 position-relative">
+          <div class="expenses">
+            <div class="mb-2">
+              <h5 class="mb-1"> 82.5k </h5><span class="text-disabled text-sm">Expenses</span>
+            </div>
+            <div id="expenxe-chart">
+              <apx-chart [series]="expenxeChartOptions.series" [chart]="expenxeChartOptions.chart"
+                [plotOptions]="expenxeChartOptions.plotOptions" [labels]="expenxeChartOptions.labels"
+                [fill]="expenxeChartOptions.fill"></apx-chart>
+            </div>
+            <div class="text-sm text-center clamp-text text-muted"> $21k Expenses more than last month
+            </div>
+          </div>
+        </div>
+        <div class="card-dashboard p-4 profit-wrapper position-relative">
+          <div class="profit">
+            <div class="mb-2">
+              <h5 class="mb-1">Profit </h5><span class="text-disabled text-sm">Last Month</span>
+            </div>
+            <div id="profit-chart">
+              <div id="chart">
+                <apx-chart [series]="profitChartOptions.series" [chart]="profitChartOptions.chart"
+                  [xaxis]="profitChartOptions.xaxis" [dataLabels]="profitChartOptions.dataLabels"
+                  [grid]="profitChartOptions.grid" [stroke]="profitChartOptions.stroke"></apx-chart>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between gap-3 mt-3 clamp-text">
+              <h4 class="mb-0 text-center font-weight-medium"> 624k </h4><span class="text-sm text-success"> +8.24%
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-dashboard p-4 mt-3">
+        <div class="v-card-text d-flex justify-content-between">
+          <div class="d-flex flex-column">
+            <div class="mb-auto">
+              <h5 class="text-h5 text-no-wrap"> Generated Leads </h5><span class="text-sm">Monthly
+                Report</span>
+            </div>
+            <div>
+              <h4 class="text-h3 my-1"> 4,350 </h4>
+              <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                  role="img" tag="i"
+                  class="v-icon notranslate v-theme--light v-icon--size-default text-success me-1 iconify iconify--tabler"
+                  width="1em" height="1em" viewBox="0 0 24 24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.5" d="m6 15l6-6l6 6"></path>
+                </svg><span class="text-success fst-normal">15.8% </span></div>
+            </div>
+          </div>
+          <div class="generatedLeads-container">
+            <div id="generatedLeads">
+              <apx-chart [series]="generateLeadsChartOptions.series" [chart]="generateLeadsChartOptions.chart"
+                [labels]="generateLeadsChartOptions.labels"
+                [responsive]="generateLeadsChartOptions.responsive"></apx-chart>
+              <div class="center-label d-flex align-items-center flex-column" id="center-label">
+                <p class="mb-0 fs-18">{{ totalValue }}</p>
+                <p class="mb-0 fs-12">Total</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-fill card-dashboard d-flex p-4">
+      <div class="">
+        <h5 class="text-h5 mb-6" style="color: rgba(208,212,241);"> Revenue Report </h5>
+        <div id="revenueReport" class="me-4">
+          <apx-chart
+            [series]="revenueReportOptions.series!"
+            [chart]="revenueReportOptions.chart!"
+            [plotOptions]="revenueReportOptions.plotOptions!"
+            [colors]="revenueReportOptions.colors!"
+            [grid]="revenueReportOptions.grid!"
+            [dataLabels]="revenueReportOptions.dataLabels!"
+            [xaxis]="revenueReportOptions.xaxis!"
+            [yaxis]="revenueReportOptions.yaxis!"
+            [legend]="revenueReportOptions.legend!"
+          ></apx-chart>
+        </div>
+      </div>
+      <div class="border-start text-center w-100">
+        <nz-select ngModel="2022">
+          <nz-option nzValue="2022" nzLabel="2022"></nz-option>
+          <nz-option nzValue="2021" nzLabel="2021"></nz-option>
+          <nz-option nzValue="2020" nzLabel="2020"></nz-option>
+        </nz-select>
+        <div class="d-flex flex-column mt-5">
+          <h3 class="fw-500 text-h3"> $25,825 </h3>
+          <p><span class="text-high-emphasis fw-500 me-1">Budget:</span><span>56,800</span></p>
+          <div id="BudgetChart" class="d-flex justify-content-center">
+            <apx-chart
+              [chart]="BudgetLineChartOptions.chart"
+              [series]="BudgetLineChartOptions.series"
+              [dataLabels]="BudgetLineChartOptions.dataLabels"
+              [stroke]="BudgetLineChartOptions.stroke"
+              [grid]="BudgetLineChartOptions.grid"
+              [xaxis]="BudgetLineChartOptions.xaxis"
+              [yaxis]="BudgetLineChartOptions.yaxis"
+            ></apx-chart>
+          </div>
+        </div>
+        <div class="mt-5">
+          <button nz-button nzType="primary" class="mt-3">Increase Budget</button>
+        </div>
+      </div>
 
-        </div>
     </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col-4">
+      <nz-card [nzTitle]="earningReportTitle" class="h-100">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div class="d-flex align-items-center gap-2">
+            <div class="icon rounded p-2 d-flex align-items-center"  style="background-color:rgba(115,103,240,0.3)">
+              <span nz-icon nzType="clock-circle" style="color:rgb(115,103,240)" class="fs-6" nzTheme="outline"></span>
+            </div>
+            <div class="name">
+              <h6 class="m-0">Net Profit</h6>
+              <p class="text-muted m-0">12.4k Sales</p>
+            </div>
+          </div>
+          <div class="price d-flex gap-2 align-items-center">
+            <span>$1,619</span>
+            <span nz-icon nzType="up" class="text-success" nzTheme="outline"></span>
+            <span>18.6%</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div class="d-flex align-items-center gap-2">
+            <div class="icon rounded p-2 d-flex align-items-center"  style="background-color:rgba(40, 199, 111,0.3)">
+              <span nz-icon nzType="dollar" style="color:rgb(40, 199, 111)" class="fs-6" nzTheme="outline"></span>
+            </div>
+            <div class="name">
+              <h6 class="m-0">Total Income</h6>
+              <p class="text-muted m-0">Sales, Affiliation</p>
+            </div>
+          </div>
+          <div class="price d-flex gap-2 align-items-center">
+            <span>$3,571</span>
+            <span nz-icon nzType="up" class="text-success" nzTheme="outline"></span>
+            <span>39.6%</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <div class="d-flex align-items-center gap-2">
+            <div class="icon rounded p-2 d-flex align-items-center"  style="background-color:rgba(168, 170, 174,0.3)">
+              <span nz-icon nzType="wallet" style="color:rgb(168, 170, 174)" class="fs-6" nzTheme="outline"></span>
+            </div>
+            <div class="name">
+              <h6 class="m-0">Total Expenses</h6>
+              <p class="text-muted m-0">ADVT, Marketing</p>
+            </div>
+          </div>
+          <div class="price d-flex gap-2 align-items-center">
+            <span>$430</span>
+            <span nz-icon nzType="up" class="text-success" nzTheme="outline"></span>
+            <span>52.8%</span>
+          </div>
+        </div>
+        <div class="chart" id="earningChart">
+          <apx-chart
+              [series]="earningChartOptions.series!"
+              [chart]="earningChartOptions.chart!"
+              [legend]="earningChartOptions.legend!"
+              [plotOptions]="earningChartOptions.plotOptions!"
+              [xaxis]="earningChartOptions.xaxis!"
+              [yaxis]="earningChartOptions.yaxis!"
+              [colors]="earningChartOptions.colors!"
+              [dataLabels]="earningChartOptions.dataLabels!"
+              [grid]="earningChartOptions.grid!"
+              ></apx-chart>
+        </div>
+      </nz-card>
+      <ng-template #earningReportTitle>
+        <h5 class="m-0">Earning Reports</h5>
+        <p class="text-muted m-0">Weekly Earnings Overview</p>
+      </ng-template>
+
+    </div>
+    <div class="col-4">
+      <nz-card [nzTitle]="popularProductsTitle" class="h-100">
+        <div class="">
+          <div class="d-flex align-items-center justify-content-between mb-3" *ngFor="let item of localData.popularProducts">
+            <div class="d-flex align-items-center gap-2">
+              <div class="img">
+                <img src="../../../../assets/Images/{{item.itemImage}}.png" height="50" alt="" />
+              </div>
+              <div class="name">
+                <h6 class="m-0">{{item.itemName}}</h6>
+                <p class="text-muted m-0">item:{{item.itemId}}</p>
+              </div>
+            </div>
+            <p class="m-0">
+              {{item.itemCost}}
+            </p>
+          </div>
+        </div>
+      </nz-card>
+      <ng-template #popularProductsTitle>
+        <h5 class="m-0">Popular Products</h5>
+        <p class="text-muted m-0">Total 10.4k Visitors</p>
+      </ng-template>
+
+    </div>
+    <div class="col-4">
+      <nz-card class="h-100" [nzTitle]="salesByOrderTitle">
+        <nz-tabset nzCentered [nzTabBarGutter]="60" nzSize="large">
+          <nz-tab nzTitle="New">
+            <nz-timeline *ngFor="let item of localData.salesByOrder.new;let last = last;">
+              <nz-timeline-item>
+                <p class="m-0 text-success fw-bold">SENDER</p>
+                <p class="m-0">{{item.sender.name}}</p>
+                <p class="text-muted m-0">{{item.sender.address}}</p>
+              </nz-timeline-item>
+              <nz-timeline-item>
+                <p class="m-0 text-primary fw-bold">RECEIVER</p>
+                <p class="m-0">{{item.receiver.name}}</p>
+                <p class="text-muted m-0">{{item.receiver.address}}</p>
+              </nz-timeline-item>
+            </nz-timeline>
+          </nz-tab>
+          <nz-tab nzTitle="Preparing">
+            <nz-timeline *ngFor="let item of localData.salesByOrder.preparing;let last = last;">
+              <nz-timeline-item>
+                <p class="m-0 text-success fw-bold">SENDER</p>
+                <p class="m-0">{{item.sender.name}}</p>
+                <p class="text-muted m-0">{{item.sender.address}}</p>
+              </nz-timeline-item>
+              <nz-timeline-item>
+                <p class="m-0 text-primary fw-bold">RECEIVER</p>
+                <p class="m-0">{{item.receiver.name}}</p>
+                <p class="text-muted m-0">{{item.receiver.address}}</p>
+              </nz-timeline-item>
+            </nz-timeline>
+          </nz-tab>
+          <nz-tab nzTitle="Shipping">
+            <nz-timeline *ngFor="let item of localData.salesByOrder.shipping;let last = last;">
+              <nz-timeline-item>
+                <p class="m-0 text-success fw-bold">SENDER</p>
+                <p class="m-0">{{item.sender.name}}</p>
+                <p class="text-muted m-0">{{item.sender.address}}</p>
+              </nz-timeline-item>
+              <nz-timeline-item>
+                <p class="m-0 text-primary fw-bold">RECEIVER</p>
+                <p class="m-0">{{item.receiver.name}}</p>
+                <p class="text-muted m-0">{{item.receiver.address}}</p>
+              </nz-timeline-item>
+            </nz-timeline>
+          </nz-tab>
+        </nz-tabset>
+      </nz-card>
+      <ng-template #salesByOrderTitle>
+        <h6 class="m-0">Sales by Orders</h6>
+        <p class="text-muted m-0">62 Deliveries in Progress</p>
+      </ng-template>
+
+    </div>
+  </div>
+
+<div class="row my-3">
+  <div class="col-4">
+    <nz-card [nzTitle]="transactionsTitle" class="h-100">
+      <div class="d-flex flex-column gap-4">
+          <div class="d-flex align-items-center justify-content-between" *ngFor="let item of localData.transactions">
+            <div class="d-flex align-items-center gap-3">
+              <div class="icon rounded p-2 d-flex align-items-center"  style="background-color:{{item.bgcolor}}">
+                <span nz-icon nzType="{{item.icon}}" style="color:{{item.color}}" class="fs-6" nzTheme="outline"></span>
+              </div>
+              <div class="name">
+                <h6 class="m-0">{{item.name}}</h6>
+                <p class="text-muted m-0">{{item.detail}}</p>
+              </div>
+            </div>
+            <p class="m-0" [ngClass]="item.type === 'debit' ? 'text-danger':'text-success'">
+              {{item.amount}}
+            </p>
+          </div>
+        </div>
+    </nz-card>
+    <ng-template #transactionsTitle>
+      <h6 clas="m-0">Transactions</h6>
+      <p class="text-muted m-0">Total 58 Transactions done in this Month</p>
+    </ng-template>
+  </div>
+  <div class="col-8">
+    <nz-card [nzTitle]="createInvoiceTitle" [nzExtra]="createInvoiceExtra">
+      <nz-table #basicTable [nzData]="listOfData">
+        <thead>
+          <tr>
+            <th>#ID</th>
+            <th><span nz-icon nzType="rise" nzTheme="outline"></span></th>
+            <th>TOTAL</th>
+            <th>ISSUED DATE</th>
+            <th nzWidth="100">ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of localData.invoiceTable.tableData" >
+            <td>{{data.id}}</td>
+            <td><span nz-icon nzType="{{data.icon}}" style="color:{{data.color}}" class="fs-6" nzTheme="outline"></span></td>
+            <td>{{data.total}}</td>
+            <td>{{data.issuedDate}}</td>
+            <td>
+              <span nz-icon class="me-3" nzType="delete" nzTheme="outline"></span>
+              <span nz-icon class="me-3" nzType="eye" nzTheme="outline"></span>
+              <span nz-icon nzType="more" nzTheme="outline"></span>
+            </td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+    <ng-template #createInvoiceTitle>
+      <div class="d-flex align-items-center gap-3">
+        <nz-select nzSize="large" ngModel="6">
+          <nz-option *ngFor="let p of localData.invoiceTable.select1" [nzValue]="p" [nzLabel]="p"></nz-option>
+        </nz-select>
+        <button nz-button class="createInvoiceButton">+ Create Invoice</button>
+      </div>
+    </ng-template>
+
+    <ng-template #createInvoiceExtra>
+      <div class="d-flex align-items-center gap-3">
+        <input nz-input placeholder="Search Invoice" nzSize="large" />
+        <nz-select nzSize="large" nzPlaceHolder="Select Status">
+          <nz-option *ngFor="let p of localData.invoiceTable.select2" [nzValue]="p" [nzLabel]="p"></nz-option>
+        </nz-select>
+      </div>
+    </ng-template>
+
+  </div>
+</div>
+
 </div>
