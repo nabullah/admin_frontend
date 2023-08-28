@@ -419,11 +419,11 @@ export const crmchart = {
 		series: [
 			{
 				name: "Radar Series 1",
-				data: [65, 52, 38, 24, 33, 20],
+				data: [65, 52, 58, 24, 103, 20],
 			},
 			{
-				name: "Radar Series 1",
-				data: [15, 32, 78, 21, 63, 80],
+				name: "Radar Series 2",
+				data: [20,40,60,60,100,120],
 			},
 		],
 		categories: ["April", "May", "June", "July", "August", "September"],
