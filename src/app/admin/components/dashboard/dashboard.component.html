@@ -55,6 +55,7 @@
               [chart]="totalRevenueChartOptions.chart!"
               [xaxis]="totalRevenueChartOptions.xaxis!"
               [yaxis]="totalRevenueChartOptions.yaxis!"
+              [colors]="totalRevenueChartOptions.colors!"
             ></apx-chart>
           </div>
         </nz-card>
@@ -72,12 +73,17 @@
               [series]="customerChartOptions.series!"
               [chart]="customerChartOptions.chart!"
               [colors]="customerChartOptions.colors!"
+              [dataLabels]="customerChartOptions.dataLabels!"
+              [legend]="customerChartOptions.legend!"
+              [labels]="customerChartOptions.labels!"
+              [fill]="customerChartOptions.fill!"
+              [responsive]="customerChartOptions.responsive!"
             ></apx-chart>
           </div>
           <nz-divider></nz-divider>
           <div class="legends d-flex align-items-center justify-content-evenly">
             <div class="d-flex align-items-center">
-              <nz-badge nzStatus="success"></nz-badge>
+              <nz-badge nzColor="#7367f0"></nz-badge>
               <div>
                 <h4 class="m-0">350</h4>
                 <p class="text-muted">New</p>
@@ -129,7 +135,7 @@
               ></apx-chart>
             </div>
           </div>
-          <div class="d-flex justify-content-center px-4 py-3">
+          <div class="d-flex justify-content-center px-4 pt-3">
             <div class="col-4 px-3">
               <p class="fs-4 d-flex align-items-center"><span nz-icon nzType="dollar-circle" class="text-success me-2 rounded-circle" nzTheme="outline"></span> <span>Earnings</span></p>
               <p>$545.69</p>
@@ -156,7 +162,7 @@
                 <span style="font-size:3vw;">164</span>
                 <span class="text-muted">Total Tickets</span>
               </p>
-              <div class="d-flex gap-2">
+              <div class="d-flex gap-2 mt-3">
                 <img src="../../../../assets/Images/ticket.png" height="20" alt="">
                 <p class="d-flex flex-column">
                   <span class="fw-bold">New Tickets</span>
@@ -178,7 +184,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 align-items-center">
               <apx-chart
                 [chart]="supportTrackerChartOptions.chart!"
                 [series]="supportTrackerChartOptions.series!"
@@ -251,6 +257,87 @@
         </nz-card>
         <ng-template #viewMoreButton>
           <button nz-button nzType="default">View More</button>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <nz-card [nzTitle]="salesByCountryTitle">
+          <div class="d-flex justify-content-between" *ngFor="let item of localData.salesByCountries">
+            <div class="d-flex gap-3">
+              <img src="../../../../assets/Images/{{item.flag}}.png" height="30" alt="">
+              <div class="d-flex flex-column justify-content-center">
+                <h6 class="m-0">{{item.money}}</h6>
+                <p class="text-muted">{{item.country}}</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center fw-medium">
+              <span nz-icon nzType="down" nzTheme="outline" *ngIf="item.direction === 'down'" class="text-danger" ></span>
+              <span nz-icon nzType="up" nzTheme="outline" *ngIf="item.direction === 'up'" class="text-success" ></span>
+              <p class="m-0" [ngClass]="item.direction === 'up' ? 'text-success':'text-danger'">{{item.percentage}}</p>
+            </div>
+          </div>
+        </nz-card>
+        <ng-template #salesByCountryTitle>
+          <h3>Sales by Countries</h3>
+          <p class="text-muted">Monthly Sales Overview</p>
+        </ng-template>
+
+      </div>
+      <div class="col-4">
+        <nz-card nzTitle="Total Earning">
+          <div class="d-flex align-items-center gap-3">
+            <p class="fs-1 m-0">87%</p>
+            <p class="text-success m-0 fw-medium"><span nz-icon nzType="up" nzTheme="outline"></span><span>25.8%</span></p>
+          </div>
+          <div>
+            <apx-chart
+              [chart]="totalEarningChartOptions.chart!"
+              [series]="totalEarningChartOptions.series!"
+              [xaxis]="totalEarningChartOptions.xaxis!"
+              [yaxis]="totalEarningChartOptions.yaxis!"
+              [plotOptions]="totalEarningChartOptions.plotOptions!"
+              [dataLabels]="totalEarningChartOptions.dataLabels!"
+              [legend]="totalEarningChartOptions.legend!"
+              [grid]="totalEarningChartOptions.grid!"
+              [tooltip]="totalEarningChartOptions.tooltip!"
+            ></apx-chart>
+          </div>
+          <div>
+            <div class="d-flex justify-content-between">
+              <div class="d-flex gap-2">
+                <p class="icon"><span nz-icon nzType="dollar" nzTheme="outline"></span></p>
+                <p class="fw-medium">Total Sales</p>
+              </div>
+              <p class="text-success fw-medium">+$98</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="d-flex gap-2">
+                <p class="icon"><span nz-icon nzType="check-circle" nzTheme="outline"></span></p>
+                <p class="fw-medium">Total Revenue</p>
+              </div>
+              <p class="text-success fw-medium">+$126</p>
+            </div>
+          </div>
+        </nz-card>
+      </div>
+      <div class="col-4">
+        <nz-card [nzTitle]="MonthlyCampaignStateTitle">
+          <div class="d-flex justify-content-between mb-3" *ngFor="let item of localData.monthlyCampaignState">
+            <div class="d-flex gap-2 align-items-center">
+              <img src="../../../../assets/Images/{{item.icon}}.png" height="20" alt="">
+              <p class="fw-medium fs-5 m-0">{{item.name}}</p>
+            </div>
+            <div class="d-flex gap-2 fw-medium">
+              <p>{{item.number}}</p>
+              <p class="text-success">{{item.percentage}}</p>
+            </div>
+          </div>
+        </nz-card>
+        <ng-template #MonthlyCampaignStateTitle>
+          <h4>Monthly Campaign State</h4>
+          <p class="text-muted">8.52k Social Visitors</p>
         </ng-template>
       </div>
     </div>
