@@ -250,88 +250,88 @@ export const dashboard = {
 			},
 		],
 	},
-  salesByCountries:[
-    {
-      flag:"united-states",
-      money:"8.45k",
-      country:"United States",
-      direction:"up",
-      percentage:"25.8%"
-    },
-    {
-      flag:"brazil-",
-      money:"7.78k",
-      country:"Brazil",
-      direction:"down",
-      percentage:"16.2%"
-    },
-    {
-      flag:"india",
-      money:"6.48k",
-      country:"India",
-      direction:"up",
-      percentage:"12.3%"
-    },
-    {
-      flag:"australia",
-      money:"5.12k",
-      country:"Australia",
-      direction:"down",
-      percentage:"11.9%"
-    },
-    {
-      flag:"france",
-      money:"4.45k",
-      country:"France",
-      direction:"up",
-      percentage:"16.2%"
-    },
-    {
-      flag:"china",
-      money:"3.90k",
-      country:"China",
-      direction:"up",
-      percentage:"14.8%"
-    },
-  ],
-  monthlyCampaignState:[
-    {
-      icon:"email",
-      name:"Emails",
-      number:"12,346",
-      percentage:"0.3%"
-    },
-    {
-      icon:"link",
-      name:"Opened",
-      number:"8,734",
-      percentage:"2.1%"
-    },
-    {
-      icon:"click",
-      name:"Clicked",
-      number:"967",
-      percentage:"1.4%"
-    },
-    {
-      icon:"user",
-      name:"Subscribe",
-      number:"345",
-      percentage:"8.5%"
-    },
-    {
-      icon:"complain",
-      name:"Complaints",
-      number:"10",
-      percentage:"1.5%"
-    },
-    {
-      icon:"signal",
-      name:"Unsubscribe",
-      number:"86",
-      percentage:"0.8%"
-    }
-  ]
+	salesByCountries: [
+		{
+			flag: "united-states",
+			money: "8.45k",
+			country: "United States",
+			direction: "up",
+			percentage: "25.8%",
+		},
+		{
+			flag: "brazil-",
+			money: "7.78k",
+			country: "Brazil",
+			direction: "down",
+			percentage: "16.2%",
+		},
+		{
+			flag: "india",
+			money: "6.48k",
+			country: "India",
+			direction: "up",
+			percentage: "12.3%",
+		},
+		{
+			flag: "australia",
+			money: "5.12k",
+			country: "Australia",
+			direction: "down",
+			percentage: "11.9%",
+		},
+		{
+			flag: "france",
+			money: "4.45k",
+			country: "France",
+			direction: "up",
+			percentage: "16.2%",
+		},
+		{
+			flag: "china",
+			money: "3.90k",
+			country: "China",
+			direction: "up",
+			percentage: "14.8%",
+		},
+	],
+	monthlyCampaignState: [
+		{
+			icon: "email",
+			name: "Emails",
+			number: "12,346",
+			percentage: "0.3%",
+		},
+		{
+			icon: "link",
+			name: "Opened",
+			number: "8,734",
+			percentage: "2.1%",
+		},
+		{
+			icon: "click",
+			name: "Clicked",
+			number: "967",
+			percentage: "1.4%",
+		},
+		{
+			icon: "user",
+			name: "Subscribe",
+			number: "345",
+			percentage: "8.5%",
+		},
+		{
+			icon: "complain",
+			name: "Complaints",
+			number: "10",
+			percentage: "1.5%",
+		},
+		{
+			icon: "signal",
+			name: "Unsubscribe",
+			number: "86",
+			percentage: "0.8%",
+		},
+	],
 };
 
 export const blogData = [
@@ -396,11 +396,11 @@ export const crmchart = {
 		categories: ["16th", "17th", "18th", "19th", "20th", "21st"],
 		series: [
 			{
-				name: "Series b",
+				name: "Revenue",
 				data: [30, 20, 30, 55, 30, 25],
 			},
 			{
-				name: "Series b",
+				name: "Margin",
 				data: [20, 30, 50, 45, 10, 55],
 			},
 		],
@@ -418,15 +418,15 @@ export const crmchart = {
 	radarchart1: {
 		series: [
 			{
-				name: "Radar Series 1",
-				data: [65, 52, 58, 24, 103, 20],
+				name: "Sales",
+				data: [65, 52, 58, 24, 103, 35],
 			},
 			{
-				name: "Radar Series 2",
-				data: [20,40,60,60,100,120],
+				name: "Visits",
+				data: [40, 40, 60, 60, 100, 120],
 			},
 		],
-		categories: ["April", "May", "June", "July", "August", "September"],
+		categories: ["Apr", "May", "Jun", "Jul", "Aug", "Sept"],
 	},
 	barchart2: {
 		series: [
@@ -440,7 +440,7 @@ export const crmchart = {
 		series: [
 			{
 				name: "Inflation",
-				data: [5.3, 6.1, 7.0, 8.1, 9.0, 10.6, 11.2, 12.3, 13.4, 14.8, 15.5, 16.2],
+				data: [5.3, 6.1, 7.0, 8.1, 5.0, 10.6, 7.2, 3.3, 13.4, 9.8, 5.5, 6.2],
 			},
 		],
 	},

@@ -98,19 +98,33 @@ th {
 	}
 }
 
-.new-ticktes, .open-ticktes, .response-ticktes {
+.new-ticktes,
+.open-ticktes,
+.response-ticktes {
 	background: rgb(115 103 240 / 13%);
 	color: var(--primary-color);
-  border-radius: 4px;
+	border-radius: 4px;
 }
 
-.montly-campaigns .image{
-  background: rgb(115 103 240 / 13%);
-  padding: 4px;
-  height: 25px;
-  border-radius: 4px;
-  display: flex;
-  width: 25px;
-  align-items: center;
-  justify-content: center;
+.montly-campaigns .image {
+	background: rgb(115 103 240 / 13%);
+	padding: 4px;
+	height: 25px;
+	border-radius: 4px;
+	display: flex;
+	width: 25px;
+	align-items: center;
+	justify-content: center;
+}
+
+:host ::ng-deep.ant-progress-bg {
+	background-color: var(--primary-color) !important;
+}
+
+:host ::ng-deep.ant-card-head {
+	border-bottom: none;
+}
+
+:host ::ng-deep.ant-card-body {
+	padding: 8px 24px 24px 24px;
 }

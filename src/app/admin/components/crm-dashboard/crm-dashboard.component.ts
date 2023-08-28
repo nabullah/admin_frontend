@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild, inject } from "@angular/core";
 import { crmchart } from "src/app/constants/localStore";
-import { ChartComponent, ApexAxisChartSeries, ApexChart, ApexXAxis, ApexTitleSubtitle, ApexFill, ApexStroke, ApexDataLabels, ApexPlotOptions, ApexYAxis, ApexGrid } from "ng-apexcharts";
+import { ChartComponent, ApexAxisChartSeries, ApexChart, ApexXAxis, ApexTitleSubtitle, ApexFill, ApexStroke, ApexDataLabels, ApexPlotOptions, ApexYAxis, ApexGrid, ApexLegend } from "ng-apexcharts";
 import { ThemeService } from "src/app/services/theme.service";
 
 interface Person {
@@ -18,6 +18,8 @@ export type barchart1 = {
 	xaxis: ApexXAxis;
 	dataLabels: ApexDataLabels;
 	yaxis: ApexYAxis;
+	grid: ApexGrid;
+	plotOptions: ApexPlotOptions;
 };
 export type barchart2 = {
 	series: ApexAxisChartSeries;
@@ -50,8 +52,9 @@ export type radarChartOptions1 = {
 	dataLabels: ApexDataLabels;
 	xaxis: ApexXAxis;
 	yaxis: ApexYAxis;
-  // plotOptions: ApexPlotOptions;
-  colors:string[];
+	plotOptions: ApexPlotOptions;
+	colors: string[];
+	fill: ApexFill;
 };
 
 export type totalRevenueChartOptions2 = {
@@ -60,6 +63,10 @@ export type totalRevenueChartOptions2 = {
 	xaxis: ApexXAxis;
 	dataLabels: ApexDataLabels;
 	yaxis: ApexYAxis;
+	grid: ApexGrid;
+	stroke: ApexStroke;
+	colors: any;
+	legend: ApexLegend;
 };
 @Component({
 	selector: "app-crm-dashboard",
@@ -164,6 +171,21 @@ export class CrmDashboardComponent {
 					},
 				},
 			},
+			grid: {
+				show: false,
+			},
+			stroke: {
+				curve: "smooth",
+				width: 3,
+			},
+			colors: ["#7367f0", "#ff9f43"],
+			legend: {
+				position: "top",
+				horizontalAlign: "left",
+				labels: {
+					colors: this.currentTheme === "dark" ? "#d0d4f1" : "#2f2b3d",
+				},
+			},
 		};
 
 		this.barchart1 = {
@@ -195,26 +217,38 @@ export class CrmDashboardComponent {
 					},
 				},
 			},
+			grid: {
+				show: false,
+			},
+			plotOptions: {
+				bar: {
+					borderRadius: 4,
+				},
+			},
 		};
 
 		this.radarChartOptions1 = {
 			series: this.localData.radarchart1.series,
-      // plotOptions: {
-      //   radar: {
-      //     size: undefined,
-      //     offsetX: 0,
-      //     offsetY: 0,
-      //     polygons: {
-      //       strokeColors: ['#8267f0',"red"],
+			// plotOptions: {
+			//   radar: {
+			//     size: undefined,
+			//     offsetX: 0,
+			//     offsetY: 0,
+			//     polygons: {
+			//       strokeColors: ['#8267f0',"red"],
 
-      //       connectorColors: '',
-      //       fill: {
-      //         // colors: ['#8267f0'],
-      //       }
-      //     }
-      //   }
-      // },
-      colors:["#5C00A3","blue"],
+			//       connectorColors: '',
+			//       fill: {
+			//         // colors: ['#8267f0'],
+			//       }
+			//     }
+			//   }
+			// },
+			fill:{
+				opacity: 0.2,
+				colors: [],
+			},
+			colors: ["#7367f0", "#ff9f43"],
 			chart: {
 				height: 280,
 				type: "radar",
@@ -234,11 +268,7 @@ export class CrmDashboardComponent {
 				},
 			},
 			yaxis: {
-				labels: {
-					style: {
-						colors: this.currentTheme === "dark" ? "#d0d4f1" : "#2f2b3d",
-					},
-				},
+				show:false,
 			},
 		};
 
@@ -352,7 +382,7 @@ export class CrmDashboardComponent {
 				enabled: false,
 			},
 			xaxis: {
-				categories: ["jan", "feb", "mar", "apr", "may", "june", "july", "aug", "sep", "oct", "nov", "dec"],
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
 				position: "bottom",
 
 				labels: {
@@ -361,36 +391,13 @@ export class CrmDashboardComponent {
 						colors: this.currentTheme === "dark" ? "#d0d4f1" : "#2f2b3d",
 					},
 				},
-				crosshairs: {
-					fill: {
-						// type: "gradient",
-						gradient: {
-							colorFrom: "#D8E3F0",
-							colorTo: "#BED1E6",
-							stops: [0, 100],
-							opacityFrom: 0.4,
-							opacityTo: 0.5,
-						},
-					},
-				},
+
 				tooltip: {
 					enabled: false,
 					offsetY: -35,
 				},
 			},
-			fill: {
-				// type: "gradient",
-				gradient: {
-					shade: "light",
-					type: "horizontal",
-					shadeIntensity: 0.25,
-					gradientToColors: undefined,
-					inverseColors: true,
-					opacityFrom: 1,
-					opacityTo: 1,
-					stops: [50, 300, 100, 100],
-				},
-			},
+
 			yaxis: {
 				axisBorder: {
 					show: false,
@@ -402,7 +409,7 @@ export class CrmDashboardComponent {
 				},
 			},
 			grid: {
-				show: true,
+				show: false,
 			},
 			colors: "rgba(115, 103, 240)",
 		};

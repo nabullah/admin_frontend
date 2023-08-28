@@ -246,7 +246,9 @@ router-outlet + * {
 .card-dashboard {
 	border-radius: 0.4rem;
 }
-
+.ant-btn {
+	border-radius: 0.4rem !important;
+}
 .ant-btn-primary {
 	--v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
 	background-color: rgb(var(--v-theme-primary)) !important;
@@ -258,7 +260,7 @@ router-outlet + * {
 	border: none !important;
 }
 
-.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
 	border-radius: 0.4rem !important;
 }
 
@@ -278,7 +280,7 @@ router-outlet + * {
 	.border-start,
 	.border-bottom,
 	.border-top {
-		border: 1px solid var(--border-color) !important;
+		border-color: rgb(208 212 241 / 15%) !important;
 	}
 
 	.card-dashboard {
@@ -331,14 +333,25 @@ router-outlet + * {
 	.text-color-shade-1 {
 		color: rgba(var(--primary-bg-light));
 	}
+
+	.ant-input {
+		color: #bfbfc7 !important;
+		border: 1px solid #474849 !important;
+	}
 }
 
 // Light Theme
 .default {
+	.menu-links {
+		li {
+			color: #2f2d3fad;
+		}
+	}
+
 	.menu-sidebar,
 	.mainside-logo {
 		background: var(--primary-bg-light) !important;
-		box-shadow: 0 2px 6px rgba(var(--v-shadow-key-umbra-color), 0.14), 0 0 transparent, 0 0 transparent;
+		// box-shadow: 0 2px 6px rgba(var(--v-shadow-key-umbra-color), 0.14), 0 0 transparent, 0 0 transparent;
 	}
 	.wrapper-top,
 	.tabs .ant-tabs-nav-wrap {
@@ -383,5 +396,9 @@ router-outlet + * {
 	.card-dashboard {
 		background: rgba(var(--v-theme-surface)) !important;
 		box-shadow: 0 2px 6px rgba(var(--v-shadow-key-umbra-color), 0.14), 0 0 transparent, 0 0 transparent;
+	}
+
+	.ant-input {
+		border: 1px solid #cfd4db !important;
 	}
 }

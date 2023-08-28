@@ -37,25 +37,28 @@
 }
 
 .generatedLeads-container {
-    position: relative;
-  }
+	position: relative;
+}
 
 .center-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  font-weight: bold;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+	font-weight: bold;
 }
-.createInvoiceButton{
-  border:none;
-  background-color:rgb(115,103,240);
-  color:white;
-  padding:7px;
-  border-radius:4px;
-  height:40px;
+.createInvoiceButton {
+	span {
+		font-size: 1rem;
+		color: #d8d3d3;
+	}
+	// padding: 20px 24px;
 }
-nz-select {
-  min-width: 100px;
+// nz-select {
+//   min-width: 100px;
+// }
+.ant-input {
+	padding: 0.33rem 1rem !important;
+	border: 1px solid #cfd4db;
 }

@@ -234,7 +234,7 @@ export class DashboardComponent implements OnInit {
       series: this.localData.averageProfit.series,
       chart: {
         type: "bar",
-        height: 450,
+        height: 400,
         stacked: true,
         toolbar: {
           show: false,
@@ -439,6 +439,8 @@ export class DashboardComponent implements OnInit {
           show:false
         }
       },
+      colors: ["#7367f0", "#ff9f43"],
+
       xaxis:{
         labels:{
           show:false
@@ -462,7 +464,6 @@ export class DashboardComponent implements OnInit {
           // columnWidthOffset: 5,
         }
       },
-      colors: ["#7367f0", "#ff9f43"],
       dataLabels:{
         enabled:false
       },

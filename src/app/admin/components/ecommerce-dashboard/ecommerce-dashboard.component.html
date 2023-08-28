@@ -163,7 +163,7 @@
         </div>
       </div>
     </div>
-    <div class="flex-fill card-dashboard d-flex p-4">
+    <div class="flex-fill card-dashboard d-flex ps-4 py-4" >
       <div class="">
         <h5 class="text-h5 mb-6" style="color: rgba(208,212,241);"> Revenue Report </h5>
         <div id="revenueReport" class="me-4">
@@ -211,7 +211,7 @@
 
   <div class="row my-3">
     <div class="col-4">
-      <nz-card [nzTitle]="earningReportTitle" class="h-100">
+      <nz-card [nzTitle]="earningReportTitle" class="h-100" [nzBordered]="false">
         <div class="d-flex align-items-center justify-content-between mb-4">
           <div class="d-flex align-items-center gap-2">
             <div class="icon rounded p-2 d-flex align-items-center"  style="background-color:rgba(115,103,240,0.3)">
@@ -275,13 +275,13 @@
         </div>
       </nz-card>
       <ng-template #earningReportTitle>
-        <h5 class="m-0">Earning Reports</h5>
-        <p class="text-muted m-0">Weekly Earnings Overview</p>
+        <span class="m-0 fs-16 fw-500">Earning Reports</span>
+        <p class="text-muted m-0 fs-12">Weekly Earnings Overview</p>
       </ng-template>
 
     </div>
     <div class="col-4">
-      <nz-card [nzTitle]="popularProductsTitle" class="h-100">
+      <nz-card [nzTitle]="popularProductsTitle" class="h-100" [nzBordered]="false">
         <div class="">
           <div class="d-flex align-items-center justify-content-between mb-3" *ngFor="let item of localData.popularProducts">
             <div class="d-flex align-items-center gap-2">
@@ -300,14 +300,14 @@
         </div>
       </nz-card>
       <ng-template #popularProductsTitle>
-        <h5 class="m-0">Popular Products</h5>
-        <p class="text-muted m-0">Total 10.4k Visitors</p>
+        <span class="m-0 fs-16 fw-500">Popular Products</span>
+        <p class="text-muted m-0 fs-12">Total 10.4k Visitors</p>
       </ng-template>
 
     </div>
     <div class="col-4">
-      <nz-card class="h-100" [nzTitle]="salesByOrderTitle">
-        <nz-tabset nzCentered [nzTabBarGutter]="60" nzSize="large">
+      <nz-card class="h-100" [nzTitle]="salesByOrderTitle" [nzBordered]="false">
+        <nz-tabset [nzTabBarGutter]="30" nzSize="default">
           <nz-tab nzTitle="New">
             <nz-timeline *ngFor="let item of localData.salesByOrder.new;let last = last;">
               <nz-timeline-item>
@@ -353,8 +353,8 @@
         </nz-tabset>
       </nz-card>
       <ng-template #salesByOrderTitle>
-        <h6 class="m-0">Sales by Orders</h6>
-        <p class="text-muted m-0">62 Deliveries in Progress</p>
+        <span class="m-0 fw-500 fs-16">Sales by Orders</span>
+        <p class="text-muted m-0 fs-12">62 Deliveries in Progress</p>
       </ng-template>
 
     </div>
@@ -362,7 +362,7 @@
 
 <div class="row my-3">
   <div class="col-4">
-    <nz-card [nzTitle]="transactionsTitle" class="h-100">
+    <nz-card [nzTitle]="transactionsTitle" class="h-100" [nzBordered]="false">
       <div class="d-flex flex-column gap-4">
           <div class="d-flex align-items-center justify-content-between" *ngFor="let item of localData.transactions">
             <div class="d-flex align-items-center gap-3">
@@ -381,12 +381,12 @@
         </div>
     </nz-card>
     <ng-template #transactionsTitle>
-      <h6 clas="m-0">Transactions</h6>
-      <p class="text-muted m-0">Total 58 Transactions done in this Month</p>
+      <span clas="m-0 fs-16 fw-500">Transactions</span>
+      <p class="text-muted m-0 fs-12">Total 58 Transactions done in this Month</p>
     </ng-template>
   </div>
   <div class="col-8">
-    <nz-card [nzTitle]="createInvoiceTitle" [nzExtra]="createInvoiceExtra">
+    <nz-card [nzTitle]="createInvoiceTitle" [nzExtra]="createInvoiceExtra" [nzBordered]="false">
       <nz-table #basicTable [nzData]="listOfData">
         <thead>
           <tr>
@@ -414,17 +414,19 @@
     </nz-card>
     <ng-template #createInvoiceTitle>
       <div class="d-flex align-items-center gap-3">
-        <nz-select nzSize="large" ngModel="6">
+        <nz-select nzSize="default" ngModel="6" style="width: 75px;">
           <nz-option *ngFor="let p of localData.invoiceTable.select1" [nzValue]="p" [nzLabel]="p"></nz-option>
         </nz-select>
-        <button nz-button class="createInvoiceButton">+ Create Invoice</button>
+        <button nz-button class="createInvoiceButton d-flex align-items-center" nzType="primary">
+          <span nz-icon nzType="plus" nzTheme="outline"></span>Create Invoice
+        </button>
       </div>
     </ng-template>
 
     <ng-template #createInvoiceExtra>
       <div class="d-flex align-items-center gap-3">
-        <input nz-input placeholder="Search Invoice" nzSize="large" />
-        <nz-select nzSize="large" nzPlaceHolder="Select Status">
+        <input nz-input placeholder="Search Invoice"/>
+        <nz-select nzSize="default" nzPlaceHolder="Select Status">
           <nz-option *ngFor="let p of localData.invoiceTable.select2" [nzValue]="p" [nzLabel]="p"></nz-option>
         </nz-select>
       </div>

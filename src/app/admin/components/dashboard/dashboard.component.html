@@ -269,14 +269,14 @@
           </nz-table>
         </nz-card>
         <ng-template #viewMoreButton>
-          <button nz-button nzType="default">View More</button>
+          <button nz-button nzType="default" style="border-radius: 4px;">View More</button>
         </ng-template>
       </div>
     </div>
 
     <div class="row">
       <div class="col-4">
-        <nz-card [nzTitle]="salesByCountryTitle">
+        <nz-card [nzTitle]="salesByCountryTitle" [nzExtra]="salesmenuExtra">
           <div class="d-flex justify-content-between" *ngFor="let item of localData.salesByCountries">
             <div class="d-flex gap-3">
               <img src="../../../../assets/Images/{{item.flag}}.png" height="30" alt="">
@@ -293,13 +293,32 @@
           </div>
         </nz-card>
         <ng-template #salesByCountryTitle>
-          <h3>Sales by Countries</h3>
-          <p class="text-muted">Monthly Sales Overview</p>
+          <span class="fw-500 fs-18">Sales by Countries</span >
+          <p class="text-muted fs-14 mb-0">Monthly Sales Overview</p>
         </ng-template>
+        <ng-template #salesmenuExtra>
+          <button
+          nz-button
+          nzNoAnimation
+          nz-dropdown
+          [nzDropdownMenu]="menu"
+          nzPlacement="bottomRight"
+          style="border: none; padding: 0"
+        >
+          <span nz-icon nzType="more" nzTheme="outline" style="font-size: 20px; vertical-align: top;"></span>
+        </button>
+        </ng-template>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu>
+            <li nz-menu-item>Refresh</li>
+            <li nz-menu-item>Download</li>
+            <li nz-menu-item>View All</li>
+          </ul>
+        </nz-dropdown-menu>
 
       </div>
       <div class="col-4">
-        <nz-card nzTitle="Total Earning">
+        <nz-card nzTitle="Total Earning" [nzExtra]="totlaEarningExtra">
           <div class="d-flex align-items-center gap-3">
             <p class="fs-1 m-0">87%</p>
             <p class="text-success m-0 fw-medium"><span nz-icon nzType="up" nzTheme="outline"></span><span>25.8%</span></p>
@@ -315,28 +334,47 @@
               [legend]="totalEarningChartOptions.legend!"
               [grid]="totalEarningChartOptions.grid!"
               [tooltip]="totalEarningChartOptions.tooltip!"
+              [colors]="totalEarningChartOptions.colors!"
             ></apx-chart>
           </div>
+          <ng-template #totlaEarningExtra>
+            <button
+            nz-button
+            nzNoAnimation
+            nz-dropdown
+            [nzDropdownMenu]="Earninigmenu"
+            nzPlacement="bottomRight"
+            style="border: none; padding: 0"
+          >
+            <span nz-icon nzType="more" nzTheme="outline" style="font-size: 20px; vertical-align: top;"></span>
+          </button>
+          </ng-template>
+          <nz-dropdown-menu #Earninigmenu="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item>View More</li>
+              <li nz-menu-item>Delete</li>
+            </ul>
+          </nz-dropdown-menu>
           <div>
             <div class="d-flex justify-content-between">
               <div class="d-flex gap-2 align-items-center">
-                <p class="icon"><span nz-icon nzType="dollar" nzTheme="outline"></span></p>
-                <p class="fw-medium">Total Sales</p>
+                <span nz-icon nzType="dollar" nzTheme="outline"></span>
+                <p class="fw-medium mb-0">Total Sales</p>
               </div>
-              <p class="text-success fw-medium">+$98</p>
+              <p class="text-success fw-medium mb-0">+$98</p>
             </div>
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between mt-3">
               <div class="d-flex gap-2 align-items-center">
-                <p class="icon"><span nz-icon nzType="check-circle" nzTheme="outline"></span></p>
-                <p class="fw-medium">Total Revenue</p>
+                <span nz-icon nzType="check-circle" nzTheme="outline"></span>
+                <p class="fw-medium mb-0">Total Revenue</p>
               </div>
-              <p class="text-success fw-medium">+$126</p>
+              <p class="text-success fw-medium mb-0">+$126</p>
             </div>
           </div>
         </nz-card>
       </div>
       <div class="col-4">
-        <nz-card [nzTitle]="MonthlyCampaignStateTitle">
+        <nz-card [nzTitle]="MonthlyCampaignStateTitle" [nzExtra]="campaignState">
           <div class="d-flex justify-content-between mb-3" *ngFor="let item of localData.monthlyCampaignState">
             <div class="d-flex gap-2 align-items-center montly-campaigns">
               <div class="image">
@@ -351,9 +389,28 @@
           </div>
         </nz-card>
         <ng-template #MonthlyCampaignStateTitle>
-          <h4>Monthly Campaign State</h4>
-          <p class="text-muted">8.52k Social Visitors</p>
+          <span class="fw-500 fs-18">Monthly Campaign State</span>
+          <p class="text-muted fs-14 mb-0">8.52k Social Visitors</p>
         </ng-template>
+        <ng-template #campaignState>
+          <button
+          nz-button
+          nzNoAnimation
+          nz-dropdown
+          [nzDropdownMenu]="campaignMenu"
+          nzPlacement="bottomRight"
+          style="border: none; padding: 0"
+        >
+          <span nz-icon nzType="more" nzTheme="outline" style="font-size: 20px; vertical-align: top;"></span>
+        </button>
+        </ng-template>
+        <nz-dropdown-menu #campaignMenu="nzDropdownMenu">
+          <ul nz-menu>
+            <li nz-menu-item>Refresh</li>
+            <li nz-menu-item>Download</li>
+            <li nz-menu-item>View All</li>
+          </ul>
+        </nz-dropdown-menu>
       </div>
     </div>
 
@@ -437,13 +494,13 @@
       </div>
       <div class="task col-4">
         <nz-card nzTitle="Task" class="">
-          <nz-tabset [nzSize]="'large'" nzCentered [nzTabBarGutter]="50">
+          <nz-tabset [nzSize]="'default'" [nzTabBarGutter]="40">
             <nz-tab nzTitle="Today">
               <div class="list pt-2">
                 <div class="d-flex align-items-center" *ngFor="let task of today">
                   <label nz-checkbox nzValue="A" class="me-3"></label>
                   <div class="d-flex flex-column justify-content-center">
-                    <h6 class="m-0 pb-2">{{task.head}}</h6>
+                    <h6 class="m-0 pb-1">{{task.head}}</h6>
                     <p class="text-muted m-0">{{task.detail}}</p>
                   </div>
                 </div>
@@ -454,7 +511,7 @@
                 <div class="d-flex align-items-center" *ngFor="let task of week">
                   <label nz-checkbox nzValue="A" class="me-3"></label>
                   <div class="d-flex flex-column justify-content-center">
-                    <h6 class="m-0 pb-2">{{task.head}}</h6>
+                    <h6 class="m-0 pb-1">{{task.head}}</h6>
                     <p class="text-muted m-0">{{task.detail}}</p>
                   </div>
                 </div>
@@ -465,7 +522,7 @@
                 <div class="d-flex align-items-center" *ngFor="let task of month">
                   <label nz-checkbox nzValue="A" class="me-3"></label>
                   <div class="d-flex flex-column justify-content-center">
-                    <h6 class="m-0 pb-2">{{task.head}}</h6>
+                    <h6 class="m-0 pb-1">{{task.head}}</h6>
                     <p class="text-muted m-0">{{task.detail}}</p>
                   </div>
                 </div>
