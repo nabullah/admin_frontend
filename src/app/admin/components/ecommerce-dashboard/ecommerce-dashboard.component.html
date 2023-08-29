@@ -121,7 +121,7 @@
               <div id="chart">
                 <apx-chart [series]="profitChartOptions.series" [chart]="profitChartOptions.chart"
                   [xaxis]="profitChartOptions.xaxis" [dataLabels]="profitChartOptions.dataLabels"
-                  [grid]="profitChartOptions.grid" [stroke]="profitChartOptions.stroke"></apx-chart>
+                  [grid]="profitChartOptions.grid" [stroke]="profitChartOptions.stroke" [colors]="profitChartOptions.colors"></apx-chart>
               </div>
             </div>
             <div class="d-flex align-items-center justify-content-between gap-3 mt-3 clamp-text">
@@ -153,7 +153,10 @@
             <div id="generatedLeads">
               <apx-chart [series]="generateLeadsChartOptions.series" [chart]="generateLeadsChartOptions.chart"
                 [labels]="generateLeadsChartOptions.labels"
-                [responsive]="generateLeadsChartOptions.responsive"></apx-chart>
+                [responsive]="generateLeadsChartOptions.responsive"
+                [plotOptions]="generateLeadsChartOptions.plotOptions"
+                [stroke]="generateLeadsChartOptions.stroke"
+                ></apx-chart>
               <div class="center-label d-flex align-items-center flex-column" id="center-label">
                 <p class="mb-0 fs-18">{{ totalValue }}</p>
                 <p class="mb-0 fs-12">Total</p>
@@ -198,6 +201,7 @@
               [grid]="BudgetLineChartOptions.grid"
               [xaxis]="BudgetLineChartOptions.xaxis"
               [yaxis]="BudgetLineChartOptions.yaxis"
+              [colors]="BudgetLineChartOptions.colors"
             ></apx-chart>
           </div>
         </div>
@@ -366,8 +370,8 @@
       <div class="d-flex flex-column gap-4">
           <div class="d-flex align-items-center justify-content-between" *ngFor="let item of localData.transactions">
             <div class="d-flex align-items-center gap-3">
-              <div class="icon rounded p-2 d-flex align-items-center"  style="background-color:{{item.bgcolor}}">
-                <span nz-icon nzType="{{item.icon}}" style="color:{{item.color}}" class="fs-6" nzTheme="outline"></span>
+              <div class="icon rounded p-2 d-flex align-items-center" [ngStyle]="{'background-color':item.bgcolor}">
+                <span nz-icon nzType="{{item.icon}}" [ngStyle]="{'color':item.color}" class="fs-6" nzTheme="outline"></span>
               </div>
               <div class="name">
                 <h6 class="m-0">{{item.name}}</h6>
@@ -400,7 +404,7 @@
         <tbody>
           <tr *ngFor="let data of localData.invoiceTable.tableData" >
             <td>{{data.id}}</td>
-            <td><span nz-icon nzType="{{data.icon}}" style="color:{{data.color}}" class="fs-6" nzTheme="outline"></span></td>
+            <td><span nz-icon nzType="{{data.icon}}" [ngStyle]="{'color':data.color}" class="fs-6" nzTheme="outline"></span></td>
             <td>{{data.total}}</td>
             <td>{{data.issuedDate}}</td>
             <td>

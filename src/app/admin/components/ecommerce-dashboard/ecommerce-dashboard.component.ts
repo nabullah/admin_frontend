@@ -134,6 +134,7 @@ export class EcommerceDashboardComponent implements OnInit {
 			yaxis: {
 				show: false,
 			},
+			colors: ["#7367f0"],
 		};
 	}
 
@@ -156,14 +157,10 @@ export class EcommerceDashboardComponent implements OnInit {
 			plotOptions: {
 				pie: {
 					expandOnClick: false,
-					donut: {
-						background: "#000",
-					},
 				},
 			},
 			stroke: {
 				show: false,
-				colors: ["#000"],
 			},
 			theme: {
 				monochrome: {
@@ -305,6 +302,7 @@ export class EcommerceDashboardComponent implements OnInit {
 			yaxis: {
 				show: false,
 			},
+			colors: ["#7367f0"],
 		};
 	}
 
@@ -349,6 +347,7 @@ export class EcommerceDashboardComponent implements OnInit {
 			plotOptions: {
 				bar: {
 					horizontal: false,
+					borderRadius: 4,
 				},
 			},
 			legend: {

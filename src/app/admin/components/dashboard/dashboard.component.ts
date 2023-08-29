@@ -53,6 +53,7 @@ export type customerChartOptions = {
 	colors: any;
   dataLabels:ApexDataLabels,
   xaxis: ApexXAxis | any,
+  stroke: ApexStroke;
 };
 
 export type averageProfitChartOptions = {
@@ -208,6 +209,9 @@ export class DashboardComponent implements OnInit {
       legend: {
         position: "bottom",
         show:false
+      },
+      stroke:{
+        show: false
       },
       labels: this.localData.customers.labels,
       responsive: [
