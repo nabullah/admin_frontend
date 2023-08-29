@@ -220,7 +220,6 @@ export const dashboard = {
 			},
 		],
 	},
-
 	radarchart1: {
 		series: [
 			{
@@ -444,7 +443,77 @@ export const crmchart = {
 			},
 		],
 	},
+  browser :[
+    {
+      browserImage: "google",
+      bname: "Google chrome",
+      browserpercentage: "75.2",
+    },
+    {
+      browserImage: "safari",
+      bname: "Apple Safari",
+      browserpercentage: "45.2",
+    },
+    {
+      browserImage: "internet-explorer",
+      bname: "Internet Explorer",
+      browserpercentage: "35.2",
+    },
+    {
+      browserImage: "mozilla",
+      bname: "Mozilla",
+      browserpercentage: "45.32",
+    },
+    {
+      browserImage: "lion",
+      bname: "Brave",
+      browserpercentage: "35.2",
+    },
+    {
+      browserImage: "safari",
+      bname: "Apple Safari",
+      browserpercentage: "95.2",
+    },
+  ],
+  project : [
+    {
+    projectimage: "figma",
+      Pname: "Figma",
+      projectpercentage: "75.2",
+      projecttype:"App Ui Kit",
+    },
+    {
+      projectimage: "science",
+      Pname: "React",
+      projectpercentage: "95.2",
+      projecttype:"Dashboard",
+    },
+    {
+      projectimage: "android",
+      Pname: "Android",
+      projectpercentage: "85.2",
+      projecttype:"App Ui Kit",
+
+
+    },
+    {
+      projectimage: "apple-black-logo",
+      Pname: "IOS",
+      projectpercentage: "90.72",
+      projecttype:"Apple",
+    },
+    {
+      projectimage: "file",
+      Pname: "PHP",
+      projectpercentage: "95.2",
+      projecttype:"Backend",
+
+    },
+  ]
 };
+
+
+
 
 export const eCommerce = {
   popularProducts:[
