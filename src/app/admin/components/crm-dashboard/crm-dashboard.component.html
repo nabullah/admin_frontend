@@ -52,169 +52,99 @@
 		</div>
 		<div class="row second-row">
 			<div class="steps col-8">
-				<nz-card [nzBordered]="false" nzTitle="Total Revenue">
+				<nz-card [nzBordered]="false"  [nzTitle]="revenueTitle" [nzExtra]="revenueExtra">
 					<apx-chart [series]="barchart3.series!" [chart]="barchart3.chart!"
 						[dataLabels]="barchart3.dataLabels!" [plotOptions]="barchart3.plotOptions!"
 						[yaxis]="barchart3.yaxis!" [xaxis]="barchart3.xaxis!" [fill]="barchart3.fill!"
 						[grid]="barchart3.grid!" [colors]="barchart3.colors!">
 					</apx-chart>
 				</nz-card>
+        <ng-template #revenueTitle>
+					<div class="heading d-flex flex-column">
+						<span class="fw-500 fs-16">Total Revenue</span>
+					</div>
+				</ng-template>
+				<ng-template #revenueExtra>
+					<a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+						<span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+					</a>
+					<nz-dropdown-menu #menu="nzDropdownMenu">
+						<ul nz-menu>
+							<li nz-menu-item>Refresh</li>
+							<li nz-menu-item>Download</li>
+							<li nz-menu-item>View All</li>
+						</ul>
+					</nz-dropdown-menu>
+				</ng-template>
 			</div>
 			<div class="steps col-4">
-				<nz-card [nzBordered]="false">
-					<div class="content">
-						<div class="d-flex justify-content-between">
-							<div class="heading d-flex flex-column">
-								<span class="mb-0 fs-16">Active Projects</span>
-								<span class="text-muted mt-0 fs-12">Average 72% Completed</span>
-							</div><a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-								<span nz-icon nzType="more" nzTheme="outline"></span>
-							</a>
-							<nz-dropdown-menu #menu="nzDropdownMenu">
-								<ul nz-menu>
-									<li nz-menu-item>Refresh</li>
-									<li nz-menu-item>Download</li>
-									<li nz-menu-item>View All</li>
-								</ul>
-							</nz-dropdown-menu>
-						</div>
-						<div class="browsers">
-							<div class="row mb-3">
+        <nz-card [nzBordered]="false" [nzTitle]="activeProjectsTitle" [nzExtra]="activeProjectsExtra">
+						<div class="projects">
+							<div class="row mb-3" *ngFor="let data of activeProjectData">
 								<div class="col-6">
 									<div class="one d-flex gap-3 align-items-center">
-										<img src="../../../../assets/Images/crm comp.images/figma.png" height="26"
+										<img src="../../../../assets/Images/crm comp.images/{{data.projectimage}}.png" height="26"
 											class="rounded-circle" />
 										<div class=" browser-font font-weight-medium">
-											<p class="fs-16 mb-0">Figma</p>
-											<p class="fs-12 mb-0 text-muted">App UI kit</p>
+											<p class="fs-16 mb-0">{{data.Pname}}</p>
+											<p class="fs-12 mb-0 text-muted">{{data.projecttype}}</p>
 										</div>
 									</div>
 								</div>
 								<div class="col-6">
-									<nz-progress [nzPercent]="16"></nz-progress>
+									<nz-progress [nzPercent]="data.projectpercentage"></nz-progress>
 								</div>
 							</div>
-							<div class="row mb-3">
-								<div class="col-6">
-									<div class="one d-flex gap-3 align-items-center">
-										<img src="../../../../assets/Images/crm comp.images/file.png" height="26"
-											class="rounded-circle" />
-										<div class=" browser-font font-weight-medium">
-											<p class="fs-16 mb-0">PHP</p>
-											<p class="fs-12 mb-0 text-muted">Backend</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-6">
-									<nz-progress [nzPercent]="71"></nz-progress>
-								</div>
-							</div>
-							<div class="row mb-3">
-								<div class="col-6">
-									<div class="one d-flex gap-3 align-items-center">
-										<img src="../../../../assets/Images/crm comp.images/apple-black-logo.png"
-											height="26" class="rounded-circle" />
-										<div class=" browser-font font-weight-medium">
-											<p class="fs-16 mb-0">IOS</p>
-											<p class="fs-12 mb-0 text-muted">Apple</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-6">
-									<nz-progress [nzPercent]="60"></nz-progress>
-								</div>
-							</div>
-							<div class="row mb-3">
-								<div class="col-6">
-									<div class="one d-flex gap-3 align-items-center">
-										<img src="../../../../assets/Images/crm comp.images/android.png" height="26"
-											class="rounded-circle" />
-										<div class=" browser-font font-weight-medium">
-											<p class="fs-16 mb-0">Android</p>
-											<p class="fs-12 mb-0 text-muted">App UI kit</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-6">
-									<nz-progress [nzPercent]="50"></nz-progress>
-								</div>
-							</div>
-							<div class="row mb-3">
-								<div class="col-6">
-									<div class="one d-flex gap-3 align-items-center">
-										<img src="../../../../assets/Images/crm comp.images/android.png" height="26"
-											class="rounded-circle" />
-										<div class=" browser-font font-weight-medium">
-											<p class="fs-16 mb-0">Boostrap</p>
-											<p class="fs-12 mb-0 text-muted">Website</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-6">
-									<nz-progress [nzPercent]="20"></nz-progress>
-								</div>
-							</div>
-							<div class="row mb-3">
-								<div class="col-6">
-									<div class="one d-flex gap-3 align-items-center">
-										<img src="../../../../assets/Images/crm comp.images/science.png" height="26"
-											class="rounded-circle" />
-										<div class=" browser-font font-weight-medium">
-											<p class="fs-16 mb-0">React</p>
-											<p class="fs-12 mb-0 text-muted">Dashboard</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-6">
-									<nz-progress [nzPercent]="70"></nz-progress>
-								</div>
-							</div>
-
-
 
 						</div>
-					</div>
 				</nz-card>
+        <ng-template #activeProjectsTitle>
+          <span class="fw-500 fs-16">Active Projects</span>
+					<p class="text-muted m-0 fs-12">Average 72% Completed</p>
+        </ng-template>
+        <ng-template #activeProjectsExtra>
+          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+            <span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+          </a>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item>Refresh</li>
+              <li nz-menu-item>Download</li>
+              <li nz-menu-item>View All</li>
+            </ul>
+          </nz-dropdown-menu>
+        </ng-template>
 			</div>
 		</div>
 		<div class="row third-row">
-			<div class="steps col-lg-6">
-				<nz-card [nzBordered]="false">
-					<div class="parameter d-flex justify-content-between flex-row mb-3">
-						<p class="fs-16 fw-500">Total sales</p>
-						<div class="d-flex justify-content-between gap-2">
-							<nz-badge nzStatus="processing"></nz-badge>
-							<span>
-								<p class="text-muted">Revenue</p>
-							</span>
-							<nz-badge nzStatus="default"></nz-badge>
-							<span>
-								<p class="text-muted">Margin</p>
-							</span>
-						</div>
-					</div>
-					<div>
+      <div class="steps col-lg-6">
+				<nz-card [nzBordered]="false" [nzTitle]="totalSalesTitle" [nzExtra]="totalSalesExtra">
 						<apx-chart [series]="totalRevenueChartOptions2.series!"
 							[chart]="totalRevenueChartOptions2.chart!" [xaxis]="totalRevenueChartOptions2.xaxis!"
 							[yaxis]="totalRevenueChartOptions2.yaxis!" [grid]="totalRevenueChartOptions2.grid!"
 							[stroke]="totalRevenueChartOptions2.stroke!" [colors]="totalRevenueChartOptions2.colors!"
 							[legend]="totalRevenueChartOptions2.legend!"></apx-chart>
-					</div>
 				</nz-card>
+        <ng-template #totalSalesTitle>
+          <span class="fw-500 fs-16">Total Sales</span>
+          <p class="m-0 fs-12 text-muted">Sales</p>
+        </ng-template>
+        <ng-template #totalSalesExtra>
+          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+            <span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+          </a>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item>Refresh</li>
+              <li nz-menu-item>Download</li>
+              <li nz-menu-item>View All</li>
+            </ul>
+          </nz-dropdown-menu>
+        </ng-template>
 			</div>
 			<div class="steps col-lg-6">
-				<nz-card [nzBordered]="false">
+        <nz-card [nzBordered]="false" [nzTitle]="revenueGrowthTitle" [nzExtra]="revenueGrowthExtra">
 					<div class="d-flex flex-column">
-						<div class="d-flex justify-content-between">
-							<div>
-								<p class="fs-16 text-no-wrap mb-0">Revenue Growth</p>
-								<p class="mb-0 text-sm ds-12">Weekly Report</p>
-							</div>
-							<div class="text-h3 mb-2">
-								<h3 class="text-h3 mb-2">$23,454</h3>
-								<nz-tag [nzColor]="'green'">+12.2%</nz-tag>
-							</div>
-						</div>
 						<div class="d-flex justify-content-between gap-5">
 							<div class="profit d-flex flex-column justify-content-center gap-3">
 								<nz-tag [nzColor]="'orange'">Revenue</nz-tag>
@@ -230,15 +160,20 @@
 						</div>
 					</div>
 				</nz-card>
+        <ng-template #revenueGrowthTitle>
+          <span class="fs-16 fw-500">Revenue Growth</span>
+          <p class="fs-12 m-0 text-muted">Weekly Report</p>
+        </ng-template>
+        <ng-template #revenueGrowthExtra>
+          <h6 class="m-0">$23,454</h6>
+					<nz-tag nzColor="green" class="rounded-pill">+12.2%</nz-tag>
+        </ng-template>
 			</div>
 		</div>
 
 		<div class="row fourth-row">
 			<div class="steps col-lg-4">
-				<nz-card [nzBordered]="false">
-					<div class="parameter d-flex justify-content-between flex-row mb-3">
-						<p class="fw-500 fs-16">Overall Rating</p>
-					</div>
+				<nz-card [nzBordered]="false" [nzTitle]="overallrating" [nzExtra]="overallratingextra">
 					<div class="rating d-flex align-items-center">
 						<h3 class="m-0 me-2 font-weight-normal">4.5</h3>
 						<div>
@@ -255,130 +190,84 @@
 							[grid]="barchart1.grid!" [plotOptions]="barchart1.plotOptions!"></apx-chart>
 					</div>
 				</nz-card>
+        <ng-template #overallrating>
+          <span class="fs-16 fw-500">Browser States</span>
+					<p class="text-muted m-0 fs-12">Counter April 2022</p>
+        </ng-template>
+        <ng-template #overallratingextra>
+          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+            <span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+          </a>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item>Refresh</li>
+              <li nz-menu-item>Download</li>
+              <li nz-menu-item>View All</li>
+            </ul>
+          </nz-dropdown-menu>
+        </ng-template>
 			</div>
 			<div class="col-4">
-				<nz-card [nzBordered]="false">
-					<div class="content">
-						<div class="d-flex justify-content-between">
-							<div class="heading d-flex flex-column">
-								<p class="fw-500 fs-16 mb-0">Browser States</p>
-								<p class="text-muted mt-0 fs-12">Counter April 2022</p>
-							</div><a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-								<span nz-icon nzType="more" nzTheme="outline"></span>
-							</a>
-							<nz-dropdown-menu #menu="nzDropdownMenu">
-								<ul nz-menu>
-									<li nz-menu-item>Refresh</li>
-									<li nz-menu-item>Download</li>
-									<li nz-menu-item>View All</li>
-								</ul>
-							</nz-dropdown-menu>
-						</div>
+				<nz-card [nzBordered]="false" [nzTitle]="browserStatesTitle" [nzExtra]="browserStatesExtra">
 						<div class="browser-states">
-							<div class="d-flex justify-content-between align-items-center">
+							<div class="d-flex justify-content-between align-items-center"*ngFor="let item of browserStatesData">
 								<div class="one d-flex gap-3 align-items-center">
-									<img src="../../../../assets/Images/crm comp.images/google.png" height="26"
+									<img src="../../../../assets/Images/crm comp.images/{{item.browserImage}}.png" height="26"
 										class="rounded-circle" />
-									<span class=" browser-font font-weight-medium">Google Chrome</span>
+									<span class=" browser-font font-weight-medium">{{item.bname}}</span>
 								</div>
 								<div class="two d-flex gap-3 align-items-center fw-bold text-muted">
-									<span class="font-weight-bold browser-font fs-12">75.2%</span>
-									<nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"
+									<span class="font-weight-bold browser-font fs-12">{{item.browserpercentage}}%</span>
+									<nz-progress [nzPercent]="item.browserpercentage" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"
 										[nzStrokeWidth]="10"></nz-progress>
 								</div>
 							</div>
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="one d-flex gap-3 align-items-center">
-									<img src="../../../../assets/Images/crm comp.images/safari.png" height="26"
-										class="rounded-circle" />
-									<span class=" browser-font font-weight-medium">Apple Safari</span>
 
-								</div>
-								<div class="two d-flex gap-3 align-items-center fw-bold text-muted">
-									<span class="font-weight-bold browser-font fs-12">45.4%</span>
-									<nz-progress [nzPercent]="45" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"
-										[nzStrokeWidth]="10"></nz-progress>
-								</div>
-							</div>
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="one d-flex gap-3 align-items-center">
-									<img src="../../../../assets/Images/crm comp.images/internet-explorer.png"
-										height="26" class="rounded-circle" />
-									<span class=" browser-font font-weight-medium">Internet Explorer</span>
-								</div>
-								<div class="two d-flex gap-3 align-items-center fw-bold text-muted">
-									<span class="font-weight-bold browser-font fs-12">70.2%</span>
-									<nz-progress [nzPercent]="70" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"
-										[nzStrokeWidth]="10"></nz-progress>
-								</div>
-							</div>
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="one d-flex gap-3 align-items-center">
-									<img src="../../../../assets/Images/crm comp.images/mozilla.png" height="26"
-										class="rounded-circle" />
-									<span class=" browser-font font-weight-medium">Mozilla Firefox</span>
-								</div>
-								<div class="two d-flex gap-3 align-items-center fw-bold text-muted">
-									<span class="font-weight-bold browser-font fs-12">50.54%</span>
-									<nz-progress [nzPercent]="50" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"
-										[nzStrokeWidth]="10"></nz-progress>
-								</div>
-							</div>
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="one d-flex gap-3 align-items-center">
-									<img src="../../../../assets/Images/crm comp.images/lion.png" height="26"
-										class="rounded-circle" />
-									<span class=" browser-font font-weight-medium">Brave</span>
-								</div>
-								<div class="two d-flex gap-3 align-items-center fw-bold text-muted">
-									<span class="font-weight-bold browser-font fs-12">100%</span>
-									<nz-progress [nzPercent]="100" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"
-										[nzStrokeWidth]="10"></nz-progress>
-								</div>
-							</div>
-							<div class="d-flex justify-content-between align-items-center">
-								<div class="one d-flex gap-3 align-items-center">
-									<img src="../../../../assets/Images/crm comp.images/google.png" height="26"
-										class="rounded-circle" />
-									<span class=" browser-font font-weight-medium">Google Chrome</span>
-								</div>
-								<div class="two d-flex gap-3 align-items-center fw-bold text-muted">
-									<span class="font-weight-bold browser-font fs-12">75.96%</span>
-									<nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"
-										[nzStrokeWidth]="10"></nz-progress>
-								</div>
-							</div>
 						</div>
-					</div>
 				</nz-card>
+        <ng-template #browserStatesTitle>
+          <span class="fs-16 fw-500">Browser States</span>
+					<p class="text-muted m-0 fs-12">Counter April 2022</p>
+        </ng-template>
+        <ng-template #browserStatesExtra>
+          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+            <span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+          </a>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item>Refresh</li>
+              <li nz-menu-item>Download</li>
+              <li nz-menu-item>View All</li>
+            </ul>
+          </nz-dropdown-menu>
+        </ng-template>
 			</div>
 			<div class="col-lg-4">
-				<nz-card [nzBordered]="false">
-					<div class="d-flex justify-content-between">
-						<div class="heading d-flex flex-column">
-							<p class="fw-500 fs-16 mb-0">Sales</p>
-							<p class="text-muted mt-0 fs-12">Last 6 Months</p>
-						</div><a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-							<span nz-icon nzType="more" nzTheme="outline"></span>
-						</a>
-						<nz-dropdown-menu #menu="nzDropdownMenu">
-							<ul nz-menu>
-								<li nz-menu-item>Refresh</li>
-								<li nz-menu-item>Download</li>
-								<li nz-menu-item>View All</li>
-							</ul>
-						</nz-dropdown-menu>
-					</div>
-					<div class="d-flex justify-content-center align-items-center flex-column mt-5">
-						<div>
+        <nz-card [nzBordered]="false" [nzTitle]="salesChartTitle" [nzExtra]="salesChartExtra">
 							<apx-chart [series]="radarChartOptions1.series!" [chart]="radarChartOptions1.chart!"
 								[labels]="radarChartOptions1.labels!" [xaxis]="radarChartOptions1.xaxis!"
 								[yaxis]="radarChartOptions1.yaxis!" [colors]="radarChartOptions1.colors!"
 								[dataLabels]="radarChartOptions1.dataLabels!"
 								></apx-chart>
-						</div>
-					</div>
 				</nz-card>
+        <ng-template #salesChartTitle>
+					<div class="heading d-flex flex-column">
+						<span class="fw-500 fs-16">Sales</span>
+						<p class="text-muted m-0 fs-12">Last 6 Months</p>
+					</div>
+				</ng-template>
+				<ng-template #salesChartExtra>
+					<a nz-dropdown nzTrigger="click"  [nzDropdownMenu]="menu">
+						<span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+					</a>
+					<nz-dropdown-menu #menu="nzDropdownMenu">
+						<ul nz-menu>
+							<li nz-menu-item>Refresh</li>
+							<li nz-menu-item>Download</li>
+							<li nz-menu-item>View All</li>
+						</ul>
+					</nz-dropdown-menu>
+				</ng-template>
 			</div>
 		</div>
 		<div class="row d-flex flex-wrap">

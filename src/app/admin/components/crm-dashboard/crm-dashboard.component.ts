@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, inject } from "@angular/core";
-import { crmchart } from "src/app/constants/localStore";
+import {  crmchart } from "src/app/constants/localStore";
 import { ChartComponent, ApexAxisChartSeries, ApexChart, ApexXAxis, ApexTitleSubtitle, ApexFill, ApexStroke, ApexDataLabels, ApexPlotOptions, ApexYAxis, ApexGrid, ApexLegend } from "ng-apexcharts";
 import { ThemeService } from "src/app/services/theme.service";
 
@@ -77,6 +77,16 @@ export class CrmDashboardComponent {
 	formatOne = (percent: number): string => `$${percent},237`;
 	value = 5;
 	localData = crmchart;
+  activeProjectData:any;
+  browserStatesData: any;
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.activeProjectData=this.localData.project;
+    this.browserStatesData=this.localData.browser;
+  }
+
 	listOfData: Person[] = [
 		{
 			productimage: "thumb-1",
@@ -193,7 +203,7 @@ export class CrmDashboardComponent {
 
 			chart: {
 				type: "bar",
-				height: "300",
+				height: "265",
 				toolbar: {
 					show: false,
 				},
