@@ -38,6 +38,7 @@ export type LineChartOptions = {
 	theme: ApexTheme | any;
 	legend: ApexLegend | any;
 	tooltip: ApexTooltip | any;
+	colors: any;
 };
 
 export type DonutChartOptions = {
@@ -52,14 +53,14 @@ export type DonutChartOptions = {
 };
 
 export type BarChartOptions = {
-  series: ApexAxisChartSeries;
-  chart:ApexChart;
-  responsive:ApexResponsive;
-  xaxis:ApexXAxis;
-  yaxis:ApexYAxis;
-  plotOptions:ApexPlotOptions;
-  colors:any;
-  grid:ApexGrid;
-  dataLabels:ApexDataLabels;
-  legend:ApexLegend;
-}
+	series: ApexAxisChartSeries;
+	chart: ApexChart;
+	responsive: ApexResponsive;
+	xaxis: ApexXAxis;
+	yaxis: ApexYAxis;
+	plotOptions: ApexPlotOptions;
+	colors: any;
+	grid: ApexGrid;
+	dataLabels: ApexDataLabels;
+	legend: ApexLegend;
+};

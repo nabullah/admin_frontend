@@ -1,6 +1,20 @@
 import { Component, ElementRef, ViewChild, inject } from "@angular/core";
 import { crmchart } from "src/app/constants/localStore";
-import { ChartComponent, ApexAxisChartSeries, ApexChart, ApexXAxis, ApexTitleSubtitle, ApexFill, ApexStroke, ApexDataLabels, ApexPlotOptions, ApexYAxis, ApexGrid, ApexLegend } from "ng-apexcharts";
+import {
+	ChartComponent,
+	ApexAxisChartSeries,
+	ApexChart,
+	ApexXAxis,
+	ApexTitleSubtitle,
+	ApexFill,
+	ApexStroke,
+	ApexDataLabels,
+	ApexPlotOptions,
+	ApexYAxis,
+	ApexGrid,
+	ApexLegend,
+	ApexMarkers,
+} from "ng-apexcharts";
 import { ThemeService } from "src/app/services/theme.service";
 
 interface Person {
@@ -55,6 +69,8 @@ export type radarChartOptions1 = {
 	plotOptions: ApexPlotOptions;
 	colors: string[];
 	fill: ApexFill;
+	markers: ApexMarkers;
+	stroke: ApexStroke;
 };
 
 export type totalRevenueChartOptions2 = {
@@ -229,24 +245,10 @@ export class CrmDashboardComponent {
 
 		this.radarChartOptions1 = {
 			series: this.localData.radarchart1.series,
-			// plotOptions: {
-			//   radar: {
-			//     size: undefined,
-			//     offsetX: 0,
-			//     offsetY: 0,
-			//     polygons: {
-			//       strokeColors: ['#8267f0',"red"],
 
-			//       connectorColors: '',
-			//       fill: {
-			//         // colors: ['#8267f0'],
-			//       }
-			//     }
-			//   }
-			// },
-			fill:{
-				opacity: 0.2,
-				colors: [],
+			fill: {
+				opacity: 0.8,
+				colors: ["#7367f0", "#ff9f43"],
 			},
 			colors: ["#7367f0", "#ff9f43"],
 			chart: {
@@ -263,12 +265,18 @@ export class CrmDashboardComponent {
 			xaxis: {
 				labels: {
 					style: {
-						colors: this.currentTheme === "dark" ? "#d0d4f1" : "#2f2b3d",
+						colors: this.currentTheme === "dark" ? "#72849ab3" : "#2f2b3d",
 					},
 				},
 			},
 			yaxis: {
-				show:false,
+				show: false,
+			},
+			markers: {
+				size: 0,
+			},
+			stroke: {
+				show: false,
 			},
 		};
 
