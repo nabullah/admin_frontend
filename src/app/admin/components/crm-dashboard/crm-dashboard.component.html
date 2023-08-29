@@ -52,14 +52,14 @@
 		</div>
 		<div class="row second-row">
 			<div class="steps col-8">
-				<nz-card [nzBordered]="false"  [nzTitle]="revenueTitle" [nzExtra]="revenueExtra">
+				<nz-card [nzBordered]="false" [nzTitle]="revenueTitle" [nzExtra]="revenueExtra">
 					<apx-chart [series]="barchart3.series!" [chart]="barchart3.chart!"
 						[dataLabels]="barchart3.dataLabels!" [plotOptions]="barchart3.plotOptions!"
 						[yaxis]="barchart3.yaxis!" [xaxis]="barchart3.xaxis!" [fill]="barchart3.fill!"
 						[grid]="barchart3.grid!" [colors]="barchart3.colors!">
 					</apx-chart>
 				</nz-card>
-        <ng-template #revenueTitle>
+				<ng-template #revenueTitle>
 					<div class="heading d-flex flex-column">
 						<span class="fw-500 fs-16">Total Revenue</span>
 					</div>
@@ -78,72 +78,72 @@
 				</ng-template>
 			</div>
 			<div class="steps col-4">
-        <nz-card [nzBordered]="false" [nzTitle]="activeProjectsTitle" [nzExtra]="activeProjectsExtra">
-						<div class="projects">
-							<div class="row mb-3" *ngFor="let data of activeProjectData">
-								<div class="col-6">
-									<div class="one d-flex gap-3 align-items-center">
-										<img src="../../../../assets/Images/crm comp.images/{{data.projectimage}}.png" height="26"
-											class="rounded-circle" />
-										<div class=" browser-font font-weight-medium">
-											<p class="fs-16 mb-0">{{data.Pname}}</p>
-											<p class="fs-12 mb-0 text-muted">{{data.projecttype}}</p>
-										</div>
+				<nz-card [nzBordered]="false" [nzTitle]="activeProjectsTitle" [nzExtra]="activeProjectsExtra">
+					<div class="projects">
+						<div class="row mb-3" *ngFor="let data of activeProjectData">
+							<div class="col-6">
+								<div class="one d-flex gap-3 align-items-center">
+									<img src="../../../../assets/Images/crm comp.images/{{data.projectimage}}.png"
+										height="26" class="rounded-circle" />
+									<div class=" browser-font font-weight-medium">
+										<p class="fs-16 mb-0">{{data.Pname}}</p>
+										<p class="fs-12 mb-0 text-muted">{{data.projecttype}}</p>
 									</div>
 								</div>
-								<div class="col-6">
-									<nz-progress [nzPercent]="data.projectpercentage"></nz-progress>
-								</div>
 							</div>
-
+							<div class="col-6">
+								<nz-progress [nzPercent]="data.projectpercentage"></nz-progress>
+							</div>
 						</div>
+
+					</div>
 				</nz-card>
-        <ng-template #activeProjectsTitle>
-          <span class="fw-500 fs-16">Active Projects</span>
+				<ng-template #activeProjectsTitle>
+					<span class="fw-500 fs-16">Active Projects</span>
 					<p class="text-muted m-0 fs-12">Average 72% Completed</p>
-        </ng-template>
-        <ng-template #activeProjectsExtra>
-          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-            <span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
-          </a>
-          <nz-dropdown-menu #menu="nzDropdownMenu">
-            <ul nz-menu>
-              <li nz-menu-item>Refresh</li>
-              <li nz-menu-item>Download</li>
-              <li nz-menu-item>View All</li>
-            </ul>
-          </nz-dropdown-menu>
-        </ng-template>
+				</ng-template>
+				<ng-template #activeProjectsExtra>
+					<a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+						<span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+					</a>
+					<nz-dropdown-menu #menu="nzDropdownMenu">
+						<ul nz-menu>
+							<li nz-menu-item>Refresh</li>
+							<li nz-menu-item>Download</li>
+							<li nz-menu-item>View All</li>
+						</ul>
+					</nz-dropdown-menu>
+				</ng-template>
 			</div>
 		</div>
 		<div class="row third-row">
-      <div class="steps col-lg-6">
+			<div class="steps col-lg-6">
 				<nz-card [nzBordered]="false" [nzTitle]="totalSalesTitle" [nzExtra]="totalSalesExtra">
-						<apx-chart [series]="totalRevenueChartOptions2.series!"
-							[chart]="totalRevenueChartOptions2.chart!" [xaxis]="totalRevenueChartOptions2.xaxis!"
-							[yaxis]="totalRevenueChartOptions2.yaxis!" [grid]="totalRevenueChartOptions2.grid!"
-							[stroke]="totalRevenueChartOptions2.stroke!" [colors]="totalRevenueChartOptions2.colors!"
-							[legend]="totalRevenueChartOptions2.legend!"></apx-chart>
+					<apx-chart [series]="totalRevenueChartOptions2.series!" [chart]="totalRevenueChartOptions2.chart!"
+						[xaxis]="totalRevenueChartOptions2.xaxis!" [yaxis]="totalRevenueChartOptions2.yaxis!"
+						[grid]="totalRevenueChartOptions2.grid!" [stroke]="totalRevenueChartOptions2.stroke!"
+						[colors]="totalRevenueChartOptions2.colors!"
+						[legend]="totalRevenueChartOptions2.legend!"></apx-chart>
 				</nz-card>
-        <ng-template #totalSalesTitle>
-          <span class="fw-500 fs-16">Total Sales</span>
-          <p class="m-0 fs-12 text-muted">Sales</p>
-        </ng-template>
-        <ng-template #totalSalesExtra>
-          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-            <span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
-          </a>
-          <nz-dropdown-menu #menu="nzDropdownMenu">
-            <ul nz-menu>
-              <li nz-menu-item>Refresh</li>
-              <li nz-menu-item>Download</li>
-              <li nz-menu-item>View All</li>
-            </ul>
-          </nz-dropdown-menu>
-        </ng-template>
+				<ng-template #totalSalesTitle>
+					<span class="fw-500 fs-16">Total Sales</span>
+					<p class="m-0 fs-12 text-muted">Sales</p>
+				</ng-template>
+				<ng-template #totalSalesExtra>
+					<a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+						<span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+					</a>
+					<nz-dropdown-menu #menu="nzDropdownMenu">
+						<ul nz-menu>
+							<li nz-menu-item>Refresh</li>
+							<li nz-menu-item>Download</li>
+							<li nz-menu-item>View All</li>
+						</ul>
+					</nz-dropdown-menu>
+				</ng-template>
 			</div>
 			<div class="steps col-lg-6">
-        <nz-card [nzBordered]="false" [nzTitle]="revenueGrowthTitle" [nzExtra]="revenueGrowthExtra">
+				<nz-card [nzBordered]="false" [nzTitle]="revenueGrowthTitle" [nzExtra]="revenueGrowthExtra">
 					<div class="d-flex flex-column">
 						<div class="d-flex justify-content-between gap-5">
 							<div class="profit d-flex flex-column justify-content-center gap-3">
@@ -160,14 +160,14 @@
 						</div>
 					</div>
 				</nz-card>
-        <ng-template #revenueGrowthTitle>
-          <span class="fs-16 fw-500">Revenue Growth</span>
-          <p class="fs-12 m-0 text-muted">Weekly Report</p>
-        </ng-template>
-        <ng-template #revenueGrowthExtra>
-          <h6 class="m-0">$23,454</h6>
+				<ng-template #revenueGrowthTitle>
+					<span class="fs-16 fw-500">Revenue Growth</span>
+					<p class="fs-12 m-0 text-muted">Weekly Report</p>
+				</ng-template>
+				<ng-template #revenueGrowthExtra>
+					<h6 class="m-0">$23,454</h6>
 					<nz-tag nzColor="green" class="rounded-pill">+12.2%</nz-tag>
-        </ng-template>
+				</ng-template>
 			</div>
 		</div>
 
@@ -190,77 +190,76 @@
 							[grid]="barchart1.grid!" [plotOptions]="barchart1.plotOptions!"></apx-chart>
 					</div>
 				</nz-card>
-        <ng-template #overallrating>
-          <span class="fs-16 fw-500">Browser States</span>
+				<ng-template #overallrating>
+					<span class="fs-16 fw-500">Browser States</span>
 					<p class="text-muted m-0 fs-12">Counter April 2022</p>
-        </ng-template>
-        <ng-template #overallratingextra>
-          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-            <span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
-          </a>
-          <nz-dropdown-menu #menu="nzDropdownMenu">
-            <ul nz-menu>
-              <li nz-menu-item>Refresh</li>
-              <li nz-menu-item>Download</li>
-              <li nz-menu-item>View All</li>
-            </ul>
-          </nz-dropdown-menu>
-        </ng-template>
+				</ng-template>
+				<ng-template #overallratingextra>
+					<a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+						<span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+					</a>
+					<nz-dropdown-menu #menu="nzDropdownMenu">
+						<ul nz-menu>
+							<li nz-menu-item>Refresh</li>
+							<li nz-menu-item>Download</li>
+							<li nz-menu-item>View All</li>
+						</ul>
+					</nz-dropdown-menu>
+				</ng-template>
 			</div>
 			<div class="col-4">
 				<nz-card [nzBordered]="false" [nzTitle]="browserStatesTitle" [nzExtra]="browserStatesExtra">
-						<div class="browser-states">
-							<div class="d-flex justify-content-between align-items-center"*ngFor="let item of browserStatesData">
-								<div class="one d-flex gap-3 align-items-center">
-									<img src="../../../../assets/Images/crm comp.images/{{item.browserImage}}.png" height="26"
-										class="rounded-circle" />
-									<span class=" browser-font font-weight-medium">{{item.bname}}</span>
-								</div>
-								<div class="two d-flex gap-3 align-items-center fw-bold text-muted">
-									<span class="font-weight-bold browser-font fs-12">{{item.browserpercentage}}%</span>
-									<nz-progress [nzPercent]="item.browserpercentage" nzType="circle" [nzWidth]="30" [nzShowInfo]="false"
-										[nzStrokeWidth]="10"></nz-progress>
-								</div>
+					<div class="browser-states">
+						<div class="d-flex justify-content-between align-items-center"
+							*ngFor="let item of browserStatesData">
+							<div class="one d-flex gap-3 align-items-center">
+								<img src="../../../../assets/Images/crm comp.images/{{item.browserImage}}.png"
+									height="26" class="rounded-circle" />
+								<span class=" browser-font font-weight-medium">{{item.bname}}</span>
 							</div>
+							<div class="two d-flex gap-3 align-items-center fw-bold text-muted">
+								<span class="font-weight-bold browser-font fs-12">{{item.browserpercentage}}%</span>
+								<nz-progress [nzPercent]="item.browserpercentage" nzType="circle" [nzWidth]="30"
+									[nzShowInfo]="false" [nzStrokeWidth]="10"></nz-progress>
+							</div>
+						</div>
 
-						</div>
-				</nz-card>
-        <ng-template #browserStatesTitle>
-          <span class="fs-16 fw-500">Browser States</span>
-					<p class="text-muted m-0 fs-12">Counter April 2022</p>
-        </ng-template>
-        <ng-template #browserStatesExtra>
-          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-            <span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
-          </a>
-          <nz-dropdown-menu #menu="nzDropdownMenu">
-            <ul nz-menu>
-              <li nz-menu-item>Refresh</li>
-              <li nz-menu-item>Download</li>
-              <li nz-menu-item>View All</li>
-            </ul>
-          </nz-dropdown-menu>
-        </ng-template>
-			</div>
-			<div class="col-lg-4">
-        <nz-card [nzBordered]="false" [nzTitle]="salesChartTitle" [nzExtra]="salesChartExtra">
-							<apx-chart [series]="radarChartOptions1.series!" [chart]="radarChartOptions1.chart!"
-								[labels]="radarChartOptions1.labels!" [xaxis]="radarChartOptions1.xaxis!"
-								[yaxis]="radarChartOptions1.yaxis!" [colors]="radarChartOptions1.colors!"
-								[dataLabels]="radarChartOptions1.dataLabels!" [fill]="radarChartOptions1.fill!"
-								[stroke]="radarChartOptions1.stroke!"
-								[markers]="radarChartOptions1.markers!"></apx-chart>
-						</div>
 					</div>
 				</nz-card>
-        <ng-template #salesChartTitle>
+				<ng-template #browserStatesTitle>
+					<span class="fs-16 fw-500">Browser States</span>
+					<p class="text-muted m-0 fs-12">Counter April 2022</p>
+				</ng-template>
+				<ng-template #browserStatesExtra>
+					<a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+						<span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
+					</a>
+					<nz-dropdown-menu #menu="nzDropdownMenu">
+						<ul nz-menu>
+							<li nz-menu-item>Refresh</li>
+							<li nz-menu-item>Download</li>
+							<li nz-menu-item>View All</li>
+						</ul>
+					</nz-dropdown-menu>
+				</ng-template>
+			</div>
+			<div class="col-lg-4">
+				<nz-card [nzBordered]="false" [nzTitle]="salesChartTitle" [nzExtra]="salesChartExtra">
+					<apx-chart [series]="radarChartOptions1.series!" [chart]="radarChartOptions1.chart!"
+						[labels]="radarChartOptions1.labels!" [xaxis]="radarChartOptions1.xaxis!"
+						[yaxis]="radarChartOptions1.yaxis!" [colors]="radarChartOptions1.colors!"
+						[dataLabels]="radarChartOptions1.dataLabels!" [fill]="radarChartOptions1.fill!"
+						[stroke]="radarChartOptions1.stroke!" [markers]="radarChartOptions1.markers!">
+					</apx-chart>
+				</nz-card>
+				<ng-template #salesChartTitle>
 					<div class="heading d-flex flex-column">
 						<span class="fw-500 fs-16">Sales</span>
 						<p class="text-muted m-0 fs-12">Last 6 Months</p>
 					</div>
 				</ng-template>
 				<ng-template #salesChartExtra>
-					<a nz-dropdown nzTrigger="click"  [nzDropdownMenu]="menu">
+					<a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
 						<span nz-icon nzType="more" class="fs-5 drop-btn-downColor" nzTheme="outline"></span>
 					</a>
 					<nz-dropdown-menu #menu="nzDropdownMenu">
